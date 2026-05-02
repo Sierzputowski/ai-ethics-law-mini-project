@@ -1,0 +1,6 @@
+polityka,srednie_ryzyko_resztkowe,mediana_ryzyka_resztkowego,p95_ryzyka_resztkowego,sredni_czas_decyzji_s,odsetek_interwencji,srednia_redukcja_wzgledna
+Zatwierdzenie przed ruchem,0.2447,0.2507,0.4217,7.4296,0.4691,0.2285
+Adaptacyjny HITL,0.2748,0.2913,0.4708,4.9481,0.3704,0.1624
+Prawo weta operatora,0.3155,0.3334,0.5278,3.3123,0.216,0.0715
+HITL informacyjny,0.3541,0.3413,0.6636,2.1457,0.0864,0.0117
+Brak HITL,0.363,0.3413,0.7403,1.8,0.0,0.0

@@ -1,0 +1,811 @@
+id_scenariusza,polityka,tryb,interwencja_operatora,czas_decyzji_s,ryzyko_bazowe,ryzyko_resztkowe,redukcja_wzgledna,pewnosc_ai,srodowisko,predkosc,ladunek,niepewnosc,nowosc_sytuacji
+S001,Brak HITL,autonomia,False,1.8,0.0397,0.0397,0.0,0.887,odseparowane,niska,lekki,niska,znane
+S001,HITL informacyjny,monitorowanie,False,1.8,0.0397,0.0397,0.0,0.887,odseparowane,niska,lekki,niska,znane
+S001,Prawo weta operatora,weto,False,1.8,0.0397,0.0397,0.0,0.887,odseparowane,niska,lekki,niska,znane
+S001,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0397,0.0397,0.0,0.887,odseparowane,niska,lekki,niska,znane
+S001,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0397,0.0397,0.0,0.887,odseparowane,niska,lekki,niska,znane
+S002,Brak HITL,autonomia,False,1.8,0.0523,0.0523,0.0,0.782,odseparowane,niska,lekki,niska,rzadkie
+S002,HITL informacyjny,monitorowanie,False,1.8,0.0523,0.0523,0.0,0.782,odseparowane,niska,lekki,niska,rzadkie
+S002,Prawo weta operatora,weto,False,1.8,0.0523,0.0523,0.0,0.782,odseparowane,niska,lekki,niska,rzadkie
+S002,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0523,0.0523,0.0,0.782,odseparowane,niska,lekki,niska,rzadkie
+S002,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0523,0.0523,0.0,0.782,odseparowane,niska,lekki,niska,rzadkie
+S003,Brak HITL,autonomia,False,1.8,0.0539,0.0539,0.0,0.739,odseparowane,niska,lekki,srednia,znane
+S003,HITL informacyjny,monitorowanie,False,1.8,0.0539,0.0539,0.0,0.739,odseparowane,niska,lekki,srednia,znane
+S003,Prawo weta operatora,weto,False,1.8,0.0539,0.0539,0.0,0.739,odseparowane,niska,lekki,srednia,znane
+S003,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0539,0.0539,0.0,0.739,odseparowane,niska,lekki,srednia,znane
+S003,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0539,0.0539,0.0,0.739,odseparowane,niska,lekki,srednia,znane
+S004,Brak HITL,autonomia,False,1.8,0.0701,0.0701,0.0,0.634,odseparowane,niska,lekki,srednia,rzadkie
+S004,HITL informacyjny,monitorowanie,False,1.8,0.0701,0.0701,0.0,0.634,odseparowane,niska,lekki,srednia,rzadkie
+S004,Prawo weta operatora,weto,False,1.8,0.0701,0.0701,0.0,0.634,odseparowane,niska,lekki,srednia,rzadkie
+S004,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0701,0.0701,0.0,0.634,odseparowane,niska,lekki,srednia,rzadkie
+S004,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0701,0.0701,0.0,0.634,odseparowane,niska,lekki,srednia,rzadkie
+S005,Brak HITL,autonomia,False,1.8,0.076,0.076,0.0,0.563,odseparowane,niska,lekki,wysoka,znane
+S005,HITL informacyjny,monitorowanie,False,1.8,0.076,0.076,0.0,0.563,odseparowane,niska,lekki,wysoka,znane
+S005,Prawo weta operatora,weto,False,1.8,0.076,0.076,0.0,0.563,odseparowane,niska,lekki,wysoka,znane
+S005,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.076,0.076,0.0,0.563,odseparowane,niska,lekki,wysoka,znane
+S005,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.076,0.076,0.0,0.563,odseparowane,niska,lekki,wysoka,znane
+S006,Brak HITL,autonomia,False,1.8,0.0968,0.0968,0.0,0.458,odseparowane,niska,lekki,wysoka,rzadkie
+S006,HITL informacyjny,monitorowanie,False,1.8,0.0968,0.0968,0.0,0.458,odseparowane,niska,lekki,wysoka,rzadkie
+S006,Prawo weta operatora,weto,False,1.8,0.0968,0.0968,0.0,0.458,odseparowane,niska,lekki,wysoka,rzadkie
+S006,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.0968,0.0497,0.487,0.458,odseparowane,niska,lekki,wysoka,rzadkie
+S006,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.0968,0.0544,0.4384,0.458,odseparowane,niska,lekki,wysoka,rzadkie
+S007,Brak HITL,autonomia,False,1.8,0.0499,0.0499,0.0,0.887,odseparowane,niska,sredni,niska,znane
+S007,HITL informacyjny,monitorowanie,False,1.8,0.0499,0.0499,0.0,0.887,odseparowane,niska,sredni,niska,znane
+S007,Prawo weta operatora,weto,False,1.8,0.0499,0.0499,0.0,0.887,odseparowane,niska,sredni,niska,znane
+S007,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0499,0.0499,0.0,0.887,odseparowane,niska,sredni,niska,znane
+S007,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0499,0.0499,0.0,0.887,odseparowane,niska,sredni,niska,znane
+S008,Brak HITL,autonomia,False,1.8,0.0658,0.0658,0.0,0.782,odseparowane,niska,sredni,niska,rzadkie
+S008,HITL informacyjny,monitorowanie,False,1.8,0.0658,0.0658,0.0,0.782,odseparowane,niska,sredni,niska,rzadkie
+S008,Prawo weta operatora,weto,False,1.8,0.0658,0.0658,0.0,0.782,odseparowane,niska,sredni,niska,rzadkie
+S008,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0658,0.0658,0.0,0.782,odseparowane,niska,sredni,niska,rzadkie
+S008,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0658,0.0658,0.0,0.782,odseparowane,niska,sredni,niska,rzadkie
+S009,Brak HITL,autonomia,False,1.8,0.0679,0.0679,0.0,0.739,odseparowane,niska,sredni,srednia,znane
+S009,HITL informacyjny,monitorowanie,False,1.8,0.0679,0.0679,0.0,0.739,odseparowane,niska,sredni,srednia,znane
+S009,Prawo weta operatora,weto,False,1.8,0.0679,0.0679,0.0,0.739,odseparowane,niska,sredni,srednia,znane
+S009,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0679,0.0679,0.0,0.739,odseparowane,niska,sredni,srednia,znane
+S009,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0679,0.0679,0.0,0.739,odseparowane,niska,sredni,srednia,znane
+S010,Brak HITL,autonomia,False,1.8,0.0883,0.0883,0.0,0.634,odseparowane,niska,sredni,srednia,rzadkie
+S010,HITL informacyjny,monitorowanie,False,1.8,0.0883,0.0883,0.0,0.634,odseparowane,niska,sredni,srednia,rzadkie
+S010,Prawo weta operatora,weto,False,1.8,0.0883,0.0883,0.0,0.634,odseparowane,niska,sredni,srednia,rzadkie
+S010,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0883,0.0883,0.0,0.634,odseparowane,niska,sredni,srednia,rzadkie
+S010,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0883,0.0883,0.0,0.634,odseparowane,niska,sredni,srednia,rzadkie
+S011,Brak HITL,autonomia,False,1.8,0.0957,0.0957,0.0,0.563,odseparowane,niska,sredni,wysoka,znane
+S011,HITL informacyjny,monitorowanie,False,1.8,0.0957,0.0957,0.0,0.563,odseparowane,niska,sredni,wysoka,znane
+S011,Prawo weta operatora,weto,False,1.8,0.0957,0.0957,0.0,0.563,odseparowane,niska,sredni,wysoka,znane
+S011,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0957,0.0957,0.0,0.563,odseparowane,niska,sredni,wysoka,znane
+S011,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0957,0.0957,0.0,0.563,odseparowane,niska,sredni,wysoka,znane
+S012,Brak HITL,autonomia,False,1.8,0.1219,0.1219,0.0,0.458,odseparowane,niska,sredni,wysoka,rzadkie
+S012,HITL informacyjny,monitorowanie,False,1.8,0.1219,0.1219,0.0,0.458,odseparowane,niska,sredni,wysoka,rzadkie
+S012,Prawo weta operatora,weto,False,1.8,0.1219,0.1219,0.0,0.458,odseparowane,niska,sredni,wysoka,rzadkie
+S012,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.1219,0.0625,0.487,0.458,odseparowane,niska,sredni,wysoka,rzadkie
+S012,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.1219,0.0685,0.4384,0.458,odseparowane,niska,sredni,wysoka,rzadkie
+S013,Brak HITL,autonomia,False,1.8,0.0609,0.0609,0.0,0.887,odseparowane,niska,ciezki,niska,znane
+S013,HITL informacyjny,monitorowanie,False,1.8,0.0609,0.0609,0.0,0.887,odseparowane,niska,ciezki,niska,znane
+S013,Prawo weta operatora,weto,False,1.8,0.0609,0.0609,0.0,0.887,odseparowane,niska,ciezki,niska,znane
+S013,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0609,0.0609,0.0,0.887,odseparowane,niska,ciezki,niska,znane
+S013,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0609,0.0609,0.0,0.887,odseparowane,niska,ciezki,niska,znane
+S014,Brak HITL,autonomia,False,1.8,0.0803,0.0803,0.0,0.782,odseparowane,niska,ciezki,niska,rzadkie
+S014,HITL informacyjny,monitorowanie,False,1.8,0.0803,0.0803,0.0,0.782,odseparowane,niska,ciezki,niska,rzadkie
+S014,Prawo weta operatora,weto,False,1.8,0.0803,0.0803,0.0,0.782,odseparowane,niska,ciezki,niska,rzadkie
+S014,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0803,0.0803,0.0,0.782,odseparowane,niska,ciezki,niska,rzadkie
+S014,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0803,0.0803,0.0,0.782,odseparowane,niska,ciezki,niska,rzadkie
+S015,Brak HITL,autonomia,False,1.8,0.0828,0.0828,0.0,0.739,odseparowane,niska,ciezki,srednia,znane
+S015,HITL informacyjny,monitorowanie,False,1.8,0.0828,0.0828,0.0,0.739,odseparowane,niska,ciezki,srednia,znane
+S015,Prawo weta operatora,weto,False,1.8,0.0828,0.0828,0.0,0.739,odseparowane,niska,ciezki,srednia,znane
+S015,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0828,0.0828,0.0,0.739,odseparowane,niska,ciezki,srednia,znane
+S015,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0828,0.0828,0.0,0.739,odseparowane,niska,ciezki,srednia,znane
+S016,Brak HITL,autonomia,False,1.8,0.1076,0.1076,0.0,0.634,odseparowane,niska,ciezki,srednia,rzadkie
+S016,HITL informacyjny,monitorowanie,False,1.8,0.1076,0.1076,0.0,0.634,odseparowane,niska,ciezki,srednia,rzadkie
+S016,Prawo weta operatora,weto,False,1.8,0.1076,0.1076,0.0,0.634,odseparowane,niska,ciezki,srednia,rzadkie
+S016,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1076,0.1076,0.0,0.634,odseparowane,niska,ciezki,srednia,rzadkie
+S016,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1076,0.1076,0.0,0.634,odseparowane,niska,ciezki,srednia,rzadkie
+S017,Brak HITL,autonomia,False,1.8,0.1167,0.1167,0.0,0.563,odseparowane,niska,ciezki,wysoka,znane
+S017,HITL informacyjny,monitorowanie,False,1.8,0.1167,0.1167,0.0,0.563,odseparowane,niska,ciezki,wysoka,znane
+S017,Prawo weta operatora,weto,False,1.8,0.1167,0.1167,0.0,0.563,odseparowane,niska,ciezki,wysoka,znane
+S017,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1167,0.1167,0.0,0.563,odseparowane,niska,ciezki,wysoka,znane
+S017,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1167,0.1167,0.0,0.563,odseparowane,niska,ciezki,wysoka,znane
+S018,Brak HITL,autonomia,False,1.8,0.1487,0.1487,0.0,0.458,odseparowane,niska,ciezki,wysoka,rzadkie
+S018,HITL informacyjny,monitorowanie,False,1.8,0.1487,0.1487,0.0,0.458,odseparowane,niska,ciezki,wysoka,rzadkie
+S018,Prawo weta operatora,weto,False,1.8,0.1487,0.1487,0.0,0.458,odseparowane,niska,ciezki,wysoka,rzadkie
+S018,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.1487,0.0763,0.487,0.458,odseparowane,niska,ciezki,wysoka,rzadkie
+S018,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.1487,0.0835,0.4384,0.458,odseparowane,niska,ciezki,wysoka,rzadkie
+S019,Brak HITL,autonomia,False,1.8,0.0806,0.0806,0.0,0.887,odseparowane,srednia,lekki,niska,znane
+S019,HITL informacyjny,monitorowanie,False,1.8,0.0806,0.0806,0.0,0.887,odseparowane,srednia,lekki,niska,znane
+S019,Prawo weta operatora,weto,False,1.8,0.0806,0.0806,0.0,0.887,odseparowane,srednia,lekki,niska,znane
+S019,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0806,0.0806,0.0,0.887,odseparowane,srednia,lekki,niska,znane
+S019,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0806,0.0806,0.0,0.887,odseparowane,srednia,lekki,niska,znane
+S020,Brak HITL,autonomia,False,1.8,0.1041,0.1041,0.0,0.782,odseparowane,srednia,lekki,niska,rzadkie
+S020,HITL informacyjny,monitorowanie,False,1.8,0.1041,0.1041,0.0,0.782,odseparowane,srednia,lekki,niska,rzadkie
+S020,Prawo weta operatora,weto,False,1.8,0.1041,0.1041,0.0,0.782,odseparowane,srednia,lekki,niska,rzadkie
+S020,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1041,0.1041,0.0,0.782,odseparowane,srednia,lekki,niska,rzadkie
+S020,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1041,0.1041,0.0,0.782,odseparowane,srednia,lekki,niska,rzadkie
+S021,Brak HITL,autonomia,False,1.8,0.107,0.107,0.0,0.739,odseparowane,srednia,lekki,srednia,znane
+S021,HITL informacyjny,monitorowanie,False,1.8,0.107,0.107,0.0,0.739,odseparowane,srednia,lekki,srednia,znane
+S021,Prawo weta operatora,weto,False,1.8,0.107,0.107,0.0,0.739,odseparowane,srednia,lekki,srednia,znane
+S021,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.107,0.107,0.0,0.739,odseparowane,srednia,lekki,srednia,znane
+S021,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.107,0.107,0.0,0.739,odseparowane,srednia,lekki,srednia,znane
+S022,Brak HITL,autonomia,False,1.8,0.1356,0.1356,0.0,0.634,odseparowane,srednia,lekki,srednia,rzadkie
+S022,HITL informacyjny,monitorowanie,False,1.8,0.1356,0.1356,0.0,0.634,odseparowane,srednia,lekki,srednia,rzadkie
+S022,Prawo weta operatora,weto,False,1.8,0.1356,0.1356,0.0,0.634,odseparowane,srednia,lekki,srednia,rzadkie
+S022,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1356,0.1356,0.0,0.634,odseparowane,srednia,lekki,srednia,rzadkie
+S022,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1356,0.1356,0.0,0.634,odseparowane,srednia,lekki,srednia,rzadkie
+S023,Brak HITL,autonomia,False,1.8,0.1456,0.1456,0.0,0.563,odseparowane,srednia,lekki,wysoka,znane
+S023,HITL informacyjny,monitorowanie,False,1.8,0.1456,0.1456,0.0,0.563,odseparowane,srednia,lekki,wysoka,znane
+S023,Prawo weta operatora,weto,False,1.8,0.1456,0.1456,0.0,0.563,odseparowane,srednia,lekki,wysoka,znane
+S023,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1456,0.1456,0.0,0.563,odseparowane,srednia,lekki,wysoka,znane
+S023,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1456,0.1456,0.0,0.563,odseparowane,srednia,lekki,wysoka,znane
+S024,Brak HITL,autonomia,False,1.8,0.1796,0.1796,0.0,0.458,odseparowane,srednia,lekki,wysoka,rzadkie
+S024,HITL informacyjny,monitorowanie,False,1.8,0.1796,0.1796,0.0,0.458,odseparowane,srednia,lekki,wysoka,rzadkie
+S024,Prawo weta operatora,weto,False,1.8,0.1796,0.1796,0.0,0.458,odseparowane,srednia,lekki,wysoka,rzadkie
+S024,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.1796,0.0921,0.487,0.458,odseparowane,srednia,lekki,wysoka,rzadkie
+S024,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.1796,0.1009,0.4384,0.458,odseparowane,srednia,lekki,wysoka,rzadkie
+S025,Brak HITL,autonomia,False,1.8,0.0966,0.0966,0.0,0.887,odseparowane,srednia,sredni,niska,znane
+S025,HITL informacyjny,monitorowanie,False,1.8,0.0966,0.0966,0.0,0.887,odseparowane,srednia,sredni,niska,znane
+S025,Prawo weta operatora,weto,False,1.8,0.0966,0.0966,0.0,0.887,odseparowane,srednia,sredni,niska,znane
+S025,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.0966,0.0966,0.0,0.887,odseparowane,srednia,sredni,niska,znane
+S025,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.0966,0.0966,0.0,0.887,odseparowane,srednia,sredni,niska,znane
+S026,Brak HITL,autonomia,False,1.8,0.1247,0.1247,0.0,0.782,odseparowane,srednia,sredni,niska,rzadkie
+S026,HITL informacyjny,monitorowanie,False,1.8,0.1247,0.1247,0.0,0.782,odseparowane,srednia,sredni,niska,rzadkie
+S026,Prawo weta operatora,weto,False,1.8,0.1247,0.1247,0.0,0.782,odseparowane,srednia,sredni,niska,rzadkie
+S026,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1247,0.1247,0.0,0.782,odseparowane,srednia,sredni,niska,rzadkie
+S026,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1247,0.1247,0.0,0.782,odseparowane,srednia,sredni,niska,rzadkie
+S027,Brak HITL,autonomia,False,1.8,0.1283,0.1283,0.0,0.739,odseparowane,srednia,sredni,srednia,znane
+S027,HITL informacyjny,monitorowanie,False,1.8,0.1283,0.1283,0.0,0.739,odseparowane,srednia,sredni,srednia,znane
+S027,Prawo weta operatora,weto,False,1.8,0.1283,0.1283,0.0,0.739,odseparowane,srednia,sredni,srednia,znane
+S027,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1283,0.1283,0.0,0.739,odseparowane,srednia,sredni,srednia,znane
+S027,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1283,0.1283,0.0,0.739,odseparowane,srednia,sredni,srednia,znane
+S028,Brak HITL,autonomia,False,1.8,0.1625,0.1625,0.0,0.634,odseparowane,srednia,sredni,srednia,rzadkie
+S028,HITL informacyjny,monitorowanie,False,1.8,0.1625,0.1625,0.0,0.634,odseparowane,srednia,sredni,srednia,rzadkie
+S028,Prawo weta operatora,weto,False,1.8,0.1625,0.1625,0.0,0.634,odseparowane,srednia,sredni,srednia,rzadkie
+S028,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1625,0.1625,0.0,0.634,odseparowane,srednia,sredni,srednia,rzadkie
+S028,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1625,0.1625,0.0,0.634,odseparowane,srednia,sredni,srednia,rzadkie
+S029,Brak HITL,autonomia,False,1.8,0.1745,0.1745,0.0,0.563,odseparowane,srednia,sredni,wysoka,znane
+S029,HITL informacyjny,monitorowanie,False,1.8,0.1745,0.1745,0.0,0.563,odseparowane,srednia,sredni,wysoka,znane
+S029,Prawo weta operatora,weto,False,1.8,0.1745,0.1745,0.0,0.563,odseparowane,srednia,sredni,wysoka,znane
+S029,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1745,0.1745,0.0,0.563,odseparowane,srednia,sredni,wysoka,znane
+S029,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1745,0.1745,0.0,0.563,odseparowane,srednia,sredni,wysoka,znane
+S030,Brak HITL,autonomia,False,1.8,0.2152,0.2152,0.0,0.458,odseparowane,srednia,sredni,wysoka,rzadkie
+S030,HITL informacyjny,monitorowanie,False,1.8,0.2152,0.2152,0.0,0.458,odseparowane,srednia,sredni,wysoka,rzadkie
+S030,Prawo weta operatora,weto,False,1.8,0.2152,0.2152,0.0,0.458,odseparowane,srednia,sredni,wysoka,rzadkie
+S030,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2152,0.1104,0.487,0.458,odseparowane,srednia,sredni,wysoka,rzadkie
+S030,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.2152,0.1209,0.4384,0.458,odseparowane,srednia,sredni,wysoka,rzadkie
+S031,Brak HITL,autonomia,False,1.8,0.1137,0.1137,0.0,0.887,odseparowane,srednia,ciezki,niska,znane
+S031,HITL informacyjny,monitorowanie,False,1.8,0.1137,0.1137,0.0,0.887,odseparowane,srednia,ciezki,niska,znane
+S031,Prawo weta operatora,weto,False,1.8,0.1137,0.1137,0.0,0.887,odseparowane,srednia,ciezki,niska,znane
+S031,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1137,0.1137,0.0,0.887,odseparowane,srednia,ciezki,niska,znane
+S031,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1137,0.1137,0.0,0.887,odseparowane,srednia,ciezki,niska,znane
+S032,Brak HITL,autonomia,False,1.8,0.1467,0.1467,0.0,0.782,odseparowane,srednia,ciezki,niska,rzadkie
+S032,HITL informacyjny,monitorowanie,False,1.8,0.1467,0.1467,0.0,0.782,odseparowane,srednia,ciezki,niska,rzadkie
+S032,Prawo weta operatora,weto,False,1.8,0.1467,0.1467,0.0,0.782,odseparowane,srednia,ciezki,niska,rzadkie
+S032,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1467,0.1467,0.0,0.782,odseparowane,srednia,ciezki,niska,rzadkie
+S032,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1467,0.1467,0.0,0.782,odseparowane,srednia,ciezki,niska,rzadkie
+S033,Brak HITL,autonomia,False,1.8,0.1509,0.1509,0.0,0.739,odseparowane,srednia,ciezki,srednia,znane
+S033,HITL informacyjny,monitorowanie,False,1.8,0.1509,0.1509,0.0,0.739,odseparowane,srednia,ciezki,srednia,znane
+S033,Prawo weta operatora,weto,False,1.8,0.1509,0.1509,0.0,0.739,odseparowane,srednia,ciezki,srednia,znane
+S033,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1509,0.1509,0.0,0.739,odseparowane,srednia,ciezki,srednia,znane
+S033,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1509,0.1509,0.0,0.739,odseparowane,srednia,ciezki,srednia,znane
+S034,Brak HITL,autonomia,False,1.8,0.1911,0.1911,0.0,0.634,odseparowane,srednia,ciezki,srednia,rzadkie
+S034,HITL informacyjny,monitorowanie,False,1.8,0.1911,0.1911,0.0,0.634,odseparowane,srednia,ciezki,srednia,rzadkie
+S034,Prawo weta operatora,weto,False,1.8,0.1911,0.1911,0.0,0.634,odseparowane,srednia,ciezki,srednia,rzadkie
+S034,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1911,0.1911,0.0,0.634,odseparowane,srednia,ciezki,srednia,rzadkie
+S034,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1911,0.1911,0.0,0.634,odseparowane,srednia,ciezki,srednia,rzadkie
+S035,Brak HITL,autonomia,False,1.8,0.2053,0.2053,0.0,0.563,odseparowane,srednia,ciezki,wysoka,znane
+S035,HITL informacyjny,monitorowanie,False,1.8,0.2053,0.2053,0.0,0.563,odseparowane,srednia,ciezki,wysoka,znane
+S035,Prawo weta operatora,weto,False,1.8,0.2053,0.2053,0.0,0.563,odseparowane,srednia,ciezki,wysoka,znane
+S035,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2053,0.2053,0.0,0.563,odseparowane,srednia,ciezki,wysoka,znane
+S035,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2053,0.2053,0.0,0.563,odseparowane,srednia,ciezki,wysoka,znane
+S036,Brak HITL,autonomia,False,1.8,0.2532,0.2532,0.0,0.458,odseparowane,srednia,ciezki,wysoka,rzadkie
+S036,HITL informacyjny,monitorowanie,False,1.8,0.2532,0.2532,0.0,0.458,odseparowane,srednia,ciezki,wysoka,rzadkie
+S036,Prawo weta operatora,weto,False,1.8,0.2532,0.2532,0.0,0.458,odseparowane,srednia,ciezki,wysoka,rzadkie
+S036,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2532,0.1299,0.487,0.458,odseparowane,srednia,ciezki,wysoka,rzadkie
+S036,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.2532,0.1422,0.4384,0.458,odseparowane,srednia,ciezki,wysoka,rzadkie
+S037,Brak HITL,autonomia,False,1.8,0.1493,0.1493,0.0,0.887,odseparowane,wysoka,lekki,niska,znane
+S037,HITL informacyjny,monitorowanie,False,1.8,0.1493,0.1493,0.0,0.887,odseparowane,wysoka,lekki,niska,znane
+S037,Prawo weta operatora,weto,False,1.8,0.1493,0.1493,0.0,0.887,odseparowane,wysoka,lekki,niska,znane
+S037,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1493,0.1493,0.0,0.887,odseparowane,wysoka,lekki,niska,znane
+S037,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1493,0.1493,0.0,0.887,odseparowane,wysoka,lekki,niska,znane
+S038,Brak HITL,autonomia,False,1.8,0.1873,0.1873,0.0,0.782,odseparowane,wysoka,lekki,niska,rzadkie
+S038,HITL informacyjny,monitorowanie,False,1.8,0.1873,0.1873,0.0,0.782,odseparowane,wysoka,lekki,niska,rzadkie
+S038,Prawo weta operatora,weto,False,1.8,0.1873,0.1873,0.0,0.782,odseparowane,wysoka,lekki,niska,rzadkie
+S038,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1873,0.1873,0.0,0.782,odseparowane,wysoka,lekki,niska,rzadkie
+S038,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1873,0.1873,0.0,0.782,odseparowane,wysoka,lekki,niska,rzadkie
+S039,Brak HITL,autonomia,False,1.8,0.192,0.192,0.0,0.739,odseparowane,wysoka,lekki,srednia,znane
+S039,HITL informacyjny,monitorowanie,False,1.8,0.192,0.192,0.0,0.739,odseparowane,wysoka,lekki,srednia,znane
+S039,Prawo weta operatora,weto,False,1.8,0.192,0.192,0.0,0.739,odseparowane,wysoka,lekki,srednia,znane
+S039,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.192,0.192,0.0,0.739,odseparowane,wysoka,lekki,srednia,znane
+S039,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.192,0.192,0.0,0.739,odseparowane,wysoka,lekki,srednia,znane
+S040,Brak HITL,autonomia,False,1.8,0.2351,0.2351,0.0,0.634,odseparowane,wysoka,lekki,srednia,rzadkie
+S040,HITL informacyjny,monitorowanie,False,1.8,0.2351,0.2351,0.0,0.634,odseparowane,wysoka,lekki,srednia,rzadkie
+S040,Prawo weta operatora,weto,False,1.8,0.2351,0.2351,0.0,0.634,odseparowane,wysoka,lekki,srednia,rzadkie
+S040,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2351,0.2351,0.0,0.634,odseparowane,wysoka,lekki,srednia,rzadkie
+S040,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2351,0.2351,0.0,0.634,odseparowane,wysoka,lekki,srednia,rzadkie
+S041,Brak HITL,autonomia,False,1.8,0.2497,0.2497,0.0,0.563,odseparowane,wysoka,lekki,wysoka,znane
+S041,HITL informacyjny,monitorowanie,False,1.8,0.2497,0.2497,0.0,0.563,odseparowane,wysoka,lekki,wysoka,znane
+S041,Prawo weta operatora,weto,False,1.8,0.2497,0.2497,0.0,0.563,odseparowane,wysoka,lekki,wysoka,znane
+S041,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2497,0.2497,0.0,0.563,odseparowane,wysoka,lekki,wysoka,znane
+S041,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2497,0.2497,0.0,0.563,odseparowane,wysoka,lekki,wysoka,znane
+S042,Brak HITL,autonomia,False,1.8,0.2963,0.2963,0.0,0.458,odseparowane,wysoka,lekki,wysoka,rzadkie
+S042,HITL informacyjny,monitorowanie,False,1.8,0.2963,0.2963,0.0,0.458,odseparowane,wysoka,lekki,wysoka,rzadkie
+S042,Prawo weta operatora,weto,False,1.8,0.2963,0.2963,0.0,0.458,odseparowane,wysoka,lekki,wysoka,rzadkie
+S042,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2963,0.152,0.487,0.458,odseparowane,wysoka,lekki,wysoka,rzadkie
+S042,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.2963,0.1664,0.4384,0.458,odseparowane,wysoka,lekki,wysoka,rzadkie
+S043,Brak HITL,autonomia,False,1.8,0.1733,0.1733,0.0,0.887,odseparowane,wysoka,sredni,niska,znane
+S043,HITL informacyjny,monitorowanie,False,1.8,0.1733,0.1733,0.0,0.887,odseparowane,wysoka,sredni,niska,znane
+S043,Prawo weta operatora,weto,False,1.8,0.1733,0.1733,0.0,0.887,odseparowane,wysoka,sredni,niska,znane
+S043,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1733,0.1733,0.0,0.887,odseparowane,wysoka,sredni,niska,znane
+S043,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1733,0.1733,0.0,0.887,odseparowane,wysoka,sredni,niska,znane
+S044,Brak HITL,autonomia,False,1.8,0.2174,0.2174,0.0,0.782,odseparowane,wysoka,sredni,niska,rzadkie
+S044,HITL informacyjny,monitorowanie,False,1.8,0.2174,0.2174,0.0,0.782,odseparowane,wysoka,sredni,niska,rzadkie
+S044,Prawo weta operatora,weto,False,1.8,0.2174,0.2174,0.0,0.782,odseparowane,wysoka,sredni,niska,rzadkie
+S044,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2174,0.2174,0.0,0.782,odseparowane,wysoka,sredni,niska,rzadkie
+S044,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2174,0.2174,0.0,0.782,odseparowane,wysoka,sredni,niska,rzadkie
+S045,Brak HITL,autonomia,False,1.8,0.2228,0.2228,0.0,0.739,odseparowane,wysoka,sredni,srednia,znane
+S045,HITL informacyjny,monitorowanie,False,1.8,0.2228,0.2228,0.0,0.739,odseparowane,wysoka,sredni,srednia,znane
+S045,Prawo weta operatora,weto,False,1.8,0.2228,0.2228,0.0,0.739,odseparowane,wysoka,sredni,srednia,znane
+S045,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2228,0.2228,0.0,0.739,odseparowane,wysoka,sredni,srednia,znane
+S045,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2228,0.2228,0.0,0.739,odseparowane,wysoka,sredni,srednia,znane
+S046,Brak HITL,autonomia,False,1.8,0.2729,0.2729,0.0,0.634,odseparowane,wysoka,sredni,srednia,rzadkie
+S046,HITL informacyjny,monitorowanie,False,1.8,0.2729,0.2729,0.0,0.634,odseparowane,wysoka,sredni,srednia,rzadkie
+S046,Prawo weta operatora,weto,False,1.8,0.2729,0.2729,0.0,0.634,odseparowane,wysoka,sredni,srednia,rzadkie
+S046,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2729,0.2729,0.0,0.634,odseparowane,wysoka,sredni,srednia,rzadkie
+S046,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2729,0.2729,0.0,0.634,odseparowane,wysoka,sredni,srednia,rzadkie
+S047,Brak HITL,autonomia,False,1.8,0.2898,0.2898,0.0,0.563,odseparowane,wysoka,sredni,wysoka,znane
+S047,HITL informacyjny,monitorowanie,False,1.8,0.2898,0.2898,0.0,0.563,odseparowane,wysoka,sredni,wysoka,znane
+S047,Prawo weta operatora,weto,False,1.8,0.2898,0.2898,0.0,0.563,odseparowane,wysoka,sredni,wysoka,znane
+S047,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2898,0.2898,0.0,0.563,odseparowane,wysoka,sredni,wysoka,znane
+S047,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2898,0.2898,0.0,0.563,odseparowane,wysoka,sredni,wysoka,znane
+S048,Brak HITL,autonomia,False,1.8,0.3439,0.3439,0.0,0.458,odseparowane,wysoka,sredni,wysoka,rzadkie
+S048,HITL informacyjny,monitorowanie,False,1.8,0.3439,0.3439,0.0,0.458,odseparowane,wysoka,sredni,wysoka,rzadkie
+S048,Prawo weta operatora,weto,False,1.8,0.3439,0.3439,0.0,0.458,odseparowane,wysoka,sredni,wysoka,rzadkie
+S048,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.3439,0.1764,0.487,0.458,odseparowane,wysoka,sredni,wysoka,rzadkie
+S048,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.3439,0.1931,0.4384,0.458,odseparowane,wysoka,sredni,wysoka,rzadkie
+S049,Brak HITL,autonomia,False,1.8,0.1989,0.1989,0.0,0.887,odseparowane,wysoka,ciezki,niska,znane
+S049,HITL informacyjny,monitorowanie,False,1.8,0.1989,0.1989,0.0,0.887,odseparowane,wysoka,ciezki,niska,znane
+S049,Prawo weta operatora,weto,False,1.8,0.1989,0.1989,0.0,0.887,odseparowane,wysoka,ciezki,niska,znane
+S049,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1989,0.1989,0.0,0.887,odseparowane,wysoka,ciezki,niska,znane
+S049,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1989,0.1989,0.0,0.887,odseparowane,wysoka,ciezki,niska,znane
+S050,Brak HITL,autonomia,False,1.8,0.2495,0.2495,0.0,0.782,odseparowane,wysoka,ciezki,niska,rzadkie
+S050,HITL informacyjny,monitorowanie,False,1.8,0.2495,0.2495,0.0,0.782,odseparowane,wysoka,ciezki,niska,rzadkie
+S050,Prawo weta operatora,weto,False,1.8,0.2495,0.2495,0.0,0.782,odseparowane,wysoka,ciezki,niska,rzadkie
+S050,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2495,0.2495,0.0,0.782,odseparowane,wysoka,ciezki,niska,rzadkie
+S050,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2495,0.2495,0.0,0.782,odseparowane,wysoka,ciezki,niska,rzadkie
+S051,Brak HITL,autonomia,False,1.8,0.2557,0.2557,0.0,0.739,odseparowane,wysoka,ciezki,srednia,znane
+S051,HITL informacyjny,monitorowanie,False,1.8,0.2557,0.2557,0.0,0.739,odseparowane,wysoka,ciezki,srednia,znane
+S051,Prawo weta operatora,weto,False,1.8,0.2557,0.2557,0.0,0.739,odseparowane,wysoka,ciezki,srednia,znane
+S051,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2557,0.2557,0.0,0.739,odseparowane,wysoka,ciezki,srednia,znane
+S051,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2557,0.2557,0.0,0.739,odseparowane,wysoka,ciezki,srednia,znane
+S052,Brak HITL,autonomia,False,1.8,0.3131,0.3131,0.0,0.634,odseparowane,wysoka,ciezki,srednia,rzadkie
+S052,HITL informacyjny,monitorowanie,False,1.8,0.3131,0.3131,0.0,0.634,odseparowane,wysoka,ciezki,srednia,rzadkie
+S052,Prawo weta operatora,weto,False,1.8,0.3131,0.3131,0.0,0.634,odseparowane,wysoka,ciezki,srednia,rzadkie
+S052,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3131,0.3131,0.0,0.634,odseparowane,wysoka,ciezki,srednia,rzadkie
+S052,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3131,0.3131,0.0,0.634,odseparowane,wysoka,ciezki,srednia,rzadkie
+S053,Brak HITL,autonomia,False,1.8,0.3325,0.3325,0.0,0.563,odseparowane,wysoka,ciezki,wysoka,znane
+S053,HITL informacyjny,monitorowanie,False,1.8,0.3325,0.3325,0.0,0.563,odseparowane,wysoka,ciezki,wysoka,znane
+S053,Prawo weta operatora,weto,False,1.8,0.3325,0.3325,0.0,0.563,odseparowane,wysoka,ciezki,wysoka,znane
+S053,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3325,0.3325,0.0,0.563,odseparowane,wysoka,ciezki,wysoka,znane
+S053,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3325,0.3325,0.0,0.563,odseparowane,wysoka,ciezki,wysoka,znane
+S054,Brak HITL,autonomia,False,1.8,0.3946,0.3946,0.0,0.458,odseparowane,wysoka,ciezki,wysoka,rzadkie
+S054,HITL informacyjny,monitorowanie,False,1.8,0.3946,0.3946,0.0,0.458,odseparowane,wysoka,ciezki,wysoka,rzadkie
+S054,Prawo weta operatora,weto,False,1.8,0.3946,0.3946,0.0,0.458,odseparowane,wysoka,ciezki,wysoka,rzadkie
+S054,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.3946,0.2024,0.487,0.458,odseparowane,wysoka,ciezki,wysoka,rzadkie
+S054,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.3946,0.2216,0.4384,0.458,odseparowane,wysoka,ciezki,wysoka,rzadkie
+S055,Brak HITL,autonomia,False,1.8,0.1247,0.1247,0.0,0.838,wspoldzielone,niska,lekki,niska,znane
+S055,HITL informacyjny,monitorowanie,False,1.8,0.1247,0.1247,0.0,0.838,wspoldzielone,niska,lekki,niska,znane
+S055,Prawo weta operatora,weto,False,1.8,0.1247,0.1247,0.0,0.838,wspoldzielone,niska,lekki,niska,znane
+S055,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1247,0.1247,0.0,0.838,wspoldzielone,niska,lekki,niska,znane
+S055,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1247,0.1247,0.0,0.838,wspoldzielone,niska,lekki,niska,znane
+S056,Brak HITL,autonomia,False,1.8,0.1548,0.1548,0.0,0.733,wspoldzielone,niska,lekki,niska,rzadkie
+S056,HITL informacyjny,monitorowanie,False,1.8,0.1548,0.1548,0.0,0.733,wspoldzielone,niska,lekki,niska,rzadkie
+S056,Prawo weta operatora,weto,False,1.8,0.1548,0.1548,0.0,0.733,wspoldzielone,niska,lekki,niska,rzadkie
+S056,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1548,0.1548,0.0,0.733,wspoldzielone,niska,lekki,niska,rzadkie
+S056,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1548,0.1548,0.0,0.733,wspoldzielone,niska,lekki,niska,rzadkie
+S057,Brak HITL,autonomia,False,1.8,0.1585,0.1585,0.0,0.689,wspoldzielone,niska,lekki,srednia,znane
+S057,HITL informacyjny,monitorowanie,False,1.8,0.1585,0.1585,0.0,0.689,wspoldzielone,niska,lekki,srednia,znane
+S057,Prawo weta operatora,weto,False,1.8,0.1585,0.1585,0.0,0.689,wspoldzielone,niska,lekki,srednia,znane
+S057,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1585,0.1585,0.0,0.689,wspoldzielone,niska,lekki,srednia,znane
+S057,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1585,0.1585,0.0,0.689,wspoldzielone,niska,lekki,srednia,znane
+S058,Brak HITL,autonomia,False,1.8,0.192,0.192,0.0,0.584,wspoldzielone,niska,lekki,srednia,rzadkie
+S058,HITL informacyjny,monitorowanie,False,1.8,0.192,0.192,0.0,0.584,wspoldzielone,niska,lekki,srednia,rzadkie
+S058,Prawo weta operatora,weto,False,1.8,0.192,0.192,0.0,0.584,wspoldzielone,niska,lekki,srednia,rzadkie
+S058,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.192,0.192,0.0,0.584,wspoldzielone,niska,lekki,srednia,rzadkie
+S058,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.192,0.192,0.0,0.584,wspoldzielone,niska,lekki,srednia,rzadkie
+S059,Brak HITL,autonomia,False,1.8,0.2031,0.2031,0.0,0.513,wspoldzielone,niska,lekki,wysoka,znane
+S059,HITL informacyjny,monitorowanie,False,1.8,0.2031,0.2031,0.0,0.513,wspoldzielone,niska,lekki,wysoka,znane
+S059,Prawo weta operatora,weto,False,1.8,0.2031,0.2031,0.0,0.513,wspoldzielone,niska,lekki,wysoka,znane
+S059,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2031,0.1042,0.487,0.513,wspoldzielone,niska,lekki,wysoka,znane
+S059,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2031,0.2031,0.0,0.513,wspoldzielone,niska,lekki,wysoka,znane
+S060,Brak HITL,autonomia,False,1.8,0.2382,0.2382,0.0,0.408,wspoldzielone,niska,lekki,wysoka,rzadkie
+S060,HITL informacyjny,monitorowanie,False,1.8,0.2382,0.2382,0.0,0.408,wspoldzielone,niska,lekki,wysoka,rzadkie
+S060,Prawo weta operatora,weto,False,1.8,0.2382,0.2382,0.0,0.408,wspoldzielone,niska,lekki,wysoka,rzadkie
+S060,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2382,0.1222,0.487,0.408,wspoldzielone,niska,lekki,wysoka,rzadkie
+S060,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.2382,0.1338,0.4384,0.408,wspoldzielone,niska,lekki,wysoka,rzadkie
+S061,Brak HITL,autonomia,False,1.8,0.1514,0.1514,0.0,0.838,wspoldzielone,niska,sredni,niska,znane
+S061,HITL informacyjny,monitorowanie,False,1.8,0.1514,0.1514,0.0,0.838,wspoldzielone,niska,sredni,niska,znane
+S061,Prawo weta operatora,weto,False,1.8,0.1514,0.1514,0.0,0.838,wspoldzielone,niska,sredni,niska,znane
+S061,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1514,0.1514,0.0,0.838,wspoldzielone,niska,sredni,niska,znane
+S061,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1514,0.1514,0.0,0.838,wspoldzielone,niska,sredni,niska,znane
+S062,Brak HITL,autonomia,False,1.8,0.1881,0.1881,0.0,0.733,wspoldzielone,niska,sredni,niska,rzadkie
+S062,HITL informacyjny,monitorowanie,False,1.8,0.1881,0.1881,0.0,0.733,wspoldzielone,niska,sredni,niska,rzadkie
+S062,Prawo weta operatora,weto,False,1.8,0.1881,0.1881,0.0,0.733,wspoldzielone,niska,sredni,niska,rzadkie
+S062,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1881,0.1881,0.0,0.733,wspoldzielone,niska,sredni,niska,rzadkie
+S062,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1881,0.1881,0.0,0.733,wspoldzielone,niska,sredni,niska,rzadkie
+S063,Brak HITL,autonomia,False,1.8,0.1925,0.1925,0.0,0.689,wspoldzielone,niska,sredni,srednia,znane
+S063,HITL informacyjny,monitorowanie,False,1.8,0.1925,0.1925,0.0,0.689,wspoldzielone,niska,sredni,srednia,znane
+S063,Prawo weta operatora,weto,False,1.8,0.1925,0.1925,0.0,0.689,wspoldzielone,niska,sredni,srednia,znane
+S063,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.1925,0.1925,0.0,0.689,wspoldzielone,niska,sredni,srednia,znane
+S063,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.1925,0.1925,0.0,0.689,wspoldzielone,niska,sredni,srednia,znane
+S064,Brak HITL,autonomia,False,1.8,0.2332,0.2332,0.0,0.584,wspoldzielone,niska,sredni,srednia,rzadkie
+S064,HITL informacyjny,monitorowanie,False,1.8,0.2332,0.2332,0.0,0.584,wspoldzielone,niska,sredni,srednia,rzadkie
+S064,Prawo weta operatora,weto,False,1.8,0.2332,0.2332,0.0,0.584,wspoldzielone,niska,sredni,srednia,rzadkie
+S064,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2332,0.2332,0.0,0.584,wspoldzielone,niska,sredni,srednia,rzadkie
+S064,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2332,0.2332,0.0,0.584,wspoldzielone,niska,sredni,srednia,rzadkie
+S065,Brak HITL,autonomia,False,1.8,0.2467,0.2467,0.0,0.513,wspoldzielone,niska,sredni,wysoka,znane
+S065,HITL informacyjny,monitorowanie,False,1.8,0.2467,0.2467,0.0,0.513,wspoldzielone,niska,sredni,wysoka,znane
+S065,Prawo weta operatora,weto,False,1.8,0.2467,0.2467,0.0,0.513,wspoldzielone,niska,sredni,wysoka,znane
+S065,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2467,0.1266,0.487,0.513,wspoldzielone,niska,sredni,wysoka,znane
+S065,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2467,0.2467,0.0,0.513,wspoldzielone,niska,sredni,wysoka,znane
+S066,Brak HITL,autonomia,False,1.8,0.2894,0.2894,0.0,0.408,wspoldzielone,niska,sredni,wysoka,rzadkie
+S066,HITL informacyjny,monitorowanie,False,1.8,0.2894,0.2894,0.0,0.408,wspoldzielone,niska,sredni,wysoka,rzadkie
+S066,Prawo weta operatora,weto,False,1.8,0.2894,0.2894,0.0,0.408,wspoldzielone,niska,sredni,wysoka,rzadkie
+S066,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2894,0.1485,0.487,0.408,wspoldzielone,niska,sredni,wysoka,rzadkie
+S066,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.2894,0.1625,0.4384,0.408,wspoldzielone,niska,sredni,wysoka,rzadkie
+S067,Brak HITL,autonomia,False,1.8,0.18,0.18,0.0,0.838,wspoldzielone,niska,ciezki,niska,znane
+S067,HITL informacyjny,monitorowanie,False,1.8,0.18,0.18,0.0,0.838,wspoldzielone,niska,ciezki,niska,znane
+S067,Prawo weta operatora,weto,False,1.8,0.18,0.18,0.0,0.838,wspoldzielone,niska,ciezki,niska,znane
+S067,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.18,0.18,0.0,0.838,wspoldzielone,niska,ciezki,niska,znane
+S067,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.18,0.18,0.0,0.838,wspoldzielone,niska,ciezki,niska,znane
+S068,Brak HITL,autonomia,False,1.8,0.2236,0.2236,0.0,0.733,wspoldzielone,niska,ciezki,niska,rzadkie
+S068,HITL informacyjny,monitorowanie,False,1.8,0.2236,0.2236,0.0,0.733,wspoldzielone,niska,ciezki,niska,rzadkie
+S068,Prawo weta operatora,weto,False,1.8,0.2236,0.2236,0.0,0.733,wspoldzielone,niska,ciezki,niska,rzadkie
+S068,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2236,0.2236,0.0,0.733,wspoldzielone,niska,ciezki,niska,rzadkie
+S068,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2236,0.2236,0.0,0.733,wspoldzielone,niska,ciezki,niska,rzadkie
+S069,Brak HITL,autonomia,False,1.8,0.2288,0.2288,0.0,0.689,wspoldzielone,niska,ciezki,srednia,znane
+S069,HITL informacyjny,monitorowanie,False,1.8,0.2288,0.2288,0.0,0.689,wspoldzielone,niska,ciezki,srednia,znane
+S069,Prawo weta operatora,weto,False,1.8,0.2288,0.2288,0.0,0.689,wspoldzielone,niska,ciezki,srednia,znane
+S069,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2288,0.2288,0.0,0.689,wspoldzielone,niska,ciezki,srednia,znane
+S069,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2288,0.2288,0.0,0.689,wspoldzielone,niska,ciezki,srednia,znane
+S070,Brak HITL,autonomia,False,1.8,0.2772,0.2772,0.0,0.584,wspoldzielone,niska,ciezki,srednia,rzadkie
+S070,HITL informacyjny,monitorowanie,False,1.8,0.2772,0.2772,0.0,0.584,wspoldzielone,niska,ciezki,srednia,rzadkie
+S070,Prawo weta operatora,weto,False,1.8,0.2772,0.2772,0.0,0.584,wspoldzielone,niska,ciezki,srednia,rzadkie
+S070,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2772,0.2772,0.0,0.584,wspoldzielone,niska,ciezki,srednia,rzadkie
+S070,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2772,0.2772,0.0,0.584,wspoldzielone,niska,ciezki,srednia,rzadkie
+S071,Brak HITL,autonomia,False,1.8,0.2933,0.2933,0.0,0.513,wspoldzielone,niska,ciezki,wysoka,znane
+S071,HITL informacyjny,monitorowanie,False,1.8,0.2933,0.2933,0.0,0.513,wspoldzielone,niska,ciezki,wysoka,znane
+S071,Prawo weta operatora,weto,False,1.8,0.2933,0.2933,0.0,0.513,wspoldzielone,niska,ciezki,wysoka,znane
+S071,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.2933,0.1505,0.487,0.513,wspoldzielone,niska,ciezki,wysoka,znane
+S071,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2933,0.2933,0.0,0.513,wspoldzielone,niska,ciezki,wysoka,znane
+S072,Brak HITL,autonomia,False,1.8,0.344,0.344,0.0,0.408,wspoldzielone,niska,ciezki,wysoka,rzadkie
+S072,HITL informacyjny,monitorowanie,False,1.8,0.344,0.344,0.0,0.408,wspoldzielone,niska,ciezki,wysoka,rzadkie
+S072,Prawo weta operatora,weto,False,1.8,0.344,0.344,0.0,0.408,wspoldzielone,niska,ciezki,wysoka,rzadkie
+S072,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.344,0.1765,0.487,0.408,wspoldzielone,niska,ciezki,wysoka,rzadkie
+S072,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.344,0.1932,0.4384,0.408,wspoldzielone,niska,ciezki,wysoka,rzadkie
+S073,Brak HITL,autonomia,False,1.8,0.2198,0.2198,0.0,0.838,wspoldzielone,srednia,lekki,niska,znane
+S073,HITL informacyjny,monitorowanie,False,1.8,0.2198,0.2198,0.0,0.838,wspoldzielone,srednia,lekki,niska,znane
+S073,Prawo weta operatora,weto,False,1.8,0.2198,0.2198,0.0,0.838,wspoldzielone,srednia,lekki,niska,znane
+S073,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2198,0.2198,0.0,0.838,wspoldzielone,srednia,lekki,niska,znane
+S073,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2198,0.2198,0.0,0.838,wspoldzielone,srednia,lekki,niska,znane
+S074,Brak HITL,autonomia,False,1.8,0.263,0.263,0.0,0.733,wspoldzielone,srednia,lekki,niska,rzadkie
+S074,HITL informacyjny,monitorowanie,False,1.8,0.263,0.263,0.0,0.733,wspoldzielone,srednia,lekki,niska,rzadkie
+S074,Prawo weta operatora,weto,False,1.8,0.263,0.263,0.0,0.733,wspoldzielone,srednia,lekki,niska,rzadkie
+S074,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.263,0.263,0.0,0.733,wspoldzielone,srednia,lekki,niska,rzadkie
+S074,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.263,0.263,0.0,0.733,wspoldzielone,srednia,lekki,niska,rzadkie
+S075,Brak HITL,autonomia,False,1.8,0.268,0.268,0.0,0.689,wspoldzielone,srednia,lekki,srednia,znane
+S075,HITL informacyjny,monitorowanie,False,1.8,0.268,0.268,0.0,0.689,wspoldzielone,srednia,lekki,srednia,znane
+S075,Prawo weta operatora,weto,False,1.8,0.268,0.268,0.0,0.689,wspoldzielone,srednia,lekki,srednia,znane
+S075,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.268,0.268,0.0,0.689,wspoldzielone,srednia,lekki,srednia,znane
+S075,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.268,0.268,0.0,0.689,wspoldzielone,srednia,lekki,srednia,znane
+S076,Brak HITL,autonomia,False,1.8,0.3121,0.3121,0.0,0.584,wspoldzielone,srednia,lekki,srednia,rzadkie
+S076,HITL informacyjny,monitorowanie,False,1.8,0.3121,0.3121,0.0,0.584,wspoldzielone,srednia,lekki,srednia,rzadkie
+S076,Prawo weta operatora,weto,False,1.8,0.3121,0.3121,0.0,0.584,wspoldzielone,srednia,lekki,srednia,rzadkie
+S076,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3121,0.3121,0.0,0.584,wspoldzielone,srednia,lekki,srednia,rzadkie
+S076,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3121,0.3121,0.0,0.584,wspoldzielone,srednia,lekki,srednia,rzadkie
+S077,Brak HITL,autonomia,False,1.8,0.326,0.326,0.0,0.513,wspoldzielone,srednia,lekki,wysoka,znane
+S077,HITL informacyjny,monitorowanie,False,1.8,0.326,0.326,0.0,0.513,wspoldzielone,srednia,lekki,wysoka,znane
+S077,Prawo weta operatora,weto,False,1.8,0.326,0.326,0.0,0.513,wspoldzielone,srednia,lekki,wysoka,znane
+S077,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.326,0.1672,0.487,0.513,wspoldzielone,srednia,lekki,wysoka,znane
+S077,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.326,0.326,0.0,0.513,wspoldzielone,srednia,lekki,wysoka,znane
+S078,Brak HITL,autonomia,False,1.8,0.3676,0.3676,0.0,0.408,wspoldzielone,srednia,lekki,wysoka,rzadkie
+S078,HITL informacyjny,monitorowanie,False,1.8,0.3676,0.3676,0.0,0.408,wspoldzielone,srednia,lekki,wysoka,rzadkie
+S078,Prawo weta operatora,weto,False,1.8,0.3676,0.3676,0.0,0.408,wspoldzielone,srednia,lekki,wysoka,rzadkie
+S078,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.3676,0.1886,0.487,0.408,wspoldzielone,srednia,lekki,wysoka,rzadkie
+S078,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.3676,0.2064,0.4384,0.408,wspoldzielone,srednia,lekki,wysoka,rzadkie
+S079,Brak HITL,autonomia,False,1.8,0.2574,0.2574,0.0,0.838,wspoldzielone,srednia,sredni,niska,znane
+S079,HITL informacyjny,monitorowanie,False,1.8,0.2574,0.2574,0.0,0.838,wspoldzielone,srednia,sredni,niska,znane
+S079,Prawo weta operatora,weto,False,1.8,0.2574,0.2574,0.0,0.838,wspoldzielone,srednia,sredni,niska,znane
+S079,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2574,0.2574,0.0,0.838,wspoldzielone,srednia,sredni,niska,znane
+S079,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2574,0.2574,0.0,0.838,wspoldzielone,srednia,sredni,niska,znane
+S080,Brak HITL,autonomia,False,1.8,0.308,0.308,0.0,0.733,wspoldzielone,srednia,sredni,niska,rzadkie
+S080,HITL informacyjny,monitorowanie,False,1.8,0.308,0.308,0.0,0.733,wspoldzielone,srednia,sredni,niska,rzadkie
+S080,Prawo weta operatora,weto,False,1.8,0.308,0.308,0.0,0.733,wspoldzielone,srednia,sredni,niska,rzadkie
+S080,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.308,0.308,0.0,0.733,wspoldzielone,srednia,sredni,niska,rzadkie
+S080,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.308,0.308,0.0,0.733,wspoldzielone,srednia,sredni,niska,rzadkie
+S081,Brak HITL,autonomia,False,1.8,0.3139,0.3139,0.0,0.689,wspoldzielone,srednia,sredni,srednia,znane
+S081,HITL informacyjny,monitorowanie,False,1.8,0.3139,0.3139,0.0,0.689,wspoldzielone,srednia,sredni,srednia,znane
+S081,Prawo weta operatora,weto,False,1.8,0.3139,0.3139,0.0,0.689,wspoldzielone,srednia,sredni,srednia,znane
+S081,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3139,0.3139,0.0,0.689,wspoldzielone,srednia,sredni,srednia,znane
+S081,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3139,0.3139,0.0,0.689,wspoldzielone,srednia,sredni,srednia,znane
+S082,Brak HITL,autonomia,False,1.8,0.3655,0.3655,0.0,0.584,wspoldzielone,srednia,sredni,srednia,rzadkie
+S082,HITL informacyjny,monitorowanie,False,1.8,0.3655,0.3655,0.0,0.584,wspoldzielone,srednia,sredni,srednia,rzadkie
+S082,Prawo weta operatora,weto,False,1.8,0.3655,0.3655,0.0,0.584,wspoldzielone,srednia,sredni,srednia,rzadkie
+S082,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3655,0.3655,0.0,0.584,wspoldzielone,srednia,sredni,srednia,rzadkie
+S082,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3655,0.3655,0.0,0.584,wspoldzielone,srednia,sredni,srednia,rzadkie
+S083,Brak HITL,autonomia,False,1.8,0.3817,0.3817,0.0,0.513,wspoldzielone,srednia,sredni,wysoka,znane
+S083,HITL informacyjny,monitorowanie,False,1.8,0.3817,0.3817,0.0,0.513,wspoldzielone,srednia,sredni,wysoka,znane
+S083,Prawo weta operatora,weto,False,1.8,0.3817,0.3817,0.0,0.513,wspoldzielone,srednia,sredni,wysoka,znane
+S083,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.3817,0.1958,0.487,0.513,wspoldzielone,srednia,sredni,wysoka,znane
+S083,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3817,0.3817,0.0,0.513,wspoldzielone,srednia,sredni,wysoka,znane
+S084,Brak HITL,autonomia,False,1.8,0.4305,0.4305,0.0,0.408,wspoldzielone,srednia,sredni,wysoka,rzadkie
+S084,HITL informacyjny,monitorowanie,False,1.8,0.4305,0.4305,0.0,0.408,wspoldzielone,srednia,sredni,wysoka,rzadkie
+S084,Prawo weta operatora,weto,False,1.8,0.4305,0.4305,0.0,0.408,wspoldzielone,srednia,sredni,wysoka,rzadkie
+S084,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4305,0.2208,0.487,0.408,wspoldzielone,srednia,sredni,wysoka,rzadkie
+S084,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.4305,0.2418,0.4384,0.408,wspoldzielone,srednia,sredni,wysoka,rzadkie
+S085,Brak HITL,autonomia,False,1.8,0.2975,0.2975,0.0,0.838,wspoldzielone,srednia,ciezki,niska,znane
+S085,HITL informacyjny,monitorowanie,False,1.8,0.2975,0.2975,0.0,0.838,wspoldzielone,srednia,ciezki,niska,znane
+S085,Prawo weta operatora,weto,False,1.8,0.2975,0.2975,0.0,0.838,wspoldzielone,srednia,ciezki,niska,znane
+S085,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2975,0.2975,0.0,0.838,wspoldzielone,srednia,ciezki,niska,znane
+S085,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2975,0.2975,0.0,0.838,wspoldzielone,srednia,ciezki,niska,znane
+S086,Brak HITL,autonomia,False,1.8,0.356,0.356,0.0,0.733,wspoldzielone,srednia,ciezki,niska,rzadkie
+S086,HITL informacyjny,monitorowanie,False,1.8,0.356,0.356,0.0,0.733,wspoldzielone,srednia,ciezki,niska,rzadkie
+S086,Prawo weta operatora,weto,False,1.8,0.356,0.356,0.0,0.733,wspoldzielone,srednia,ciezki,niska,rzadkie
+S086,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.356,0.356,0.0,0.733,wspoldzielone,srednia,ciezki,niska,rzadkie
+S086,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.356,0.356,0.0,0.733,wspoldzielone,srednia,ciezki,niska,rzadkie
+S087,Brak HITL,autonomia,False,1.8,0.3628,0.3628,0.0,0.689,wspoldzielone,srednia,ciezki,srednia,znane
+S087,HITL informacyjny,monitorowanie,False,1.8,0.3628,0.3628,0.0,0.689,wspoldzielone,srednia,ciezki,srednia,znane
+S087,Prawo weta operatora,weto,False,1.8,0.3628,0.3628,0.0,0.689,wspoldzielone,srednia,ciezki,srednia,znane
+S087,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3628,0.3628,0.0,0.689,wspoldzielone,srednia,ciezki,srednia,znane
+S087,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3628,0.3628,0.0,0.689,wspoldzielone,srednia,ciezki,srednia,znane
+S088,Brak HITL,autonomia,False,1.8,0.4224,0.4224,0.0,0.584,wspoldzielone,srednia,ciezki,srednia,rzadkie
+S088,HITL informacyjny,monitorowanie,False,1.8,0.4224,0.4224,0.0,0.584,wspoldzielone,srednia,ciezki,srednia,rzadkie
+S088,Prawo weta operatora,weto,False,1.8,0.4224,0.4224,0.0,0.584,wspoldzielone,srednia,ciezki,srednia,rzadkie
+S088,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4224,0.4224,0.0,0.584,wspoldzielone,srednia,ciezki,srednia,rzadkie
+S088,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4224,0.4224,0.0,0.584,wspoldzielone,srednia,ciezki,srednia,rzadkie
+S089,Brak HITL,autonomia,False,1.8,0.4412,0.4412,0.0,0.513,wspoldzielone,srednia,ciezki,wysoka,znane
+S089,HITL informacyjny,monitorowanie,False,1.8,0.4412,0.4412,0.0,0.513,wspoldzielone,srednia,ciezki,wysoka,znane
+S089,Prawo weta operatora,weto,False,1.8,0.4412,0.4412,0.0,0.513,wspoldzielone,srednia,ciezki,wysoka,znane
+S089,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4412,0.2263,0.487,0.513,wspoldzielone,srednia,ciezki,wysoka,znane
+S089,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4412,0.4412,0.0,0.513,wspoldzielone,srednia,ciezki,wysoka,znane
+S090,Brak HITL,autonomia,False,1.8,0.4976,0.4976,0.0,0.408,wspoldzielone,srednia,ciezki,wysoka,rzadkie
+S090,HITL informacyjny,monitorowanie,False,1.8,0.4976,0.4976,0.0,0.408,wspoldzielone,srednia,ciezki,wysoka,rzadkie
+S090,Prawo weta operatora,weto,False,1.8,0.4976,0.4976,0.0,0.408,wspoldzielone,srednia,ciezki,wysoka,rzadkie
+S090,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4976,0.2553,0.487,0.408,wspoldzielone,srednia,ciezki,wysoka,rzadkie
+S090,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.4976,0.2795,0.4384,0.408,wspoldzielone,srednia,ciezki,wysoka,rzadkie
+S091,Brak HITL,autonomia,False,1.8,0.3493,0.3493,0.0,0.838,wspoldzielone,wysoka,lekki,niska,znane
+S091,HITL informacyjny,monitorowanie,False,1.8,0.3493,0.3493,0.0,0.838,wspoldzielone,wysoka,lekki,niska,znane
+S091,Prawo weta operatora,weto,False,1.8,0.3493,0.3493,0.0,0.838,wspoldzielone,wysoka,lekki,niska,znane
+S091,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3493,0.3493,0.0,0.838,wspoldzielone,wysoka,lekki,niska,znane
+S091,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3493,0.3493,0.0,0.838,wspoldzielone,wysoka,lekki,niska,znane
+S092,Brak HITL,autonomia,False,1.8,0.4017,0.4017,0.0,0.733,wspoldzielone,wysoka,lekki,niska,rzadkie
+S092,HITL informacyjny,monitorowanie,False,1.8,0.4017,0.4017,0.0,0.733,wspoldzielone,wysoka,lekki,niska,rzadkie
+S092,Prawo weta operatora,weto,False,1.8,0.4017,0.4017,0.0,0.733,wspoldzielone,wysoka,lekki,niska,rzadkie
+S092,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4017,0.4017,0.0,0.733,wspoldzielone,wysoka,lekki,niska,rzadkie
+S092,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4017,0.4017,0.0,0.733,wspoldzielone,wysoka,lekki,niska,rzadkie
+S093,Brak HITL,autonomia,False,1.8,0.4075,0.4075,0.0,0.689,wspoldzielone,wysoka,lekki,srednia,znane
+S093,HITL informacyjny,monitorowanie,False,1.8,0.4075,0.4075,0.0,0.689,wspoldzielone,wysoka,lekki,srednia,znane
+S093,Prawo weta operatora,weto,False,1.8,0.4075,0.4075,0.0,0.689,wspoldzielone,wysoka,lekki,srednia,znane
+S093,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4075,0.4075,0.0,0.689,wspoldzielone,wysoka,lekki,srednia,znane
+S093,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4075,0.4075,0.0,0.689,wspoldzielone,wysoka,lekki,srednia,znane
+S094,Brak HITL,autonomia,False,1.8,0.4564,0.4564,0.0,0.584,wspoldzielone,wysoka,lekki,srednia,rzadkie
+S094,HITL informacyjny,monitorowanie,False,1.8,0.4564,0.4564,0.0,0.584,wspoldzielone,wysoka,lekki,srednia,rzadkie
+S094,Prawo weta operatora,weto,False,1.8,0.4564,0.4564,0.0,0.584,wspoldzielone,wysoka,lekki,srednia,rzadkie
+S094,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4564,0.4564,0.0,0.584,wspoldzielone,wysoka,lekki,srednia,rzadkie
+S094,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4564,0.4564,0.0,0.584,wspoldzielone,wysoka,lekki,srednia,rzadkie
+S095,Brak HITL,autonomia,False,1.8,0.471,0.471,0.0,0.513,wspoldzielone,wysoka,lekki,wysoka,znane
+S095,HITL informacyjny,monitorowanie,False,1.8,0.471,0.471,0.0,0.513,wspoldzielone,wysoka,lekki,wysoka,znane
+S095,Prawo weta operatora,weto,False,1.8,0.471,0.471,0.0,0.513,wspoldzielone,wysoka,lekki,wysoka,znane
+S095,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.471,0.2416,0.487,0.513,wspoldzielone,wysoka,lekki,wysoka,znane
+S095,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.471,0.471,0.0,0.513,wspoldzielone,wysoka,lekki,wysoka,znane
+S096,Brak HITL,autonomia,False,1.8,0.5129,0.5129,0.0,0.408,wspoldzielone,wysoka,lekki,wysoka,rzadkie
+S096,HITL informacyjny,monitorowanie,False,1.8,0.5129,0.5129,0.0,0.408,wspoldzielone,wysoka,lekki,wysoka,rzadkie
+S096,Prawo weta operatora,weto,False,1.8,0.5129,0.5129,0.0,0.408,wspoldzielone,wysoka,lekki,wysoka,rzadkie
+S096,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5129,0.2631,0.487,0.408,wspoldzielone,wysoka,lekki,wysoka,rzadkie
+S096,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5129,0.288,0.4384,0.408,wspoldzielone,wysoka,lekki,wysoka,rzadkie
+S097,Brak HITL,autonomia,False,1.8,0.399,0.399,0.0,0.838,wspoldzielone,wysoka,sredni,niska,znane
+S097,HITL informacyjny,monitorowanie,False,1.8,0.399,0.399,0.0,0.838,wspoldzielone,wysoka,sredni,niska,znane
+S097,Prawo weta operatora,weto,False,1.8,0.399,0.399,0.0,0.838,wspoldzielone,wysoka,sredni,niska,znane
+S097,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.399,0.399,0.0,0.838,wspoldzielone,wysoka,sredni,niska,znane
+S097,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.399,0.399,0.0,0.838,wspoldzielone,wysoka,sredni,niska,znane
+S098,Brak HITL,autonomia,False,1.8,0.4588,0.4588,0.0,0.733,wspoldzielone,wysoka,sredni,niska,rzadkie
+S098,HITL informacyjny,monitorowanie,False,1.8,0.4588,0.4588,0.0,0.733,wspoldzielone,wysoka,sredni,niska,rzadkie
+S098,Prawo weta operatora,weto,False,1.8,0.4588,0.4588,0.0,0.733,wspoldzielone,wysoka,sredni,niska,rzadkie
+S098,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4588,0.4588,0.0,0.733,wspoldzielone,wysoka,sredni,niska,rzadkie
+S098,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4588,0.4588,0.0,0.733,wspoldzielone,wysoka,sredni,niska,rzadkie
+S099,Brak HITL,autonomia,False,1.8,0.4655,0.4655,0.0,0.689,wspoldzielone,wysoka,sredni,srednia,znane
+S099,HITL informacyjny,monitorowanie,False,1.8,0.4655,0.4655,0.0,0.689,wspoldzielone,wysoka,sredni,srednia,znane
+S099,Prawo weta operatora,weto,False,1.8,0.4655,0.4655,0.0,0.689,wspoldzielone,wysoka,sredni,srednia,znane
+S099,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4655,0.2388,0.487,0.689,wspoldzielone,wysoka,sredni,srednia,znane
+S099,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4655,0.4655,0.0,0.689,wspoldzielone,wysoka,sredni,srednia,znane
+S100,Brak HITL,autonomia,False,1.8,0.5213,0.5213,0.0,0.584,wspoldzielone,wysoka,sredni,srednia,rzadkie
+S100,HITL informacyjny,monitorowanie,False,1.8,0.5213,0.5213,0.0,0.584,wspoldzielone,wysoka,sredni,srednia,rzadkie
+S100,Prawo weta operatora,weto,False,1.8,0.5213,0.5213,0.0,0.584,wspoldzielone,wysoka,sredni,srednia,rzadkie
+S100,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5213,0.2674,0.487,0.584,wspoldzielone,wysoka,sredni,srednia,rzadkie
+S100,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5213,0.2928,0.4384,0.584,wspoldzielone,wysoka,sredni,srednia,rzadkie
+S101,Brak HITL,autonomia,False,1.8,0.538,0.538,0.0,0.513,wspoldzielone,wysoka,sredni,wysoka,znane
+S101,HITL informacyjny,monitorowanie,False,1.8,0.538,0.538,0.0,0.513,wspoldzielone,wysoka,sredni,wysoka,znane
+S101,Prawo weta operatora,weto,False,1.8,0.538,0.538,0.0,0.513,wspoldzielone,wysoka,sredni,wysoka,znane
+S101,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.538,0.276,0.487,0.513,wspoldzielone,wysoka,sredni,wysoka,znane
+S101,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.538,0.3021,0.4384,0.513,wspoldzielone,wysoka,sredni,wysoka,znane
+S102,Brak HITL,autonomia,False,1.8,0.5859,0.5859,0.0,0.408,wspoldzielone,wysoka,sredni,wysoka,rzadkie
+S102,HITL informacyjny,monitorowanie,False,1.8,0.5859,0.5859,0.0,0.408,wspoldzielone,wysoka,sredni,wysoka,rzadkie
+S102,Prawo weta operatora,weto,True,8.8,0.5859,0.392,0.331,0.408,wspoldzielone,wysoka,sredni,wysoka,rzadkie
+S102,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5859,0.3006,0.487,0.408,wspoldzielone,wysoka,sredni,wysoka,rzadkie
+S102,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5859,0.329,0.4384,0.408,wspoldzielone,wysoka,sredni,wysoka,rzadkie
+S103,Brak HITL,autonomia,False,1.8,0.452,0.452,0.0,0.838,wspoldzielone,wysoka,ciezki,niska,znane
+S103,HITL informacyjny,monitorowanie,False,1.8,0.452,0.452,0.0,0.838,wspoldzielone,wysoka,ciezki,niska,znane
+S103,Prawo weta operatora,weto,False,1.8,0.452,0.452,0.0,0.838,wspoldzielone,wysoka,ciezki,niska,znane
+S103,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.452,0.452,0.0,0.838,wspoldzielone,wysoka,ciezki,niska,znane
+S103,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.452,0.452,0.0,0.838,wspoldzielone,wysoka,ciezki,niska,znane
+S104,Brak HITL,autonomia,False,1.8,0.5197,0.5197,0.0,0.733,wspoldzielone,wysoka,ciezki,niska,rzadkie
+S104,HITL informacyjny,monitorowanie,False,1.8,0.5197,0.5197,0.0,0.733,wspoldzielone,wysoka,ciezki,niska,rzadkie
+S104,Prawo weta operatora,weto,False,1.8,0.5197,0.5197,0.0,0.733,wspoldzielone,wysoka,ciezki,niska,rzadkie
+S104,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5197,0.2666,0.487,0.733,wspoldzielone,wysoka,ciezki,niska,rzadkie
+S104,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.5197,0.5197,0.0,0.733,wspoldzielone,wysoka,ciezki,niska,rzadkie
+S105,Brak HITL,autonomia,False,1.8,0.5273,0.5273,0.0,0.689,wspoldzielone,wysoka,ciezki,srednia,znane
+S105,HITL informacyjny,monitorowanie,False,1.8,0.5273,0.5273,0.0,0.689,wspoldzielone,wysoka,ciezki,srednia,znane
+S105,Prawo weta operatora,weto,False,1.8,0.5273,0.5273,0.0,0.689,wspoldzielone,wysoka,ciezki,srednia,znane
+S105,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5273,0.2705,0.487,0.689,wspoldzielone,wysoka,ciezki,srednia,znane
+S105,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5273,0.2961,0.4384,0.689,wspoldzielone,wysoka,ciezki,srednia,znane
+S106,Brak HITL,autonomia,False,1.8,0.5905,0.5905,0.0,0.584,wspoldzielone,wysoka,ciezki,srednia,rzadkie
+S106,HITL informacyjny,monitorowanie,False,1.8,0.5905,0.5905,0.0,0.584,wspoldzielone,wysoka,ciezki,srednia,rzadkie
+S106,Prawo weta operatora,weto,True,8.8,0.5905,0.395,0.331,0.584,wspoldzielone,wysoka,ciezki,srednia,rzadkie
+S106,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5905,0.3029,0.487,0.584,wspoldzielone,wysoka,ciezki,srednia,rzadkie
+S106,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5905,0.3316,0.4384,0.584,wspoldzielone,wysoka,ciezki,srednia,rzadkie
+S107,Brak HITL,autonomia,False,1.8,0.6095,0.6095,0.0,0.513,wspoldzielone,wysoka,ciezki,wysoka,znane
+S107,HITL informacyjny,monitorowanie,False,1.8,0.6095,0.6095,0.0,0.513,wspoldzielone,wysoka,ciezki,wysoka,znane
+S107,Prawo weta operatora,weto,True,8.8,0.6095,0.4078,0.331,0.513,wspoldzielone,wysoka,ciezki,wysoka,znane
+S107,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6095,0.3127,0.487,0.513,wspoldzielone,wysoka,ciezki,wysoka,znane
+S107,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6095,0.3423,0.4384,0.513,wspoldzielone,wysoka,ciezki,wysoka,znane
+S108,Brak HITL,autonomia,False,1.8,0.6637,0.6637,0.0,0.408,wspoldzielone,wysoka,ciezki,wysoka,rzadkie
+S108,HITL informacyjny,monitorowanie,False,1.8,0.6637,0.6637,0.0,0.408,wspoldzielone,wysoka,ciezki,wysoka,rzadkie
+S108,Prawo weta operatora,weto,True,8.8,0.6637,0.444,0.331,0.408,wspoldzielone,wysoka,ciezki,wysoka,rzadkie
+S108,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6637,0.3405,0.487,0.408,wspoldzielone,wysoka,ciezki,wysoka,rzadkie
+S108,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6637,0.3727,0.4384,0.408,wspoldzielone,wysoka,ciezki,wysoka,rzadkie
+S109,Brak HITL,autonomia,False,1.8,0.2948,0.2948,0.0,0.783,zatloczone,niska,lekki,niska,znane
+S109,HITL informacyjny,monitorowanie,False,1.8,0.2948,0.2948,0.0,0.783,zatloczone,niska,lekki,niska,znane
+S109,Prawo weta operatora,weto,False,1.8,0.2948,0.2948,0.0,0.783,zatloczone,niska,lekki,niska,znane
+S109,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.2948,0.2948,0.0,0.783,zatloczone,niska,lekki,niska,znane
+S109,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.2948,0.2948,0.0,0.783,zatloczone,niska,lekki,niska,znane
+S110,Brak HITL,autonomia,False,1.8,0.3343,0.3343,0.0,0.678,zatloczone,niska,lekki,niska,rzadkie
+S110,HITL informacyjny,monitorowanie,False,1.8,0.3343,0.3343,0.0,0.678,zatloczone,niska,lekki,niska,rzadkie
+S110,Prawo weta operatora,weto,False,1.8,0.3343,0.3343,0.0,0.678,zatloczone,niska,lekki,niska,rzadkie
+S110,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3343,0.3343,0.0,0.678,zatloczone,niska,lekki,niska,rzadkie
+S110,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3343,0.3343,0.0,0.678,zatloczone,niska,lekki,niska,rzadkie
+S111,Brak HITL,autonomia,False,1.8,0.3387,0.3387,0.0,0.635,zatloczone,niska,lekki,srednia,znane
+S111,HITL informacyjny,monitorowanie,False,1.8,0.3387,0.3387,0.0,0.635,zatloczone,niska,lekki,srednia,znane
+S111,Prawo weta operatora,weto,False,1.8,0.3387,0.3387,0.0,0.635,zatloczone,niska,lekki,srednia,znane
+S111,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3387,0.3387,0.0,0.635,zatloczone,niska,lekki,srednia,znane
+S111,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3387,0.3387,0.0,0.635,zatloczone,niska,lekki,srednia,znane
+S112,Brak HITL,autonomia,False,1.8,0.3745,0.3745,0.0,0.53,zatloczone,niska,lekki,srednia,rzadkie
+S112,HITL informacyjny,monitorowanie,False,1.8,0.3745,0.3745,0.0,0.53,zatloczone,niska,lekki,srednia,rzadkie
+S112,Prawo weta operatora,weto,False,1.8,0.3745,0.3745,0.0,0.53,zatloczone,niska,lekki,srednia,rzadkie
+S112,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3745,0.3745,0.0,0.53,zatloczone,niska,lekki,srednia,rzadkie
+S112,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3745,0.3745,0.0,0.53,zatloczone,niska,lekki,srednia,rzadkie
+S113,Brak HITL,autonomia,False,1.8,0.385,0.385,0.0,0.459,zatloczone,niska,lekki,wysoka,znane
+S113,HITL informacyjny,monitorowanie,False,1.8,0.385,0.385,0.0,0.459,zatloczone,niska,lekki,wysoka,znane
+S113,Prawo weta operatora,weto,False,1.8,0.385,0.385,0.0,0.459,zatloczone,niska,lekki,wysoka,znane
+S113,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.385,0.1975,0.487,0.459,zatloczone,niska,lekki,wysoka,znane
+S113,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.385,0.2162,0.4384,0.459,zatloczone,niska,lekki,wysoka,znane
+S114,Brak HITL,autonomia,False,1.8,0.4147,0.4147,0.0,0.354,zatloczone,niska,lekki,wysoka,rzadkie
+S114,HITL informacyjny,monitorowanie,False,1.8,0.4147,0.4147,0.0,0.354,zatloczone,niska,lekki,wysoka,rzadkie
+S114,Prawo weta operatora,weto,True,8.8,0.4147,0.2774,0.331,0.354,zatloczone,niska,lekki,wysoka,rzadkie
+S114,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4147,0.2127,0.487,0.354,zatloczone,niska,lekki,wysoka,rzadkie
+S114,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.4147,0.2329,0.4384,0.354,zatloczone,niska,lekki,wysoka,rzadkie
+S115,Brak HITL,autonomia,False,1.8,0.3489,0.3489,0.0,0.783,zatloczone,niska,sredni,niska,znane
+S115,HITL informacyjny,monitorowanie,False,1.8,0.3489,0.3489,0.0,0.783,zatloczone,niska,sredni,niska,znane
+S115,Prawo weta operatora,weto,False,1.8,0.3489,0.3489,0.0,0.783,zatloczone,niska,sredni,niska,znane
+S115,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3489,0.3489,0.0,0.783,zatloczone,niska,sredni,niska,znane
+S115,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3489,0.3489,0.0,0.783,zatloczone,niska,sredni,niska,znane
+S116,Brak HITL,autonomia,False,1.8,0.3956,0.3956,0.0,0.678,zatloczone,niska,sredni,niska,rzadkie
+S116,HITL informacyjny,monitorowanie,False,1.8,0.3956,0.3956,0.0,0.678,zatloczone,niska,sredni,niska,rzadkie
+S116,Prawo weta operatora,weto,False,1.8,0.3956,0.3956,0.0,0.678,zatloczone,niska,sredni,niska,rzadkie
+S116,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.3956,0.3956,0.0,0.678,zatloczone,niska,sredni,niska,rzadkie
+S116,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.3956,0.3956,0.0,0.678,zatloczone,niska,sredni,niska,rzadkie
+S117,Brak HITL,autonomia,False,1.8,0.4007,0.4007,0.0,0.635,zatloczone,niska,sredni,srednia,znane
+S117,HITL informacyjny,monitorowanie,False,1.8,0.4007,0.4007,0.0,0.635,zatloczone,niska,sredni,srednia,znane
+S117,Prawo weta operatora,weto,False,1.8,0.4007,0.4007,0.0,0.635,zatloczone,niska,sredni,srednia,znane
+S117,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4007,0.4007,0.0,0.635,zatloczone,niska,sredni,srednia,znane
+S117,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4007,0.4007,0.0,0.635,zatloczone,niska,sredni,srednia,znane
+S118,Brak HITL,autonomia,False,1.8,0.4431,0.4431,0.0,0.53,zatloczone,niska,sredni,srednia,rzadkie
+S118,HITL informacyjny,monitorowanie,False,1.8,0.4431,0.4431,0.0,0.53,zatloczone,niska,sredni,srednia,rzadkie
+S118,Prawo weta operatora,weto,False,1.8,0.4431,0.4431,0.0,0.53,zatloczone,niska,sredni,srednia,rzadkie
+S118,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4431,0.4431,0.0,0.53,zatloczone,niska,sredni,srednia,rzadkie
+S118,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4431,0.4431,0.0,0.53,zatloczone,niska,sredni,srednia,rzadkie
+S119,Brak HITL,autonomia,False,1.8,0.4556,0.4556,0.0,0.459,zatloczone,niska,sredni,wysoka,znane
+S119,HITL informacyjny,monitorowanie,False,1.8,0.4556,0.4556,0.0,0.459,zatloczone,niska,sredni,wysoka,znane
+S119,Prawo weta operatora,weto,False,1.8,0.4556,0.4556,0.0,0.459,zatloczone,niska,sredni,wysoka,znane
+S119,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4556,0.2337,0.487,0.459,zatloczone,niska,sredni,wysoka,znane
+S119,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.4556,0.2559,0.4384,0.459,zatloczone,niska,sredni,wysoka,znane
+S120,Brak HITL,autonomia,False,1.8,0.4907,0.4907,0.0,0.354,zatloczone,niska,sredni,wysoka,rzadkie
+S120,HITL informacyjny,monitorowanie,False,1.8,0.4907,0.4907,0.0,0.354,zatloczone,niska,sredni,wysoka,rzadkie
+S120,Prawo weta operatora,weto,True,8.8,0.4907,0.3283,0.331,0.354,zatloczone,niska,sredni,wysoka,rzadkie
+S120,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4907,0.2517,0.487,0.354,zatloczone,niska,sredni,wysoka,rzadkie
+S120,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.4907,0.2756,0.4384,0.354,zatloczone,niska,sredni,wysoka,rzadkie
+S121,Brak HITL,autonomia,False,1.8,0.4065,0.4065,0.0,0.783,zatloczone,niska,ciezki,niska,znane
+S121,HITL informacyjny,monitorowanie,False,1.8,0.4065,0.4065,0.0,0.783,zatloczone,niska,ciezki,niska,znane
+S121,Prawo weta operatora,weto,False,1.8,0.4065,0.4065,0.0,0.783,zatloczone,niska,ciezki,niska,znane
+S121,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.4065,0.4065,0.0,0.783,zatloczone,niska,ciezki,niska,znane
+S121,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4065,0.4065,0.0,0.783,zatloczone,niska,ciezki,niska,znane
+S122,Brak HITL,autonomia,False,1.8,0.4609,0.4609,0.0,0.678,zatloczone,niska,ciezki,niska,rzadkie
+S122,HITL informacyjny,monitorowanie,False,1.8,0.4609,0.4609,0.0,0.678,zatloczone,niska,ciezki,niska,rzadkie
+S122,Prawo weta operatora,weto,False,1.8,0.4609,0.4609,0.0,0.678,zatloczone,niska,ciezki,niska,rzadkie
+S122,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4609,0.2364,0.487,0.678,zatloczone,niska,ciezki,niska,rzadkie
+S122,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4609,0.4609,0.0,0.678,zatloczone,niska,ciezki,niska,rzadkie
+S123,Brak HITL,autonomia,False,1.8,0.4669,0.4669,0.0,0.635,zatloczone,niska,ciezki,srednia,znane
+S123,HITL informacyjny,monitorowanie,False,1.8,0.4669,0.4669,0.0,0.635,zatloczone,niska,ciezki,srednia,znane
+S123,Prawo weta operatora,weto,False,1.8,0.4669,0.4669,0.0,0.635,zatloczone,niska,ciezki,srednia,znane
+S123,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4669,0.2395,0.487,0.635,zatloczone,niska,ciezki,srednia,znane
+S123,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4669,0.4669,0.0,0.635,zatloczone,niska,ciezki,srednia,znane
+S124,Brak HITL,autonomia,False,1.8,0.5163,0.5163,0.0,0.53,zatloczone,niska,ciezki,srednia,rzadkie
+S124,HITL informacyjny,monitorowanie,False,1.8,0.5163,0.5163,0.0,0.53,zatloczone,niska,ciezki,srednia,rzadkie
+S124,Prawo weta operatora,weto,False,1.8,0.5163,0.5163,0.0,0.53,zatloczone,niska,ciezki,srednia,rzadkie
+S124,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5163,0.2649,0.487,0.53,zatloczone,niska,ciezki,srednia,rzadkie
+S124,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.5163,0.5163,0.0,0.53,zatloczone,niska,ciezki,srednia,rzadkie
+S125,Brak HITL,autonomia,False,1.8,0.5308,0.5308,0.0,0.459,zatloczone,niska,ciezki,wysoka,znane
+S125,HITL informacyjny,monitorowanie,False,1.8,0.5308,0.5308,0.0,0.459,zatloczone,niska,ciezki,wysoka,znane
+S125,Prawo weta operatora,weto,False,1.8,0.5308,0.5308,0.0,0.459,zatloczone,niska,ciezki,wysoka,znane
+S125,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5308,0.2723,0.487,0.459,zatloczone,niska,ciezki,wysoka,znane
+S125,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5308,0.2981,0.4384,0.459,zatloczone,niska,ciezki,wysoka,znane
+S126,Brak HITL,autonomia,False,1.8,0.5718,0.5718,0.0,0.354,zatloczone,niska,ciezki,wysoka,rzadkie
+S126,HITL informacyjny,monitorowanie,False,1.8,0.5718,0.5718,0.0,0.354,zatloczone,niska,ciezki,wysoka,rzadkie
+S126,Prawo weta operatora,weto,True,8.8,0.5718,0.3825,0.331,0.354,zatloczone,niska,ciezki,wysoka,rzadkie
+S126,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5718,0.2933,0.487,0.354,zatloczone,niska,ciezki,wysoka,rzadkie
+S126,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5718,0.3211,0.4384,0.354,zatloczone,niska,ciezki,wysoka,rzadkie
+S127,Brak HITL,autonomia,False,1.8,0.435,0.435,0.0,0.783,zatloczone,srednia,lekki,niska,znane
+S127,HITL informacyjny,monitorowanie,False,1.8,0.435,0.435,0.0,0.783,zatloczone,srednia,lekki,niska,znane
+S127,Prawo weta operatora,weto,False,1.8,0.435,0.435,0.0,0.783,zatloczone,srednia,lekki,niska,znane
+S127,Zatwierdzenie przed ruchem,akceptacja,False,1.8,0.435,0.435,0.0,0.783,zatloczone,srednia,lekki,niska,znane
+S127,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.435,0.435,0.0,0.783,zatloczone,srednia,lekki,niska,znane
+S128,Brak HITL,autonomia,False,1.8,0.4759,0.4759,0.0,0.678,zatloczone,srednia,lekki,niska,rzadkie
+S128,HITL informacyjny,monitorowanie,False,1.8,0.4759,0.4759,0.0,0.678,zatloczone,srednia,lekki,niska,rzadkie
+S128,Prawo weta operatora,weto,False,1.8,0.4759,0.4759,0.0,0.678,zatloczone,srednia,lekki,niska,rzadkie
+S128,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4759,0.2441,0.487,0.678,zatloczone,srednia,lekki,niska,rzadkie
+S128,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4759,0.4759,0.0,0.678,zatloczone,srednia,lekki,niska,rzadkie
+S129,Brak HITL,autonomia,False,1.8,0.4802,0.4802,0.0,0.635,zatloczone,srednia,lekki,srednia,znane
+S129,HITL informacyjny,monitorowanie,False,1.8,0.4802,0.4802,0.0,0.635,zatloczone,srednia,lekki,srednia,znane
+S129,Prawo weta operatora,weto,False,1.8,0.4802,0.4802,0.0,0.635,zatloczone,srednia,lekki,srednia,znane
+S129,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.4802,0.2463,0.487,0.635,zatloczone,srednia,lekki,srednia,znane
+S129,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.4802,0.4802,0.0,0.635,zatloczone,srednia,lekki,srednia,znane
+S130,Brak HITL,autonomia,False,1.8,0.5146,0.5146,0.0,0.53,zatloczone,srednia,lekki,srednia,rzadkie
+S130,HITL informacyjny,monitorowanie,False,1.8,0.5146,0.5146,0.0,0.53,zatloczone,srednia,lekki,srednia,rzadkie
+S130,Prawo weta operatora,weto,False,1.8,0.5146,0.5146,0.0,0.53,zatloczone,srednia,lekki,srednia,rzadkie
+S130,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5146,0.264,0.487,0.53,zatloczone,srednia,lekki,srednia,rzadkie
+S130,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.5146,0.5146,0.0,0.53,zatloczone,srednia,lekki,srednia,rzadkie
+S131,Brak HITL,autonomia,False,1.8,0.5243,0.5243,0.0,0.459,zatloczone,srednia,lekki,wysoka,znane
+S131,HITL informacyjny,monitorowanie,False,1.8,0.5243,0.5243,0.0,0.459,zatloczone,srednia,lekki,wysoka,znane
+S131,Prawo weta operatora,weto,False,1.8,0.5243,0.5243,0.0,0.459,zatloczone,srednia,lekki,wysoka,znane
+S131,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5243,0.269,0.487,0.459,zatloczone,srednia,lekki,wysoka,znane
+S131,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5243,0.2944,0.4384,0.459,zatloczone,srednia,lekki,wysoka,znane
+S132,Brak HITL,autonomia,False,1.8,0.5509,0.5509,0.0,0.354,zatloczone,srednia,lekki,wysoka,rzadkie
+S132,HITL informacyjny,monitorowanie,False,1.8,0.5509,0.5509,0.0,0.354,zatloczone,srednia,lekki,wysoka,rzadkie
+S132,Prawo weta operatora,weto,True,8.8,0.5509,0.3686,0.331,0.354,zatloczone,srednia,lekki,wysoka,rzadkie
+S132,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5509,0.2826,0.487,0.354,zatloczone,srednia,lekki,wysoka,rzadkie
+S132,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5509,0.3094,0.4384,0.354,zatloczone,srednia,lekki,wysoka,rzadkie
+S133,Brak HITL,autonomia,False,1.8,0.5004,0.5004,0.0,0.783,zatloczone,srednia,sredni,niska,znane
+S133,HITL informacyjny,monitorowanie,False,1.8,0.5004,0.5004,0.0,0.783,zatloczone,srednia,sredni,niska,znane
+S133,Prawo weta operatora,weto,False,1.8,0.5004,0.5004,0.0,0.783,zatloczone,srednia,sredni,niska,znane
+S133,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5004,0.2567,0.487,0.783,zatloczone,srednia,sredni,niska,znane
+S133,Adaptacyjny HITL,ryzyko plus niepewność,False,1.8,0.5004,0.5004,0.0,0.783,zatloczone,srednia,sredni,niska,znane
+S134,Brak HITL,autonomia,False,1.8,0.5475,0.5475,0.0,0.678,zatloczone,srednia,sredni,niska,rzadkie
+S134,HITL informacyjny,monitorowanie,False,1.8,0.5475,0.5475,0.0,0.678,zatloczone,srednia,sredni,niska,rzadkie
+S134,Prawo weta operatora,weto,False,1.8,0.5475,0.5475,0.0,0.678,zatloczone,srednia,sredni,niska,rzadkie
+S134,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5475,0.2809,0.487,0.678,zatloczone,srednia,sredni,niska,rzadkie
+S134,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5475,0.3075,0.4384,0.678,zatloczone,srednia,sredni,niska,rzadkie
+S135,Brak HITL,autonomia,False,1.8,0.5525,0.5525,0.0,0.635,zatloczone,srednia,sredni,srednia,znane
+S135,HITL informacyjny,monitorowanie,False,1.8,0.5525,0.5525,0.0,0.635,zatloczone,srednia,sredni,srednia,znane
+S135,Prawo weta operatora,weto,False,1.8,0.5525,0.5525,0.0,0.635,zatloczone,srednia,sredni,srednia,znane
+S135,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5525,0.2834,0.487,0.635,zatloczone,srednia,sredni,srednia,znane
+S135,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5525,0.3103,0.4384,0.635,zatloczone,srednia,sredni,srednia,znane
+S136,Brak HITL,autonomia,False,1.8,0.592,0.592,0.0,0.53,zatloczone,srednia,sredni,srednia,rzadkie
+S136,HITL informacyjny,monitorowanie,False,1.8,0.592,0.592,0.0,0.53,zatloczone,srednia,sredni,srednia,rzadkie
+S136,Prawo weta operatora,weto,True,8.8,0.592,0.396,0.331,0.53,zatloczone,srednia,sredni,srednia,rzadkie
+S136,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.592,0.3037,0.487,0.53,zatloczone,srednia,sredni,srednia,rzadkie
+S136,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.592,0.3325,0.4384,0.53,zatloczone,srednia,sredni,srednia,rzadkie
+S137,Brak HITL,autonomia,False,1.8,0.6032,0.6032,0.0,0.459,zatloczone,srednia,sredni,wysoka,znane
+S137,HITL informacyjny,monitorowanie,False,1.8,0.6032,0.6032,0.0,0.459,zatloczone,srednia,sredni,wysoka,znane
+S137,Prawo weta operatora,weto,True,8.8,0.6032,0.4035,0.331,0.459,zatloczone,srednia,sredni,wysoka,znane
+S137,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6032,0.3094,0.487,0.459,zatloczone,srednia,sredni,wysoka,znane
+S137,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6032,0.3388,0.4384,0.459,zatloczone,srednia,sredni,wysoka,znane
+S138,Brak HITL,autonomia,False,1.8,0.6338,0.6338,0.0,0.354,zatloczone,srednia,sredni,wysoka,rzadkie
+S138,HITL informacyjny,monitorowanie,False,1.8,0.6338,0.6338,0.0,0.354,zatloczone,srednia,sredni,wysoka,rzadkie
+S138,Prawo weta operatora,weto,True,8.8,0.6338,0.424,0.331,0.354,zatloczone,srednia,sredni,wysoka,rzadkie
+S138,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6338,0.3251,0.487,0.354,zatloczone,srednia,sredni,wysoka,rzadkie
+S138,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6338,0.3559,0.4384,0.354,zatloczone,srednia,sredni,wysoka,rzadkie
+S139,Brak HITL,autonomia,False,1.8,0.5702,0.5702,0.0,0.783,zatloczone,srednia,ciezki,niska,znane
+S139,HITL informacyjny,monitorowanie,False,1.8,0.5702,0.5702,0.0,0.783,zatloczone,srednia,ciezki,niska,znane
+S139,Prawo weta operatora,weto,True,8.8,0.5702,0.3815,0.331,0.783,zatloczone,srednia,ciezki,niska,znane
+S139,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5702,0.2925,0.487,0.783,zatloczone,srednia,ciezki,niska,znane
+S139,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5702,0.3202,0.4384,0.783,zatloczone,srednia,ciezki,niska,znane
+S140,Brak HITL,autonomia,False,1.8,0.6239,0.6239,0.0,0.678,zatloczone,srednia,ciezki,niska,rzadkie
+S140,HITL informacyjny,monitorowanie,False,1.8,0.6239,0.6239,0.0,0.678,zatloczone,srednia,ciezki,niska,rzadkie
+S140,Prawo weta operatora,weto,True,8.8,0.6239,0.4174,0.331,0.678,zatloczone,srednia,ciezki,niska,rzadkie
+S140,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6239,0.3201,0.487,0.678,zatloczone,srednia,ciezki,niska,rzadkie
+S140,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6239,0.3504,0.4384,0.678,zatloczone,srednia,ciezki,niska,rzadkie
+S141,Brak HITL,autonomia,False,1.8,0.6295,0.6295,0.0,0.635,zatloczone,srednia,ciezki,srednia,znane
+S141,HITL informacyjny,monitorowanie,False,1.8,0.6295,0.6295,0.0,0.635,zatloczone,srednia,ciezki,srednia,znane
+S141,Prawo weta operatora,weto,True,8.8,0.6295,0.4211,0.331,0.635,zatloczone,srednia,ciezki,srednia,znane
+S141,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6295,0.3229,0.487,0.635,zatloczone,srednia,ciezki,srednia,znane
+S141,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6295,0.3535,0.4384,0.635,zatloczone,srednia,ciezki,srednia,znane
+S142,Brak HITL,autonomia,False,1.8,0.6746,0.6746,0.0,0.53,zatloczone,srednia,ciezki,srednia,rzadkie
+S142,HITL informacyjny,monitorowanie,False,1.8,0.6746,0.6746,0.0,0.53,zatloczone,srednia,ciezki,srednia,rzadkie
+S142,Prawo weta operatora,weto,True,8.8,0.6746,0.4513,0.331,0.53,zatloczone,srednia,ciezki,srednia,rzadkie
+S142,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6746,0.3461,0.487,0.53,zatloczone,srednia,ciezki,srednia,rzadkie
+S142,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6746,0.3789,0.4384,0.53,zatloczone,srednia,ciezki,srednia,rzadkie
+S143,Brak HITL,autonomia,False,1.8,0.6874,0.6874,0.0,0.459,zatloczone,srednia,ciezki,wysoka,znane
+S143,HITL informacyjny,monitorowanie,True,5.8,0.6874,0.5946,0.135,0.459,zatloczone,srednia,ciezki,wysoka,znane
+S143,Prawo weta operatora,weto,True,8.8,0.6874,0.4599,0.331,0.459,zatloczone,srednia,ciezki,wysoka,znane
+S143,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6874,0.3526,0.487,0.459,zatloczone,srednia,ciezki,wysoka,znane
+S143,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6874,0.386,0.4384,0.459,zatloczone,srednia,ciezki,wysoka,znane
+S144,Brak HITL,autonomia,False,1.8,0.7222,0.7222,0.0,0.354,zatloczone,srednia,ciezki,wysoka,rzadkie
+S144,HITL informacyjny,monitorowanie,True,5.8,0.7222,0.6247,0.135,0.354,zatloczone,srednia,ciezki,wysoka,rzadkie
+S144,Prawo weta operatora,weto,True,8.8,0.7222,0.4832,0.331,0.354,zatloczone,srednia,ciezki,wysoka,rzadkie
+S144,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7222,0.3705,0.487,0.354,zatloczone,srednia,ciezki,wysoka,rzadkie
+S144,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7222,0.4056,0.4384,0.354,zatloczone,srednia,ciezki,wysoka,rzadkie
+S145,Brak HITL,autonomia,False,1.8,0.5874,0.5874,0.0,0.783,zatloczone,wysoka,lekki,niska,znane
+S145,HITL informacyjny,monitorowanie,False,1.8,0.5874,0.5874,0.0,0.783,zatloczone,wysoka,lekki,niska,znane
+S145,Prawo weta operatora,weto,True,8.8,0.5874,0.393,0.331,0.783,zatloczone,wysoka,lekki,niska,znane
+S145,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.5874,0.3013,0.487,0.783,zatloczone,wysoka,lekki,niska,znane
+S145,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.5874,0.3299,0.4384,0.783,zatloczone,wysoka,lekki,niska,znane
+S146,Brak HITL,autonomia,False,1.8,0.6243,0.6243,0.0,0.678,zatloczone,wysoka,lekki,niska,rzadkie
+S146,HITL informacyjny,monitorowanie,False,1.8,0.6243,0.6243,0.0,0.678,zatloczone,wysoka,lekki,niska,rzadkie
+S146,Prawo weta operatora,weto,True,8.8,0.6243,0.4177,0.331,0.678,zatloczone,wysoka,lekki,niska,rzadkie
+S146,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6243,0.3203,0.487,0.678,zatloczone,wysoka,lekki,niska,rzadkie
+S146,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6243,0.3506,0.4384,0.678,zatloczone,wysoka,lekki,niska,rzadkie
+S147,Brak HITL,autonomia,False,1.8,0.6281,0.6281,0.0,0.635,zatloczone,wysoka,lekki,srednia,znane
+S147,HITL informacyjny,monitorowanie,False,1.8,0.6281,0.6281,0.0,0.635,zatloczone,wysoka,lekki,srednia,znane
+S147,Prawo weta operatora,weto,True,8.8,0.6281,0.4202,0.331,0.635,zatloczone,wysoka,lekki,srednia,znane
+S147,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6281,0.3222,0.487,0.635,zatloczone,wysoka,lekki,srednia,znane
+S147,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6281,0.3527,0.4384,0.635,zatloczone,wysoka,lekki,srednia,znane
+S148,Brak HITL,autonomia,False,1.8,0.6573,0.6573,0.0,0.53,zatloczone,wysoka,lekki,srednia,rzadkie
+S148,HITL informacyjny,monitorowanie,False,1.8,0.6573,0.6573,0.0,0.53,zatloczone,wysoka,lekki,srednia,rzadkie
+S148,Prawo weta operatora,weto,True,8.8,0.6573,0.4397,0.331,0.53,zatloczone,wysoka,lekki,srednia,rzadkie
+S148,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6573,0.3372,0.487,0.53,zatloczone,wysoka,lekki,srednia,rzadkie
+S148,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6573,0.3691,0.4384,0.53,zatloczone,wysoka,lekki,srednia,rzadkie
+S149,Brak HITL,autonomia,False,1.8,0.6654,0.6654,0.0,0.459,zatloczone,wysoka,lekki,wysoka,znane
+S149,HITL informacyjny,monitorowanie,False,1.8,0.6654,0.6654,0.0,0.459,zatloczone,wysoka,lekki,wysoka,znane
+S149,Prawo weta operatora,weto,True,8.8,0.6654,0.4452,0.331,0.459,zatloczone,wysoka,lekki,wysoka,znane
+S149,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6654,0.3414,0.487,0.459,zatloczone,wysoka,lekki,wysoka,znane
+S149,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6654,0.3737,0.4384,0.459,zatloczone,wysoka,lekki,wysoka,znane
+S150,Brak HITL,autonomia,False,1.8,0.6868,0.6868,0.0,0.354,zatloczone,wysoka,lekki,wysoka,rzadkie
+S150,HITL informacyjny,monitorowanie,True,5.8,0.6868,0.5941,0.135,0.354,zatloczone,wysoka,lekki,wysoka,rzadkie
+S150,Prawo weta operatora,weto,True,8.8,0.6868,0.4595,0.331,0.354,zatloczone,wysoka,lekki,wysoka,rzadkie
+S150,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6868,0.3523,0.487,0.354,zatloczone,wysoka,lekki,wysoka,rzadkie
+S150,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6868,0.3857,0.4384,0.354,zatloczone,wysoka,lekki,wysoka,rzadkie
+S151,Brak HITL,autonomia,False,1.8,0.6624,0.6624,0.0,0.783,zatloczone,wysoka,sredni,niska,znane
+S151,HITL informacyjny,monitorowanie,False,1.8,0.6624,0.6624,0.0,0.783,zatloczone,wysoka,sredni,niska,znane
+S151,Prawo weta operatora,weto,True,8.8,0.6624,0.4431,0.331,0.783,zatloczone,wysoka,sredni,niska,znane
+S151,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.6624,0.3398,0.487,0.783,zatloczone,wysoka,sredni,niska,znane
+S151,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.6624,0.372,0.4384,0.783,zatloczone,wysoka,sredni,niska,znane
+S152,Brak HITL,autonomia,False,1.8,0.704,0.704,0.0,0.678,zatloczone,wysoka,sredni,niska,rzadkie
+S152,HITL informacyjny,monitorowanie,True,5.8,0.704,0.609,0.135,0.678,zatloczone,wysoka,sredni,niska,rzadkie
+S152,Prawo weta operatora,weto,True,8.8,0.704,0.471,0.331,0.678,zatloczone,wysoka,sredni,niska,rzadkie
+S152,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.704,0.3612,0.487,0.678,zatloczone,wysoka,sredni,niska,rzadkie
+S152,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.704,0.3954,0.4384,0.678,zatloczone,wysoka,sredni,niska,rzadkie
+S153,Brak HITL,autonomia,False,1.8,0.7083,0.7083,0.0,0.635,zatloczone,wysoka,sredni,srednia,znane
+S153,HITL informacyjny,monitorowanie,True,5.8,0.7083,0.6127,0.135,0.635,zatloczone,wysoka,sredni,srednia,znane
+S153,Prawo weta operatora,weto,True,8.8,0.7083,0.4739,0.331,0.635,zatloczone,wysoka,sredni,srednia,znane
+S153,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7083,0.3634,0.487,0.635,zatloczone,wysoka,sredni,srednia,znane
+S153,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7083,0.3978,0.4384,0.635,zatloczone,wysoka,sredni,srednia,znane
+S154,Brak HITL,autonomia,False,1.8,0.7413,0.7413,0.0,0.53,zatloczone,wysoka,sredni,srednia,rzadkie
+S154,HITL informacyjny,monitorowanie,True,5.8,0.7413,0.6412,0.135,0.53,zatloczone,wysoka,sredni,srednia,rzadkie
+S154,Prawo weta operatora,weto,True,8.8,0.7413,0.4959,0.331,0.53,zatloczone,wysoka,sredni,srednia,rzadkie
+S154,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7413,0.3803,0.487,0.53,zatloczone,wysoka,sredni,srednia,rzadkie
+S154,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7413,0.4163,0.4384,0.53,zatloczone,wysoka,sredni,srednia,rzadkie
+S155,Brak HITL,autonomia,False,1.8,0.7503,0.7503,0.0,0.459,zatloczone,wysoka,sredni,wysoka,znane
+S155,HITL informacyjny,monitorowanie,True,5.8,0.7503,0.649,0.135,0.459,zatloczone,wysoka,sredni,wysoka,znane
+S155,Prawo weta operatora,weto,True,8.8,0.7503,0.502,0.331,0.459,zatloczone,wysoka,sredni,wysoka,znane
+S155,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7503,0.3849,0.487,0.459,zatloczone,wysoka,sredni,wysoka,znane
+S155,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7503,0.4214,0.4384,0.459,zatloczone,wysoka,sredni,wysoka,znane
+S156,Brak HITL,autonomia,False,1.8,0.7744,0.7744,0.0,0.354,zatloczone,wysoka,sredni,wysoka,rzadkie
+S156,HITL informacyjny,monitorowanie,True,5.8,0.7744,0.6699,0.135,0.354,zatloczone,wysoka,sredni,wysoka,rzadkie
+S156,Prawo weta operatora,weto,True,8.8,0.7744,0.5181,0.331,0.354,zatloczone,wysoka,sredni,wysoka,rzadkie
+S156,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7744,0.3973,0.487,0.354,zatloczone,wysoka,sredni,wysoka,rzadkie
+S156,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7744,0.4349,0.4384,0.354,zatloczone,wysoka,sredni,wysoka,rzadkie
+S157,Brak HITL,autonomia,False,1.8,0.7423,0.7423,0.0,0.783,zatloczone,wysoka,ciezki,niska,znane
+S157,HITL informacyjny,monitorowanie,True,5.8,0.7423,0.6421,0.135,0.783,zatloczone,wysoka,ciezki,niska,znane
+S157,Prawo weta operatora,weto,True,8.8,0.7423,0.4966,0.331,0.783,zatloczone,wysoka,ciezki,niska,znane
+S157,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7423,0.3808,0.487,0.783,zatloczone,wysoka,ciezki,niska,znane
+S157,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7423,0.4169,0.4384,0.783,zatloczone,wysoka,ciezki,niska,znane
+S158,Brak HITL,autonomia,False,1.8,0.789,0.789,0.0,0.678,zatloczone,wysoka,ciezki,niska,rzadkie
+S158,HITL informacyjny,monitorowanie,True,5.8,0.789,0.6825,0.135,0.678,zatloczone,wysoka,ciezki,niska,rzadkie
+S158,Prawo weta operatora,weto,True,8.8,0.789,0.5278,0.331,0.678,zatloczone,wysoka,ciezki,niska,rzadkie
+S158,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.789,0.4048,0.487,0.678,zatloczone,wysoka,ciezki,niska,rzadkie
+S158,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.789,0.4431,0.4384,0.678,zatloczone,wysoka,ciezki,niska,rzadkie
+S159,Brak HITL,autonomia,False,1.8,0.7938,0.7938,0.0,0.635,zatloczone,wysoka,ciezki,srednia,znane
+S159,HITL informacyjny,monitorowanie,True,5.8,0.7938,0.6866,0.135,0.635,zatloczone,wysoka,ciezki,srednia,znane
+S159,Prawo weta operatora,weto,True,8.8,0.7938,0.5311,0.331,0.635,zatloczone,wysoka,ciezki,srednia,znane
+S159,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.7938,0.4072,0.487,0.635,zatloczone,wysoka,ciezki,srednia,znane
+S159,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.7938,0.4458,0.4384,0.635,zatloczone,wysoka,ciezki,srednia,znane
+S160,Brak HITL,autonomia,False,1.8,0.8308,0.8308,0.0,0.53,zatloczone,wysoka,ciezki,srednia,rzadkie
+S160,HITL informacyjny,monitorowanie,True,5.8,0.8308,0.7186,0.135,0.53,zatloczone,wysoka,ciezki,srednia,rzadkie
+S160,Prawo weta operatora,weto,True,8.8,0.8308,0.5558,0.331,0.53,zatloczone,wysoka,ciezki,srednia,rzadkie
+S160,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.8308,0.4262,0.487,0.53,zatloczone,wysoka,ciezki,srednia,rzadkie
+S160,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.8308,0.4666,0.4384,0.53,zatloczone,wysoka,ciezki,srednia,rzadkie
+S161,Brak HITL,autonomia,False,1.8,0.8409,0.8409,0.0,0.459,zatloczone,wysoka,ciezki,wysoka,znane
+S161,HITL informacyjny,monitorowanie,True,5.8,0.8409,0.7274,0.135,0.459,zatloczone,wysoka,ciezki,wysoka,znane
+S161,Prawo weta operatora,weto,True,8.8,0.8409,0.5626,0.331,0.459,zatloczone,wysoka,ciezki,wysoka,znane
+S161,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.8409,0.4314,0.487,0.459,zatloczone,wysoka,ciezki,wysoka,znane
+S161,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.8409,0.4722,0.4384,0.459,zatloczone,wysoka,ciezki,wysoka,znane
+S162,Brak HITL,autonomia,False,1.8,0.868,0.868,0.0,0.354,zatloczone,wysoka,ciezki,wysoka,rzadkie
+S162,HITL informacyjny,monitorowanie,True,5.8,0.868,0.7508,0.135,0.354,zatloczone,wysoka,ciezki,wysoka,rzadkie
+S162,Prawo weta operatora,weto,True,8.8,0.868,0.5807,0.331,0.354,zatloczone,wysoka,ciezki,wysoka,rzadkie
+S162,Zatwierdzenie przed ruchem,akceptacja,True,13.8,0.868,0.4453,0.487,0.354,zatloczone,wysoka,ciezki,wysoka,rzadkie
+S162,Adaptacyjny HITL,ryzyko plus niepewność,True,10.3,0.868,0.4875,0.4384,0.354,zatloczone,wysoka,ciezki,wysoka,rzadkie

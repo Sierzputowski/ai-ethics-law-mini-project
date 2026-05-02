@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+<rect width="100%" height="100%" fill="white"/>
+<text x="24" y="34" font-size="20" font-family="Arial">Ryzyko resztkowe według wariantu HITL</text>
+<text x="24" y="88" font-size="13" font-family="Arial">Zatwierdzenie przed ruchem</text>
+<rect x="220" y="70" width="377.5" height="26" fill="#2f6f73"/>
+<text x="605.5" y="88" font-size="13" font-family="Arial">0.2447</text>
+<text x="24" y="140" font-size="13" font-family="Arial">Adaptacyjny HITL</text>
+<rect x="220" y="122" width="423.9" height="26" fill="#2f6f73"/>
+<text x="651.9" y="140" font-size="13" font-family="Arial">0.2748</text>
+<text x="24" y="192" font-size="13" font-family="Arial">Prawo weta operatora</text>
+<rect x="220" y="174" width="486.7" height="26" fill="#2f6f73"/>
+<text x="714.7" y="192" font-size="13" font-family="Arial">0.3155</text>
+<text x="24" y="244" font-size="13" font-family="Arial">HITL informacyjny</text>
+<rect x="220" y="226" width="546.3" height="26" fill="#2f6f73"/>
+<text x="774.3" y="244" font-size="13" font-family="Arial">0.3541</text>
+<text x="24" y="296" font-size="13" font-family="Arial">Brak HITL</text>
+<rect x="220" y="278" width="560.0" height="26" fill="#2f6f73"/>
+<text x="788.0" y="296" font-size="13" font-family="Arial">0.3630</text>
+</svg>
