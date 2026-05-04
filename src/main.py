@@ -1,5 +1,6 @@
 """
-Analiza ryzyka Human-in-the-Loop (HITL) dla planowania trajektorii robota.
+Analiza ryzyka Human-in-the-Loop (HITL) dla planowania trajektorii manipulatora
+przemysłowego.
 
 Skrypt generuje deterministyczny zestaw scenariuszy pracy robota, porównuje
 warianty nadzoru człowieka i zapisuje wyniki w katalogu `wyniki/`.
@@ -252,37 +253,37 @@ def zbuduj_macierz_zgodnosci() -> Rekordy:
             "obszar": "AI Act art. 9",
             "wymaganie": "Ciągły system zarządzania ryzykiem dla systemu wysokiego ryzyka.",
             "implementacja_w_projekcie": "Rejestr scenariuszy, ocena ryzyka bazowego i resztkowego, porównanie środków redukcji.",
-            "luka": "W projekcie to prototyp analityczny, nie pełny proces lifecycle z właścicielami ryzyk.",
+            "luka": "W projekcie to prototyp analityczny, nie pełny proces lifecycle z właścicielami ryzyk, przeglądami i akceptacją ryzyk.",
         },
         {
             "obszar": "AI Act art. 10",
             "wymaganie": "Jakość danych, reprezentatywność i kontrola błędów danych.",
             "implementacja_w_projekcie": "Jawne parametry scenariuszy: środowisko, okluzja, prędkość, ładunek, niepewność i nowość sytuacji.",
-            "luka": "Brak danych z rzeczywistego robota i brak audytu biasu domenowego.",
+            "luka": "Brak logów z realnego manipulatora, brak danych o awariach sensorów i brak walidacji na rozkładzie z hali produkcyjnej.",
         },
         {
             "obszar": "AI Act art. 11",
             "wymaganie": "Dokumentacja techniczna umożliwiająca ocenę zgodności.",
             "implementacja_w_projekcie": "README, wygenerowany raport, CSV z wynikami i opis założeń modelu.",
-            "luka": "Brak pełnej dokumentacji producenta, wersjonowania modelu i specyfikacji HMI.",
+            "luka": "Brak pełnej dokumentacji producenta, wersjonowania modelu, specyfikacji HMI i formalnego opisu granic systemu.",
         },
         {
             "obszar": "AI Act art. 12",
             "wymaganie": "Rejestrowanie zdarzeń i możliwość śledzenia działania systemu.",
             "implementacja_w_projekcie": "Wyniki per scenariusz zapisane do CSV, w tym decyzja o interwencji i ryzyko resztkowe.",
-            "luka": "Brak strumienia logów z robota, czujników i decyzji operatora w czasie rzeczywistym.",
+            "luka": "Brak strumienia logów z robota, czujników, planera trajektorii i decyzji operatora w czasie rzeczywistym.",
         },
         {
             "obszar": "AI Act art. 13",
             "wymaganie": "Przejrzystość i instrukcje dla wdrażającego.",
             "implementacja_w_projekcie": "Opis progów, trybów nadzoru i interpretacji wyników w README oraz raporcie.",
-            "luka": "Trzeba dodać instrukcję stanowiskową dla operatora i procedury eskalacji.",
+            "luka": "Trzeba dodać instrukcję stanowiskową dla operatora, opis ograniczeń modelu i procedury eskalacji.",
         },
         {
             "obszar": "AI Act art. 14",
             "wymaganie": "Skuteczny nadzór człowieka, możliwość monitorowania, interpretacji i przerwania działania.",
-            "implementacja_w_projekcie": "Porównanie monitorowania, weta, zatwierdzania i adaptacyjnego HITL.",
-            "luka": "Projekt nie waliduje ergonomii HMI ani czasu reakcji realnego operatora.",
+            "implementacja_w_projekcie": "Porównanie monitorowania, weta, zatwierdzania i adaptacyjnego HITL oraz analiza przeciążenia operatora.",
+            "luka": "Projekt nie waliduje ergonomii HMI, czasu reakcji realnego operatora ani jakości poprawek trajektorii.",
         },
         {
             "obszar": "AI Act art. 15",
@@ -291,13 +292,113 @@ def zbuduj_macierz_zgodnosci() -> Rekordy:
             "luka": "Brak testów cyberbezpieczeństwa, odporności na spoofing sensorów i awarii sieci.",
         },
         {
+            "obszar": "AI Act role operatorów",
+            "wymaganie": "Rozróżnienie obowiązków dostawcy, producenta produktu i wdrażającego system AI.",
+            "implementacja_w_projekcie": "Wnioski rozdzielają odpowiedzialność: projektant planera, integrator maszyny, organizacja wdrażająca i przeszkolony operator.",
+            "luka": "Brak kontraktowej alokacji obowiązków i brak formalnej procedury przekazania systemu do użytkowania.",
+        },
+        {
             "obszar": "Rozporządzenie maszynowe 2023/1230",
             "wymaganie": "Ocena ryzyka i redukcja ryzyka dla maszyn, w tym autonomii i funkcji bezpieczeństwa.",
-            "implementacja_w_projekcie": "Wniosek: HITL jest środkiem organizacyjno-technicznym, ale nie zastępuje funkcji bezpieczeństwa maszyny.",
-            "luka": "Do wdrożenia potrzebna byłaby analiza zgodności CE i normy robotyczne.",
+            "implementacja_w_projekcie": "Wniosek: HITL jest środkiem organizacyjno-technicznym, ale nie zastępuje osłon, stref, ograniczeń prędkości i awaryjnego zatrzymania.",
+            "luka": "Do wdrożenia potrzebna byłaby analiza zgodności CE, ocena ryzyka maszyny i dokumentacja techniczna producenta.",
+        },
+        {
+            "obszar": "ISO/TS 15066 i normy robotyczne",
+            "wymaganie": "Dla pracy blisko ludzi trzeba analizować ograniczenia kontaktu, prędkości, siły, separacji i organizacji stanowiska.",
+            "implementacja_w_projekcie": "Scenariusze z większą gęstością ludzi i okluzją pokazują, kiedy nadzór człowieka musi być silniejszy.",
+            "luka": "Brak pomiarów sił, dystansów, czasów zatrzymania i pełnej walidacji stanowiska.",
         },
     ]
     return rekordy
+
+
+def zbuduj_rekomendacje_polityk() -> Rekordy:
+    """Rekomenduje politykę HITL dla klas sytuacji, nie tylko globalnie."""
+
+    return [
+        {
+            "sytuacja": "Strefa częściowo odseparowana, znane trajektorie, niska niepewność AI",
+            "rekomendowana_polityka": "HITL informacyjny albo prawo weta operatora",
+            "uzasadnienie": "Ryzyko dotyczy głównie mienia i przestoju, więc wystarcza monitorowanie z możliwością reakcji bez blokowania każdej trajektorii.",
+            "warunek_brzegowy": "Operator musi widzieć powód ostrzeżenia i mieć prostą możliwość zatrzymania albo korekty trajektorii.",
+        },
+        {
+            "sytuacja": "Strefa częściowo odseparowana, wysoka okluzja albo niska pewność percepcji",
+            "rekomendowana_polityka": "Adaptacyjny HITL",
+            "uzasadnienie": "Eskalacja tylko przy wysokim ryzyku lub niskiej pewności zmniejsza ryzyko bez stałego przeciążania operatora.",
+            "warunek_brzegowy": "Progi eskalacji muszą być audytowalne i zapisane w dokumentacji technicznej.",
+        },
+        {
+            "sytuacja": "Rzadkie, nowe lub nietypowe zadanie manipulacyjne",
+            "rekomendowana_polityka": "Zatwierdzenie przed ruchem",
+            "uzasadnienie": "Przed wykonaniem nieznanej trajektorii operator powinien móc sprawdzić plan i wprowadzić korektę.",
+            "warunek_brzegowy": "Nie powinno to być domyślne dla każdej decyzji, bo długotrwale tworzy ryzyko przeciążenia.",
+        },
+        {
+            "sytuacja": "Praca blisko ludzi albo możliwość kolizji z człowiekiem",
+            "rekomendowana_polityka": "Adaptacyjny HITL plus niezależne funkcje bezpieczeństwa maszyny",
+            "uzasadnienie": "Problem prawny przechodzi z ryzyka produkcyjnego w ryzyko zdrowia i bezpieczeństwa, więc sam człowiek w pętli nie wystarcza.",
+            "warunek_brzegowy": "Konieczne są osłony, strefy, ograniczenia prędkości, awaryjne zatrzymanie, walidacja HMI i analiza zgodności maszynowej.",
+        },
+        {
+            "sytuacja": "Jeden operator nadzoruje wiele robotów",
+            "rekomendowana_polityka": "Adaptacyjny HITL z limitami obciążenia",
+            "uzasadnienie": "Wiele robotów zwiększa liczbę alarmów i decyzji, więc formalny nadzór może stać się pozorny.",
+            "warunek_brzegowy": "System powinien mieć limity liczby równoległych eskalacji i procedurę przejęcia przez drugiego operatora.",
+        },
+    ]
+
+
+def analizuj_obciazenie_operatora(agregat: Rekordy) -> Rekordy:
+    """Porównuje skutki nadzoru jednego manipulatora i wielu manipulatorów."""
+
+    modele = [
+        {
+            "model_nadzoru": "jeden_operator_jeden_robot",
+            "mnoznik_zmeczenia": 1.00,
+            "mnoznik_czasu": 1.00,
+            "opis": "Operator obserwuje jeden manipulator i ma czas na korektę trajektorii.",
+        },
+        {
+            "model_nadzoru": "jeden_operator_wiele_robotow",
+            "mnoznik_zmeczenia": 1.35,
+            "mnoznik_czasu": 1.18,
+            "opis": "Operator obsługuje kilka manipulatorów, więc rośnie opóźnienie i ryzyko automatyzacyjnej bierności.",
+        },
+    ]
+
+    wynik = []
+    for wiersz in agregat:
+        for model in modele:
+            odsetek_interwencji = float(wiersz["odsetek_interwencji"])
+            przeciazenie = min(
+                1.0, odsetek_interwencji * float(model["mnoznik_zmeczenia"])
+            )
+            kara_ryzyka = 1 + 0.18 * max(0.0, przeciazenie - 0.35)
+            wynik.append(
+                {
+                    "polityka": wiersz["polityka"],
+                    "model_nadzoru": model["model_nadzoru"],
+                    "opis": model["opis"],
+                    "skorygowane_ryzyko": round(
+                        float(wiersz["srednie_ryzyko_resztkowe"]) * kara_ryzyka,
+                        4,
+                    ),
+                    "skorygowany_czas_decyzji_s": round(
+                        float(wiersz["sredni_czas_decyzji_s"])
+                        * float(model["mnoznik_czasu"]),
+                        4,
+                    ),
+                    "indeks_przeciazenia_operatora": round(przeciazenie, 4),
+                    "interpretacja": (
+                        "wymaga limitów eskalacji"
+                        if przeciazenie >= 0.5
+                        else "akceptowalne przy przeszkolonym operatorze"
+                    ),
+                }
+            )
+    return wynik
 
 
 def tabela_markdown(ramka: Rekordy) -> str:
@@ -465,6 +566,8 @@ def zapisz_raport(
     wyniki: Rekordy,
     agregat: Rekordy,
     zgodnosc: Rekordy,
+    rekomendacje: Rekordy,
+    obciazenie: Rekordy,
 ) -> None:
     najlepsza = agregat[0]
     bazowa = next(w for w in agregat if w["polityka"] == "Brak HITL")
@@ -473,9 +576,11 @@ def zapisz_raport(
         / float(bazowa["srednie_ryzyko_resztkowe"])
     )
 
-    raport = f"""# Raport z analizy HITL dla planowania trajektorii robota
+    raport = f"""# Raport z analizy HITL dla planowania trajektorii manipulatora przemysłowego
 
 ## Zakres
+
+Analiza dotyczy manipulatora przemysłowego pracującego w hali produkcyjnej, w strefie częściowo odseparowanej. AI wybiera trajektorię ramienia robota. Główne szkody w scenariuszu bazowym to uszkodzenie mienia i przestój produkcji, ale analiza wskazuje też, co zmieniłaby praca blisko ludzi.
 
 Analiza porównuje {len(POLITYKI)} wariantów nadzoru człowieka na {len(scenariusze)} deterministycznie wygenerowanych scenariuszach. Scenariusze różnią się gęstością ludzi, okluzją, prędkością robota, masą ładunku, niepewnością percepcji i nowością sytuacji.
 
@@ -492,7 +597,17 @@ Analiza porównuje {len(POLITYKI)} wariantów nadzoru człowieka na {len(scenari
 
 ## Interpretacja
 
-Wyniki wspierają podejście adaptacyjne: człowiek powinien być włączany tam, gdzie ryzyko bazowe albo niepewność modelu przekraczają ustalone progi. Stałe wymaganie zatwierdzania każdej decyzji daje silną redukcję ryzyka, ale podnosi koszt operacyjny i może obniżyć jakość nadzoru przy długiej pracy.
+Wyniki nie prowadzą do jednej uniwersalnej polityki. Dla znanych trajektorii w częściowo odseparowanej strefie wystarczające może być prawo weta albo HITL informacyjny. Dla wysokiej okluzji, niskiej pewności percepcji lub nietypowych zadań uzasadniony jest adaptacyjny HITL albo zatwierdzenie przed ruchem. Jeżeli manipulator pracowałby blisko ludzi, problem zmieniłby charakter: ryzyko zdrowia i bezpieczeństwa wymagałoby nie tylko HITL, ale też niezależnych funkcji bezpieczeństwa maszyny.
+
+Pozorny nadzór człowieka jest realnym ryzykiem etycznym i prawnym. Operator przeszkolony nadal może być przeciążony, szczególnie gdy nadzoruje wiele robotów. Wtedy odpowiedzialność nie może być przerzucana wyłącznie na operatora: dostawca planera, integrator maszyny i organizacja wdrażająca muszą zapewnić interpretowalne alarmy, możliwość korekty trajektorii, limity równoległych interwencji i pełne logowanie decyzji.
+
+## Rekomendacje zależne od sytuacji
+
+{tabela_markdown(rekomendacje)}
+
+## Nadzór jednego i wielu robotów
+
+{tabela_markdown(obciazenie)}
 
 ## Macierz zgodności
 
@@ -514,14 +629,18 @@ def main() -> None:
     wyniki = ocen_polityki(scenariusze)
     agregat = agreguj_wyniki(wyniki)
     zgodnosc = zbuduj_macierz_zgodnosci()
+    rekomendacje = zbuduj_rekomendacje_polityk()
+    obciazenie = analizuj_obciazenie_operatora(agregat)
 
     zapisz_csv(KATALOG_WYNIKOW / "scenariusze.csv", scenariusze)
     zapisz_csv(KATALOG_WYNIKOW / "wyniki_polityk_hitl.csv", wyniki)
     zapisz_csv(KATALOG_WYNIKOW / "podsumowanie_polityk.csv", agregat)
     zapisz_csv(KATALOG_WYNIKOW / "macierz_zgodnosci_ai_act.csv", zgodnosc)
+    zapisz_csv(KATALOG_WYNIKOW / "rekomendacje_polityk.csv", rekomendacje)
+    zapisz_csv(KATALOG_WYNIKOW / "analiza_obciazenia_operatora.csv", obciazenie)
 
     zapisz_wykresy(agregat, wyniki)
-    zapisz_raport(scenariusze, wyniki, agregat, zgodnosc)
+    zapisz_raport(scenariusze, wyniki, agregat, zgodnosc, rekomendacje, obciazenie)
 
     print("Wygenerowano analizę HITL i zapisano artefakty w katalogu 'wyniki/'.")
     print(tabela_markdown(agregat))

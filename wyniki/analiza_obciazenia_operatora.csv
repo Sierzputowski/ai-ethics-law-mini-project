@@ -1,0 +1,11 @@
+polityka,model_nadzoru,opis,skorygowane_ryzyko,skorygowany_czas_decyzji_s,indeks_przeciazenia_operatora,interpretacja
+Zatwierdzenie przed ruchem,jeden_operator_jeden_robot,Operator obserwuje jeden manipulator i ma czas na korektę trajektorii.,0.2499,7.4296,0.4691,akceptowalne przy przeszkolonym operatorze
+Zatwierdzenie przed ruchem,jeden_operator_wiele_robotow,"Operator obsługuje kilka manipulatorów, więc rośnie opóźnienie i ryzyko automatyzacyjnej bierności.",0.2572,8.7669,0.6333,wymaga limitów eskalacji
+Adaptacyjny HITL,jeden_operator_jeden_robot,Operator obserwuje jeden manipulator i ma czas na korektę trajektorii.,0.2758,4.9481,0.3704,akceptowalne przy przeszkolonym operatorze
+Adaptacyjny HITL,jeden_operator_wiele_robotow,"Operator obsługuje kilka manipulatorów, więc rośnie opóźnienie i ryzyko automatyzacyjnej bierności.",0.2822,5.8388,0.5,wymaga limitów eskalacji
+Prawo weta operatora,jeden_operator_jeden_robot,Operator obserwuje jeden manipulator i ma czas na korektę trajektorii.,0.3155,3.3123,0.216,akceptowalne przy przeszkolonym operatorze
+Prawo weta operatora,jeden_operator_wiele_robotow,"Operator obsługuje kilka manipulatorów, więc rośnie opóźnienie i ryzyko automatyzacyjnej bierności.",0.3155,3.9085,0.2916,akceptowalne przy przeszkolonym operatorze
+HITL informacyjny,jeden_operator_jeden_robot,Operator obserwuje jeden manipulator i ma czas na korektę trajektorii.,0.3541,2.1457,0.0864,akceptowalne przy przeszkolonym operatorze
+HITL informacyjny,jeden_operator_wiele_robotow,"Operator obsługuje kilka manipulatorów, więc rośnie opóźnienie i ryzyko automatyzacyjnej bierności.",0.3541,2.5319,0.1166,akceptowalne przy przeszkolonym operatorze
+Brak HITL,jeden_operator_jeden_robot,Operator obserwuje jeden manipulator i ma czas na korektę trajektorii.,0.363,1.8,0.0,akceptowalne przy przeszkolonym operatorze
+Brak HITL,jeden_operator_wiele_robotow,"Operator obsługuje kilka manipulatorów, więc rośnie opóźnienie i ryzyko automatyzacyjnej bierności.",0.363,2.124,0.0,akceptowalne przy przeszkolonym operatorze

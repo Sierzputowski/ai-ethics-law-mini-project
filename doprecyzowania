@@ -1,0 +1,240 @@
+# Doprecyzowania potrzebne do pełnego stworzenia projektu
+
+Ten plik zawiera pytania, na które warto odpowiedzieć przed finalnym dopracowaniem mini-projektu. Odpowiedzi pozwolą uzupełnić README, PROCESS, wnioski, powiązanie z kursem oraz ewentualnie samą analizę.
+
+## 1. Dane formalne
+
+1. Jakie imię i nazwisko ma widnieć w README?
+
+bartek
+2. Jaki jest Twój numer indeksu?
+
+1
+3. Czy temat własny został już potwierdzony z prowadzącym?
+
+tak
+4. Czy repozytorium będzie publiczne, prywatne, czy udostępnione tylko prowadzącemu?
+
+udostępnione prowadzącemu
+5. Czy projekt ma być oddany dokładnie w tej formie repozytorium, czy ma być jeszcze eksportowany do PDF / prezentacji / innej formy?
+
+w formie repozytorium
+
+## 2. Powiązanie z projektem grupowym
+
+1. Jaki jest temat Twojego projektu grupowego?
+
+wyznaczanie ścieżek dla robotów przemysłowych
+2. Czy projekt grupowy dotyczy robotyki, systemów autonomicznych, bezpieczeństwa, sterowania, AI Act, audytu AI albo innego obszaru powiązanego z tym mini-projektem?
+
+tak
+3. Jeżeli istnieje powiązanie, jak mini-projekt ma wspierać projekt grupowy?
+
+określić możliwe ograniczenia prawne rozwiązania
+4. Jeżeli powiązania nie ma, czy mam opisać mini-projekt jako samodzielny temat własny?
+
+5. Czy w projekcie grupowym występuje konkretny przypadek użycia, np. robot mobilny, cobot, manipulator, system magazynowy, linia produkcyjna albo autonomiczna platforma?
+
+manipulator
+
+## 3. Zakładany scenariusz robota
+
+1. Jaki typ robota chcesz przyjąć w opisie projektu: robot mobilny, manipulator przemysłowy, cobot, robot magazynowy, robot laboratoryjny czy ogólny system robotyczny?
+
+manipulator przemysłowy
+2. W jakim środowisku działa robot: hala produkcyjna, magazyn, laboratorium, szpital, przestrzeń publiczna, kampus, inne?
+
+hala produkcyjna
+3. Czy robot pracuje blisko ludzi, czy w strefie częściowo odseparowanej?
+
+częściowo odseparowanej (możesz jednak dodać we wnioskach co by zmieniło jakby był blisko ludzi)
+4. Jakie decyzje podejmuje AI: wybór trajektorii, omijanie ludzi, dobór prędkości, zatrzymanie, wybór alternatywnej ścieżki, priorytetyzacja zadań?
+
+wybór trajektorii
+5. Czy planowanie trajektorii ma dotyczyć ruchu całego robota, ramienia robota, czy obu przypadków?
+
+dotyczy manipulatora przemysłowego który jest ramieniem
+6. Jakie są najważniejsze potencjalne szkody: kolizja z człowiekiem, uszkodzenie mienia, upuszczenie ładunku, przestój produkcji, błędna reakcja na okluzję, inne?
+
+uszkodzenie mienia/przestój produkcji (ale możesz we wnioskach opisać również co jeżeli mógłoby dojść do kolizji z człowiekiem jak zmienia to problem prawnie)
+
+## 4. Zakres techniczny analizy
+
+1. Czy obecny model syntetycznych scenariuszy jest wystarczający, czy chcesz dodać bardziej realistyczny opis konkretnego robota?
+
+uproszczony jest raczej wystarczający (jeżeli są konkretne cechy np. masa robota które mogły by zmieniać status prawny możesz zawżeć informację o tym we wnioskach)
+2. Czy liczba 162 scenariuszy jest odpowiednia, czy chcesz większy albo mniejszy zestaw?
+
+jest wystarczająca
+3. Czy obecne parametry scenariuszy są trafne: gęstość ludzi, okluzja, prędkość, ładunek, niepewność percepcji, nowość sytuacji?
+
+chyba, nie sprawdzałem ich wszystkich jeśli jakieś mocno nie zgadzają się z tym co wcześniej napisałem popraw je/generacje ich
+4. Czy trzeba dodać inne parametry, np. stan podłoża, awarię sensora, jakość mapy, typ zadania, dystans do człowieka, kategorię ładunku?
+
+jeżeli któryś z tych parametrów jest ważny dodaj porównanie jak wpływa na wyniki
+5. Czy chcesz, aby projekt pozostał w pełni oparty o standardową bibliotekę Pythona, czy można używać dodatkowych bibliotek?
+
+można dodać inne biblioteki
+
+
+6. Czy ważniejsze jest, aby projekt był prosty i łatwy do uruchomienia, czy bardziej rozbudowany analitycznie?
+
+ważne żeby spełnia wymagania dla poziomu 'excellent' 90%+
+
+## 5. Polityki Human-in-the-Loop
+
+1. Czy obecne pięć polityk HITL ma zostać bez zmian: brak HITL, HITL informacyjny, prawo weta, zatwierdzenie przed ruchem, adaptacyjny HITL?
+
+jeżeli uważasz że potrzebnych jest więcej polityk aby uzyskać poziom excellent to dodaj, jeśli nie zostaw
+2. Czy chcesz dodać inną politykę, np. automatyczne zatrzymanie awaryjne, podwójna autoryzacja, tryb teleoperacji, tryb ograniczonej prędkości?
+
+nie
+3. Czy operator ma być człowiekiem nadzorującym jeden robot, czy wiele robotów jednocześnie?
+
+rozważ oba scenariusze
+4. Czy operator ma mieć możliwość tylko zaakceptowania lub odrzucenia trajektorii, czy także jej poprawienia?
+
+także poprawienia
+5. Czy w projekcie mamy mocniej opisać ryzyko przeciążenia operatora?
+
+tak aby było wystarczające na poziom 'excellent' 
+6. Czy mam założyć, że operator jest przeszkolony, czy że może mieć ograniczoną wiedzę techniczną?
+
+przeszkolony
+
+## 6. Interpretacja wyników
+
+1. Jaki wniosek ma być główną tezą projektu: adaptacyjny HITL jako najlepszy kompromis, czy coś innego?
+
+głównym wnioskiem powinien być opis dla jakich sytuacji jest najlepsza jaka polityka
+2. Czy chcesz mocniej podkreślić, że pełne zatwierdzanie przed ruchem daje najniższe ryzyko, ale jest kosztowne organizacyjnie?
+
+nie
+3. Czy mam rozbudować opis ryzyka pozornego nadzoru człowieka?
+
+tak aby było wystarczające na poziom 'excellent'
+4. Czy mam rozbudować opis odpowiedzialności: operator, producent systemu, wdrażający, organizacja?
+
+tak aby było wystarczające na poziom 'excellent'
+5. Czy chcesz dodać rekomendacje praktyczne dla projektanta systemu HITL?
+
+tak
+6. Czy wnioski mają być bardziej techniczne, bardziej prawne, czy zbalansowane?
+
+bardziej etyczno/prawne
+
+## 7. AI Act i regulacje
+
+1. Czy mam traktować system jako potencjalnie wysokiego ryzyka w rozumieniu AI Act?
+
+powinno to wynikać z tego co system robii, możesz we wnioskach zawrzeć dla jakich sytuacji (np. obecność ludzi, brak obecności), gdzie w AI act system by się znalazł
+2. Czy mam opisać go jako komponent bezpieczeństwa maszyny, czy ostrożniej jako system wymagający szczegółowej oceny ryzyka?
+
+tak aby było zgodnie z resztą projektu
+3. Czy chcesz, aby analiza mocniej odnosiła się do art. 14 AI Act, czyli nadzoru człowieka?
+
+tak
+4. Czy mam rozbudować macierz zgodności o dodatkowe obowiązki, np. role dostawcy i deployera?
+
+tak aby było wystarczające na poziom 'excellent'
+5. Czy mam dodać osobną sekcję o rozporządzeniu maszynowym 2023/1230?
+
+tak aby było wystarczające na poziom 'excellent'
+6. Czy mam uwzględnić normy robotyczne, np. ISO/TS 15066, tylko jako kontekst, czy szerzej?
+
+tak aby było wystarczające na poziom 'excellent'
+
+## 8. Dane, źródła i bibliografia
+
+1. Czy masz źródła, które prowadzący polecał na zajęciach i które trzeba koniecznie uwzględnić?
+
+nie ma takich (uwzględnij np. AI act czy ropzorządzenie 2023/1230 i inne jeżeli pojawią się w projekcie)
+2. Czy mam korzystać tylko z dokumentów już wymienionych w README, czy dodać więcej źródeł?
+
+możesz dodać więcej źródeł
+3. Czy źródła mają być opisane krótkimi komentarzami, czy wystarczy lista linków?
+
+wystarczy lista linków (max to - co tam powinno być np. "[link do x w ai act] -x w ai act", jakby strona pod linkiem przestała działać)
+4. Czy w projekcie mają znaleźć się cytowania w stylu akademickim, czy zwykłe linki w README wystarczą?
+
+zwykłe linki
+5. Czy masz materiały z projektu grupowego, które można zacytować albo opisać?
+
+nie, projekt powininen być zrobiony tak aby nie były potrzebne
+## 9. PROCESS.md i użycie AI
+
+1. Jakich narzędzi AI faktycznie używałeś przy projekcie?
+
+codex
+2. Czy poza Codexem / ChatGPT używałeś Claude, Cursor, GitHub Copilot, Gemini, Perplexity albo innych narzędzi?
+
+nie
+3. Jakie rzeczy robiłeś samodzielnie, a jakie z pomocą AI?
+
+aktualnie wszystko jest z codex
+4. Czy chcesz, aby dopisać do PROCESS.md prompt z tej rozmowy o wymaganiach i doprecyzowaniach?
+
+tak
+5. Czy pamiętasz inne ważne prompty, które trzeba dodać?
+
+najpierw poprosiłem codex o stworzenie projektu na podstawie readme.md dla tematu: Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance
+
+następnie to już jest nasza rozmowa tu
+6. Czy chcesz opisać użycie AI krytycznie, np. że wyniki i źródła wymagały weryfikacji?
+
+nie, raczej neutralny opis jak używam go jako narzędzia niż to jak sobie radzi (radzi sobie wyśmienicie <3)
+
+## 10. Forma końcowa projektu
+
+1. Czy projekt ma pozostać jako skrypt Python, czy chcesz dodać notebook Jupyter?
+
+dodaj notebook najlepiej 2 jeden (np. run) który pozwala na odtworzenie wszystkich wyników drugi (np. analyse) z ich analizą
+2. Czy potrzebujesz dodatkowego raportu w `wyniki/`, np. dłuższego raportu końcowego po polsku?
+
+niech on będzie tym drugim notebookiem (analyse) w `notebooks/`
+3. Czy wykresy SVG są wystarczające, czy wolisz PNG albo PDF?
+
+wystarczające, ale niech będą użyte potem w tym drugim noteboooku (analyse)
+4. Czy chcesz dodać screenshoty do `wyniki/`?
+
+nie
+5. Czy mam przygotować krótką sekcję "jak interpretować wyniki" dla osoby oceniającej?
+
+tak aby było wystarczające na poziom 'excellent' i raczej jako krótkie komentarze w tym drugim notebooku (analyse)
+6. Czy projekt ma być bardziej opisowy, czy bardziej eksperymentalny?
+
+tak aby było na poziom 'excellent'
+
+## 11. Ograniczenia i uczciwość opisu
+
+1. Czy mam jasno napisać, że projekt nie korzysta z danych realnego robota?
+
+tak, dodaj że wynika to z trudności uzyskania takich danych i braku ich w projekcie grupowym
+2. Czy mam zaznaczyć, że wyniki nie służą do certyfikacji ani wdrożenia produkcyjnego?
+
+tak aby było wystarczające na poziom 'excellent'
+3. Czy chcesz dopisać, jakie dane byłyby potrzebne do dalszego rozwoju projektu?
+
+tak
+4. Czy mam dodać plan dalszych prac, np. testy HMI, symulacja w ROS, dane z robota, analiza cyberbezpieczeństwa?
+
+tak aby było wystarczające na poziom 'excellent'
+5. Czy są elementy, których nie chcesz obiecywać w projekcie, żeby nie wyglądało to na fałszywy zakres?
+
+nie
+
+## 12. Najważniejsze decyzje do podjęcia
+
+Najbardziej potrzebuję od Ciebie odpowiedzi na te pytania:
+
+1. Jakie są Twoje dane do README: imię, nazwisko i numer indeksu?
+2. Jaki jest temat projektu grupowego i czy mini-projekt ma być z nim powiązany?
+3. Jaki konkretny typ robota i środowisko mamy przyjąć w opisie?
+4. Czy obecny syntetyczny model analizy zostaje, czy mam go rozbudować?
+5. Czy główną tezą ma być rekomendacja adaptacyjnego HITL?
+6. Czy traktujemy system jako potencjalnie wysokiego ryzyka według AI Act?
+7. Jakich narzędzi AI faktycznie używałeś i jakie prompty trzeba zapisać w PROCESS.md?
+
+chyba odpowiedziałem na wszystko to wcześniej
+
+Po odpowiedzi na te pytania będę mógł dopracować projekt tak, żeby był spójny formalnie, technicznie i merytorycznie.

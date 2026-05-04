@@ -1,24 +1,26 @@
 # Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning
 
-**Autor:** Bartek, nr indeksu: do uzupełnienia
+**Autor:** Bartek, nr indeksu: 1
 
-**Temat:** własny — *Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance*
+**Temat:** własny, potwierdzony z prowadzącym — *Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance*
 
 **Kurs:** Aspekty prawne, społeczne i etyczne w AI, PWr 2025/2026
 
 ## Cel projektu
 
-Projekt analizuje, jak różne warianty nadzoru człowieka nad systemem AI planującym trajektorie robota wpływają na ryzyko resztkowe, opóźnienie decyzji i zgodność z wymaganiami AI Act. Mini-projekt nie buduje realnego sterownika robota; tworzy odtwarzalny model analityczny, który pozwala porównać kilka polityk Human-in-the-Loop (HITL) w scenariuszach o różnej gęstości ludzi, prędkości ruchu, okluzji, ładunku i niepewności percepcji.
+Projekt analizuje, jak różne warianty nadzoru człowieka nad systemem AI wybierającym trajektorię manipulatora przemysłowego wpływają na ryzyko resztkowe, opóźnienie decyzji, obciążenie operatora i zgodność z wymaganiami AI Act. Scenariuszem bazowym jest ramię robota pracujące w hali produkcyjnej, w strefie częściowo odseparowanej od ludzi. Główne szkody w takim układzie to uszkodzenie mienia i przestój produkcji, ale projekt omawia też, co zmieniłaby praca blisko ludzi i możliwość kolizji z człowiekiem.
 
-Główne pytanie badawcze: czy „człowiek w pętli” rzeczywiście zmniejsza ryzyko w planowaniu trajektorii, czy tylko przesuwa odpowiedzialność na operatora?
+Mini-projekt nie buduje realnego sterownika robota. Tworzy odtwarzalny model analityczny, który porównuje polityki Human-in-the-Loop (HITL) w syntetycznych scenariuszach o różnej gęstości ludzi, prędkości ruchu, okluzji, ładunku, niepewności percepcji i nowości sytuacji.
+
+Główne pytanie badawcze: w jakich sytuacjach dana polityka HITL jest uzasadniona prawnie i etycznie, a kiedy „człowiek w pętli” staje się tylko formalnym przeniesieniem odpowiedzialności na operatora?
 
 ## Powiązanie z projektem grupowym
 
-Do uzupełnienia po stronie autora, jeśli projekt grupowy dotyczy robotyki, automatyki, systemów bezpieczeństwa lub audytu AI. W obecnej wersji mini-projekt jest samodzielny i wybrany dlatego, że łączy techniczny problem planowania trajektorii z wymaganiami prawnymi dotyczącymi systemów wysokiego ryzyka, nadzoru człowieka, dokumentacji i bezpieczeństwa maszyn.
+Projekt grupowy dotyczy wyznaczania ścieżek dla robotów przemysłowych. Mini-projekt wspiera go przez analizę możliwych ograniczeń prawnych i etycznych dla systemu AI planującego trajektorie manipulatora. Najważniejsze powiązanie nie polega na poprawie algorytmu planowania, ale na sprawdzeniu, kiedy taki algorytm wymaga nadzoru człowieka, dokumentacji, logowania, oceny ryzyka i zgodności z regulacjami dotyczącymi systemów AI oraz maszyn.
 
 ## Wymagania i uruchomienie
 
-Główna analiza działa na standardowej bibliotece Pythona i nie wymaga kluczy API. Zależności w `pyproject.toml` pozostają przydatne do eksperymentów z notebookami, wykresami Matplotlib i przykładami LLM z szablonu.
+Główna analiza działa na standardowej bibliotece Pythona i nie wymaga kluczy API.
 
 ```bash
 uv sync
@@ -31,11 +33,18 @@ Jeśli `uv` nie jest zainstalowane, można uruchomić analizę bezpośrednio:
 python src/main.py
 ```
 
-Opcjonalne przykłady LLM z `src/example_openai.py`, `src/example_anthropic.py` i `src/example_gemini.py` wymagają skopiowania `.env.example` do `.env` oraz uzupełnienia odpowiednich kluczy API. Główna analiza HITL ich nie używa.
+Notebooki można uruchomić po instalacji zależności notebookowych:
+
+```bash
+uv sync --extra notebooks
+uv run jupyter notebook
+```
+
+Opcjonalne przykłady LLM z szablonu wymagają skopiowania `.env.example` do `.env` oraz uzupełnienia odpowiednich kluczy API. Główna analiza HITL ich nie używa.
 
 ## Co robi skrypt
 
-`src/main.py` generuje 162 deterministyczne scenariusze pracy robota. Każdy scenariusz opisuje środowisko, prędkość, ładunek, niepewność percepcji i nowość sytuacji. Następnie porównuje pięć polityk:
+`src/main.py` generuje 162 deterministyczne scenariusze pracy manipulatora. Każdy scenariusz opisuje środowisko, prędkość, ładunek, niepewność percepcji, okluzję i nowość sytuacji. Następnie porównuje pięć polityk:
 
 - brak HITL,
 - HITL informacyjny,
@@ -43,19 +52,27 @@ Opcjonalne przykłady LLM z `src/example_openai.py`, `src/example_anthropic.py` 
 - zatwierdzenie przed ruchem,
 - adaptacyjny HITL.
 
-Wyniki są zapisywane do katalogu `wyniki/` jako pliki CSV, SVG i raport Markdown.
+Operator jest traktowany jako osoba przeszkolona. W analizie zakładam, że może nie tylko zaakceptować albo odrzucić trajektorię, ale także ją poprawić. Dodatkowy moduł porównuje dwa modele organizacyjne: jeden operator nadzoruje jeden manipulator oraz jeden operator nadzoruje wiele manipulatorów.
 
 ## Wyniki
 
 Najważniejsze pliki:
 
-- `wyniki/podsumowanie_polityk.csv` — tabela zbiorcza polityk HITL,
+- `wyniki/scenariusze.csv` — wejściowe scenariusze syntetyczne,
 - `wyniki/wyniki_polityk_hitl.csv` — wynik dla każdego scenariusza i polityki,
-- `wyniki/macierz_zgodnosci_ai_act.csv` — mapowanie wymagań AI Act na środki projektowe,
-- `wyniki/raport_hitl.md` — raport wygenerowany przez skrypt,
+- `wyniki/podsumowanie_polityk.csv` — tabela zbiorcza polityk HITL,
+- `wyniki/rekomendacje_polityk.csv` — rekomendacje zależne od sytuacji,
+- `wyniki/analiza_obciazenia_operatora.csv` — porównanie nadzoru jednego i wielu robotów,
+- `wyniki/macierz_zgodnosci_ai_act.csv` — mapowanie wymagań AI Act i regulacji maszynowych na środki projektowe,
+- `wyniki/raport_hitl.md` — raport generowany przez skrypt,
 - `wyniki/ryzyko_resztkowe_polityki.svg`,
 - `wyniki/kompromis_ryzyko_czas.svg`,
 - `wyniki/heatmapa_wysokiego_ryzyka.svg`.
+
+Notebooki:
+
+- `notebooks/run.ipynb` — odtworzenie wyników przez uruchomienie skryptu,
+- `notebooks/analyse.ipynb` — opisowa analiza wyników, wykresów i konsekwencji prawno-etycznych.
 
 Podsumowanie z uruchomienia:
 
@@ -67,19 +84,34 @@ Podsumowanie z uruchomienia:
 | HITL informacyjny | 0.3541 | 0.6636 | 2.1457 s | 8.64% |
 | Brak HITL | 0.3630 | 0.7403 | 1.8000 s | 0.00% |
 
-Najniższe średnie ryzyko daje zatwierdzanie przed ruchem: redukcja średniego ryzyka wobec pełnej autonomii wynosi około 32,6%. Wariant adaptacyjny jest jednak bardziej praktycznym kompromisem, bo zmniejsza ryzyko o około 24,3% przy krótszym średnim czasie decyzji i mniejszym obciążeniu operatora.
+## Jak interpretować wyniki
 
-## Wnioski merytoryczne
+Nie ma jednej najlepszej polityki dla wszystkich sytuacji. Zatwierdzenie przed ruchem daje najniższe średnie ryzyko, ale wymaga interwencji w prawie połowie przypadków. Dla pracy rutynowej w częściowo odseparowanej hali może to być zbyt kosztowne organizacyjnie i może prowadzić do przeciążenia operatora.
 
-1. Samo dodanie człowieka do procesu nie wystarcza do zgodności z AI Act. Nadzór musi być realny: operator powinien rozumieć powód eskalacji, mieć możliwość przerwania ruchu i działać w czasie, który ma znaczenie dla bezpieczeństwa.
-2. Dla planowania trajektorii robota najważniejszy jest kompromis między bezpieczeństwem a opóźnieniem. Zatwierdzanie każdej ryzykownej trajektorii obniża ryzyko, ale może spowolnić system i przeciążyć operatora.
-3. Najbardziej uzasadniony model organizacyjny to adaptacyjny HITL: eskalacja następuje przy wysokim ryzyku bazowym albo niskiej pewności AI. To odpowiada logice proporcjonalności z AI Act art. 14.
-4. HITL nie może zastąpić funkcji bezpieczeństwa maszyny. W robocie fizycznym nadal potrzebne są ograniczenia prędkości, strefy bezpieczeństwa, detekcja przeszkód, awaryjne zatrzymanie, logowanie decyzji i walidacja zgodności z regulacjami maszynowymi.
-5. W ujęciu AI Act system planowania trajektorii używany w środowisku, w którym decyzje mogą wpływać na zdrowie i bezpieczeństwo ludzi, należy traktować co najmniej jako kandydat do szczegółowej oceny ryzyka. Jeśli komponent AI pełni funkcję bezpieczeństwa lub jest częścią maszyny objętej oceną zgodności, wymagania dokumentacyjne i nadzorcze są szczególnie istotne.
+Najbardziej praktyczny wniosek jest sytuacyjny:
+
+- dla znanych trajektorii, niskiej niepewności i ryzyka głównie produkcyjnego wystarczy HITL informacyjny albo prawo weta;
+- dla wysokiej okluzji, niskiej pewności AI lub nietypowych zadań najlepszym kompromisem jest adaptacyjny HITL;
+- dla rzadkich i nowych trajektorii uzasadnione jest zatwierdzenie przed ruchem;
+- dla pracy blisko ludzi sam HITL nie wystarczy i musi być połączony z funkcjami bezpieczeństwa maszyny;
+- przy jednym operatorze nadzorującym wiele robotów trzeba ograniczać liczbę równoległych eskalacji, bo nadzór może stać się pozorny.
+
+## Wnioski prawno-etyczne
+
+1. Samo dodanie człowieka do procesu nie wystarcza do zgodności z AI Act. Nadzór musi być realny: operator powinien rozumieć powód eskalacji, mieć możliwość zatrzymania lub korekty trajektorii i działać w czasie, który ma znaczenie dla bezpieczeństwa.
+2. W strefie częściowo odseparowanej, gdzie podstawowe szkody dotyczą mienia i przestoju, system nie musi automatycznie być traktowany tak samo jak robot pracujący bezpośrednio obok ludzi. Mimo tego nadal wymaga zarządzania ryzykiem, dokumentacji, logowania i jasnego podziału odpowiedzialności.
+3. Jeżeli manipulator pracowałby blisko ludzi albo planowanie trajektorii wpływałoby na funkcję bezpieczeństwa maszyny, problem prawny byłby poważniejszy. System należałoby traktować jako kandydata do szczegółowej oceny pod kątem AI Act, rozporządzenia maszynowego 2023/1230 i norm robotycznych.
+4. HITL nie może zastąpić funkcji bezpieczeństwa maszyny. Potrzebne są osłony, strefy bezpieczeństwa, ograniczenia prędkości, awaryjne zatrzymanie, walidacja HMI, testy czasu reakcji i dokumentacja techniczna.
+5. Odpowiedzialność nie powinna być przerzucana wyłącznie na operatora. Dostawca planera trajektorii odpowiada za projekt systemu i dokumentację, integrator za włączenie go do maszyny, organizacja wdrażająca za procedury i szkolenia, a operator za decyzje w granicach realnie dostępnych informacji i narzędzi.
+6. Największe ryzyko etyczne to pozorny nadzór: system formalnie ma człowieka w pętli, ale operator ma za dużo alarmów, za mało czasu albo za mało wyjaśnień, żeby skutecznie zareagować.
 
 ## Ograniczenia
 
-Model jest syntetyczny i służy do analizy porównawczej, a nie do certyfikacji robota. Nie korzysta z danych z rzeczywistego manipulatora, cobota ani robota mobilnego. Nie modeluje dynamiki ruchu, mapowania przestrzeni, ograniczeń kinematycznych, awarii sensorów, cyberataków ani ergonomii konkretnego interfejsu operatora. Wdrożenie produkcyjne wymagałoby testów z realnym sprzętem, analizy norm robotycznych, walidacji HMI i pełnej dokumentacji technicznej.
+Model jest syntetyczny i służy do analizy porównawczej, a nie do certyfikacji robota. Projekt nie korzysta z danych realnego manipulatora, ponieważ takich danych nie było w projekcie grupowym i trudno je pozyskać w ramach mini-projektu akademickiego.
+
+Projekt nie modeluje pełnej dynamiki manipulatora, ograniczeń kinematycznych, rzeczywistych mas elementów robota, dokładnych czasów zatrzymania, awarii sensorów, cyberataków ani ergonomii konkretnego interfejsu operatora. Masa robota, energia ruchu, typ chwytaka, rodzaj ładunku, dystans do ludzi i czasy zatrzymania mogłyby zmienić ocenę prawną, bo wpływają na potencjalną ciężkość szkody i zakres wymagań maszynowych.
+
+Do dalszego rozwoju potrzebne byłyby: logi z realnego robota, dane o trajektoriach, pomiary odległości i prędkości, testy HMI z operatorami, symulacja w ROS lub podobnym środowisku, analiza awarii sensorów, testy cyberbezpieczeństwa oraz pełniejsza ocena zgodności z rozporządzeniem maszynowym.
 
 ## Źródła
 

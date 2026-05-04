@@ -1,0 +1,218 @@
+# Wymagania dla mini-projektu
+
+Temat: Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance
+
+## 1. Warunki formalne
+
+Mini-projekt musi być wykonany indywidualnie i powinien być wcześniej potwierdzony z prowadzącym, ponieważ temat jest tematem własnym, a nie jednym z gotowych tematów z menu. Repozytorium musi być udostępnione prowadzącemu na GitHubie, z dostępem dla użytkownika `laugustyniak`. Sam link bez dostępu nie spełnia warunku oddania.
+
+Projekt powinien być powiązany z tematyką kursu, czyli z prawnymi, społecznymi i etycznymi aspektami sztucznej inteligencji. W tym temacie nie wystarczy pokazać kodu analizującego trajektorie robota. Trzeba jasno wykazać, że problem planowania trajektorii przez AI ma znaczenie regulacyjne: może wpływać na bezpieczeństwo ludzi, odpowiedzialność operatora, jakość nadzoru człowieka, dokumentację techniczną, zarządzanie ryzykiem i zgodność z AI Act oraz regulacjami dotyczącymi maszyn.
+
+Jeżeli istnieje projekt grupowy powiązany z robotyką, autonomią, systemami bezpieczeństwa, sterowaniem, audytem AI albo compliance, należy w README opisać to powiązanie. Jeżeli mini-projekt jest samodzielny, trzeba to napisać wprost i wyjaśnić, dlaczego temat nadal dobrze pasuje do kursu.
+
+## 2. Minimalna struktura repozytorium
+
+Repozytorium powinno zawierać co najmniej:
+
+- `README.md` z opisem celu, tematu, uruchomienia, wyników, wniosków, ograniczeń i źródeł.
+- `PROCESS.md` z dokumentacją procesu pracy z AI: narzędzia, rzeczywiste prompty, decyzje, iteracje i błędy.
+- `src/` albo `notebooks/` z kodem lub notebookiem wykonującym analizę.
+- `wyniki/` z artefaktami: tabelami, wykresami, raportem albo innymi wynikami.
+- `pyproject.toml` z zależnościami, jeżeli projekt wymaga bibliotek Python.
+
+Obecny projekt spełnia podstawowy układ: ma skrypt `src/main.py`, testy, README, PROCESS oraz wygenerowane pliki w `wyniki/`. Trzeba jednak dopilnować, aby dane osobowe autora w README były uzupełnione, zwłaszcza numer indeksu.
+
+## 3. Wymagania dla README.md
+
+README musi być głównym opisem projektu i powinno pozwolić prowadzącemu zrozumieć projekt bez czytania całego kodu.
+
+README powinien zawierać:
+
+1. Tytuł projektu, imię i nazwisko autora oraz numer indeksu.
+2. Informację, że temat jest tematem własnym: Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance.
+3. Cel projektu opisany w 2-3 konkretnych zdaniach: analiza wpływu różnych wariantów nadzoru człowieka na ryzyko resztkowe, opóźnienie decyzji i zgodność z wymaganiami AI Act.
+4. Pytanie badawcze, np. czy człowiek w pętli rzeczywiście zmniejsza ryzyko w planowaniu trajektorii, czy jedynie przenosi odpowiedzialność na operatora.
+5. Opis zakresu technicznego: syntetyczne scenariusze pracy robota, parametry środowiska, prędkości, ładunku, niepewności percepcji i nowości sytuacji.
+6. Opis analizowanych polityk HITL: brak HITL, HITL informacyjny, prawo weta operatora, zatwierdzenie przed ruchem i adaptacyjny HITL.
+7. Instrukcję uruchomienia, najlepiej:
+
+```bash
+uv sync
+uv run python src/main.py
+```
+
+oraz alternatywnie:
+
+```bash
+python src/main.py
+```
+
+8. Informację, że główna analiza nie wymaga kluczy API. Jeżeli w repo są przykłady LLM z szablonu, trzeba zaznaczyć, że są opcjonalne i wymagają `.env`.
+9. Listę plików wynikowych w `wyniki/`, np. CSV, SVG i raport Markdown.
+10. Tabelę najważniejszych wyników: średnie ryzyko resztkowe, P95 ryzyka, średni czas decyzji i odsetek interwencji dla każdej polityki.
+11. Interpretację wyników w języku prawnym i etycznym, nie tylko technicznym.
+12. Ograniczenia projektu: syntetyczny model, brak realnego robota, brak walidacji HMI, brak testów ergonomii operatora, brak pełnej certyfikacji.
+13. Źródła: AI Act, rozporządzenie maszynowe 2023/1230, NIST AI RMF, ISO/TS 15066 lub inne dokumenty użyte w analizie.
+
+README powinien szczególnie mocno pokazać, że projekt nie jest tylko symulacją ryzyka, ale analizą zgodności systemu AI z wymaganiami dotyczącymi bezpieczeństwa, nadzoru człowieka i odpowiedzialności.
+
+## 4. Wymagania dla PROCESS.md
+
+PROCESS.md jest oceniany tak samo poważnie jak kod. Dokument musi pokazać świadome korzystanie z narzędzi AI.
+
+W PROCESS.md trzeba umieścić:
+
+- listę narzędzi AI użytych w projekcie, np. Codex, ChatGPT, Claude Code, Cursor, Copilot;
+- do czego każde narzędzie zostało użyte, np. planowanie struktury, implementacja skryptu, debugowanie, redakcja README, wyszukiwanie źródeł prawnych;
+- rzeczywiste prompty wpisywane podczas pracy;
+- prompty pogrupowane tematycznie, np. generowanie kodu, analiza wyników, debugowanie, dokumentacja;
+- decyzje projektowe i ich uzasadnienie;
+- alternatywy, które rozważano;
+- rzeczy, które nie zadziałały, oraz sposób obejścia problemu;
+- opis iteracji projektu od pierwszej wersji do wersji końcowej;
+- orientacyjny czas pracy, jeżeli autor chce go podać.
+
+Dla tego tematu szczególnie ważne jest opisanie, dlaczego wybrano analizę syntetyczną zamiast sterowania realnym robotem, dlaczego porównano kilka polityk HITL oraz dlaczego wyniki zapisano jako CSV, SVG i raport Markdown. Warto też dopisać prompt z tej rozmowy, ponieważ dotyczy on doprecyzowania wymagań projektu.
+
+## 5. Wymagania techniczne
+
+Projekt powinien dać się uruchomić i odtworzyć wyniki. Nie musi być produkcyjny, ale kod musi być czytelny i zrozumiały.
+
+Dla obecnego tematu minimalna część techniczna powinna obejmować:
+
+- skrypt lub notebook generujący zestaw scenariuszy planowania trajektorii robota;
+- jawne parametry ryzyka, np. gęstość ludzi, okluzja, prędkość robota, masa ładunku, niepewność percepcji i nowość sytuacji;
+- obliczenie ryzyka bazowego;
+- porównanie co najmniej kilku wariantów Human-in-the-Loop;
+- obliczenie ryzyka resztkowego po zastosowaniu danej polityki nadzoru;
+- obliczenie kosztu nadzoru, np. średniego czasu decyzji albo odsetka interwencji operatora;
+- zapis wyników do plików w `wyniki/`;
+- wygenerowanie tabel lub wykresów umożliwiających porównanie wariantów;
+- komentarze i nazwy zmiennych zrozumiałe dla osoby oceniającej.
+
+Obecny skrypt `src/main.py` powinien wytwarzać 162 deterministyczne scenariusze i porównywać pięć polityk HITL. To dobrze odpowiada wymaganiom technicznym, ponieważ wyniki są powtarzalne i możliwe do sprawdzenia.
+
+## 6. Wymagania merytoryczne
+
+Najważniejsza część projektu to nie sam kod, ale wnioski. Analiza musi odpowiadać na pytanie, co wyniki znaczą dla bezpieczeństwa, odpowiedzialności i zgodności z regulacjami.
+
+Projekt powinien zawierać analizę:
+
+- czy i kiedy HITL faktycznie zmniejsza ryzyko;
+- czy wzrost bezpieczeństwa nie powoduje nadmiernego opóźnienia decyzji;
+- czy operator ma realną możliwość nadzoru, czy jest tylko formalnym dodatkiem do systemu;
+- czy częste interwencje mogą prowadzić do przeciążenia operatora;
+- czy zbyt rzadkie interwencje nie tworzą pozornego nadzoru;
+- jaki wariant nadzoru jest najlepszym kompromisem organizacyjnym;
+- jakie ryzyka pozostają mimo obecności człowieka w pętli;
+- których wymagań AI Act projekt dotyka bezpośrednio;
+- czego projekt nie jest w stanie potwierdzić bez realnego robota i testów HMI.
+
+Wnioski powinny być konkretne. Przykład dobrego wniosku: adaptacyjny HITL może być bardziej uzasadniony niż stałe zatwierdzanie każdej ryzykownej trajektorii, ponieważ ogranicza ryzyko, ale nie obciąża operatora tak mocno i nie spowalnia systemu w każdej sytuacji.
+
+Przykład słabego wniosku: człowiek w pętli zwiększa bezpieczeństwo. Taki wniosek jest zbyt ogólny i nie pokazuje głębi analizy.
+
+## 7. Wymagania dotyczące AI Act i compliance
+
+Projekt powinien odnieść wyniki do konkretnych wymagań regulacyjnych. Dla tego tematu kluczowe są zwłaszcza:
+
+- AI Act art. 9: system zarządzania ryzykiem;
+- AI Act art. 10: jakość danych i kontrola błędów danych;
+- AI Act art. 11: dokumentacja techniczna;
+- AI Act art. 12: rejestrowanie zdarzeń i śledzalność;
+- AI Act art. 13: przejrzystość i instrukcje dla użytkownika lub wdrażającego;
+- AI Act art. 14: skuteczny nadzór człowieka;
+- AI Act art. 15: dokładność, odporność i cyberbezpieczeństwo;
+- rozporządzenie maszynowe 2023/1230: bezpieczeństwo maszyn i ryzyko związane z autonomicznym zachowaniem;
+- normy robotyczne, np. ISO/TS 15066, jeżeli projekt odnosi się do robotów współpracujących.
+
+Wymagane jest pokazanie, że HITL nie jest automatyczną gwarancją zgodności. Nadzór człowieka musi być skuteczny: operator powinien rozumieć sytuację, znać powód eskalacji, mieć możliwość przerwania lub odrzucenia trajektorii i działać w czasie, który realnie wpływa na bezpieczeństwo.
+
+Projekt powinien także zaznaczyć, że system planowania trajektorii robota może być traktowany jako system wymagający szczegółowej oceny ryzyka, zwłaszcza gdy wpływa na zdrowie lub bezpieczeństwo ludzi albo pełni funkcję bezpieczeństwa w maszynie.
+
+## 8. Wymagane artefakty wynikowe
+
+W katalogu `wyniki/` powinny znaleźć się artefakty pozwalające sprawdzić analizę bez ponownego uruchamiania kodu.
+
+Dla tego tematu zalecane artefakty to:
+
+- tabela scenariuszy, np. `scenariusze.csv`;
+- szczegółowe wyniki dla każdej polityki HITL, np. `wyniki_polityk_hitl.csv`;
+- podsumowanie polityk, np. `podsumowanie_polityk.csv`;
+- macierz zgodności z AI Act, np. `macierz_zgodnosci_ai_act.csv`;
+- raport tekstowy, np. `raport_hitl.md`;
+- wykres średniego ryzyka resztkowego;
+- wykres kompromisu między ryzykiem a czasem decyzji;
+- heatmapa scenariuszy wysokiego ryzyka.
+
+Wyniki muszą być prawdziwie wygenerowane przez kod. Nie wolno wpisywać wymyślonych metryk ani udawać uruchomienia analizy. Jeżeli wyniki są syntetyczne, trzeba jasno napisać, że są syntetyczne i służą do porównania wariantów, a nie do certyfikacji realnego robota.
+
+## 9. Poziom Base, Good i Excellent dla tego tematu
+
+### Base: 50-60%
+
+Projekt na poziomie podstawowym powinien:
+
+- uruchamiać się lokalnie;
+- generować scenariusze ryzyka;
+- porównywać co najmniej dwa lub trzy warianty HITL;
+- zapisywać tabelę wyników;
+- zawierać README z instrukcją uruchomienia;
+- zawierać PROCESS.md z promptami i opisem pracy;
+- mieć podstawowe wnioski dotyczące bezpieczeństwa i AI Act.
+
+Taki poziom pokazuje, że projekt działa i jest udokumentowany, ale analiza może być jeszcze dość prosta.
+
+### Good: 70-80%
+
+Projekt na poziomie dobrym powinien:
+
+- porównywać kilka sensownie różnych polityk HITL;
+- uwzględniać ryzyko resztkowe, opóźnienie decyzji i obciążenie operatora;
+- mieć wykresy i tabele porównawcze;
+- zawierać macierz zgodności z AI Act;
+- rozróżniać nadzór pozorny od skutecznego;
+- wskazywać kompromisy między bezpieczeństwem a użytecznością systemu;
+- zawierać konkretne rekomendacje dla projektowania HITL.
+
+Obecny projekt jest blisko tego poziomu, ponieważ porównuje pięć polityk i generuje tabelę zgodności regulacyjnej.
+
+### Excellent: 90-100%
+
+Projekt na poziomie bardzo dobrym powinien dodatkowo:
+
+- mieć pogłębioną analizę luk i ograniczeń;
+- jasno powiązać wyniki z projektem grupowym albo realnym przypadkiem użycia;
+- zawierać mocne rekomendacje compliance dla zespołu projektowego;
+- odnieść się do odpowiedzialności operatora, producenta i wdrażającego;
+- pokazać, że człowiek w pętli może ograniczać ryzyko, ale też tworzyć nowe ryzyka organizacyjne;
+- uwzględnić kwestie ergonomii HMI, czasu reakcji operatora i przeciążenia nadzorem;
+- opisać, jakie dodatkowe testy byłyby potrzebne przed wdrożeniem realnego robota;
+- zachować pełną odtwarzalność wyników.
+
+Aby zbliżyć obecny projekt do poziomu Excellent, warto szczególnie dopracować powiązanie z projektem grupowym, uzupełnić autora i numer indeksu, rozbudować interpretację prawną oraz dopisać bardziej praktyczne rekomendacje dla wdrożenia.
+
+## 10. Checklist przed oddaniem
+
+Przed oddaniem projektu należy sprawdzić:
+
+- czy temat własny został potwierdzony z prowadzącym;
+- czy README zawiera imię, nazwisko i numer indeksu;
+- czy README zawiera cel, uruchomienie, wyniki, wnioski, ograniczenia i źródła;
+- czy PROCESS.md zawiera rzeczywiste prompty, w tym prompty użyte przy pracy z agentem AI;
+- czy kod uruchamia się komendą podaną w README;
+- czy wyniki w `wyniki/` zostały wygenerowane przez kod;
+- czy wnioski nie są ogólne, tylko odnoszą się do konkretnych wyników;
+- czy analiza pokazuje związek z AI Act, zwłaszcza z art. 9, 11, 12, 13, 14 i 15;
+- czy jasno napisano, że projekt jest modelem analitycznym, a nie certyfikacją realnego robota;
+- czy repozytorium zostało udostępnione prowadzącemu na GitHubie.
+
+## 11. Najważniejsze ryzyka oceny
+
+Największe ryzyko utraty punktów dotyczy nie kodu, ale dokumentacji i interpretacji. Projekt może działać technicznie, ale dostać słabszą ocenę, jeżeli nie pokaże procesu pracy, promptów, decyzji i wniosków prawno-etycznych.
+
+Drugie ryzyko to zbyt powierzchowne potraktowanie AI Act. Samo wymienienie artykułów nie wystarczy. Trzeba pokazać, jak wyniki analizy odnoszą się do konkretnych obowiązków: zarządzania ryzykiem, dokumentacji, logowania, przejrzystości, nadzoru człowieka i odporności systemu.
+
+Trzecie ryzyko to pozorny HITL. W projekcie trzeba wyraźnie napisać, że obecność operatora nie oznacza automatycznie skutecznego nadzoru. Jeżeli operator nie ma czasu, informacji, narzędzi albo realnej możliwości przerwania działania, to HITL może być tylko formalnym przeniesieniem odpowiedzialności.
+
+Najważniejszy kierunek końcowy: projekt powinien udowodnić, że autor rozumie zarówno techniczny kompromis w planowaniu trajektorii robota, jak i regulacyjny sens wymagań AI Act dotyczących systemów wysokiego ryzyka.
