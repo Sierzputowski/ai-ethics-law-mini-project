@@ -8,15 +8,15 @@ warianty nadzoru człowieka i zapisuje wyniki w katalogu `wyniki/`.
 
 from __future__ import annotations
 
-import math
-import csv
 from dataclasses import dataclass
 from pathlib import Path
 
-try:
-    import matplotlib.pyplot as plt
-except Exception:  # pragma: no cover - zależy od lokalnej instalacji
-    plt = None
+import matplotlib
+import numpy as np
+import pandas as pd
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 
 KATALOG_PROJEKTU = Path(__file__).resolve().parents[1]
@@ -86,7 +86,7 @@ POLITYKI = [
 
 
 def sigmoid(wartosc: float) -> float:
-    return 1 / (1 + math.exp(-wartosc))
+    return float(1 / (1 + np.exp(-wartosc)))
 
 
 Rekordy = list[dict[str, object]]
@@ -207,42 +207,34 @@ def ocen_polityki(scenariusze: Rekordy) -> Rekordy:
 
 
 def srednia(wartosci: list[float]) -> float:
-    return sum(wartosci) / len(wartosci)
+    return float(np.mean(wartosci))
 
 
 def kwantyl(wartosci: list[float], q: float) -> float:
-    uporzadkowane = sorted(wartosci)
-    pozycja = (len(uporzadkowane) - 1) * q
-    dol = math.floor(pozycja)
-    gora = math.ceil(pozycja)
-    if dol == gora:
-        return uporzadkowane[int(pozycja)]
-    return uporzadkowane[dol] + (uporzadkowane[gora] - uporzadkowane[dol]) * (
-        pozycja - dol
-    )
+    return float(np.quantile(wartosci, q))
 
 
 def agreguj_wyniki(wyniki: Rekordy) -> Rekordy:
-    polityki = sorted({str(wiersz["polityka"]) for wiersz in wyniki})
-    agregat = []
-    for polityka in polityki:
-        podzbior = [w for w in wyniki if w["polityka"] == polityka]
-        ryzyka = [float(w["ryzyko_resztkowe"]) for w in podzbior]
-        czasy = [float(w["czas_decyzji_s"]) for w in podzbior]
-        interwencje = [1.0 if w["interwencja_operatora"] else 0.0 for w in podzbior]
-        redukcje = [float(w["redukcja_wzgledna"]) for w in podzbior]
-        agregat.append(
-            {
-                "polityka": polityka,
-                "srednie_ryzyko_resztkowe": round(srednia(ryzyka), 4),
-                "mediana_ryzyka_resztkowego": round(kwantyl(ryzyka, 0.5), 4),
-                "p95_ryzyka_resztkowego": round(kwantyl(ryzyka, 0.95), 4),
-                "sredni_czas_decyzji_s": round(srednia(czasy), 4),
-                "odsetek_interwencji": round(srednia(interwencje), 4),
-                "srednia_redukcja_wzgledna": round(srednia(redukcje), 4),
-            }
+    ramka = pd.DataFrame(wyniki)
+    ramka["interwencja_operatora"] = ramka["interwencja_operatora"].astype(float)
+
+    agregat = (
+        ramka.groupby("polityka", as_index=False)
+        .agg(
+            srednie_ryzyko_resztkowe=("ryzyko_resztkowe", "mean"),
+            mediana_ryzyka_resztkowego=("ryzyko_resztkowe", "median"),
+            p95_ryzyka_resztkowego=(
+                "ryzyko_resztkowe",
+                lambda seria: seria.quantile(0.95),
+            ),
+            sredni_czas_decyzji_s=("czas_decyzji_s", "mean"),
+            odsetek_interwencji=("interwencja_operatora", "mean"),
+            srednia_redukcja_wzgledna=("redukcja_wzgledna", "mean"),
         )
-    return sorted(agregat, key=lambda w: float(w["srednie_ryzyko_resztkowe"]))
+        .round(4)
+        .sort_values("srednie_ryzyko_resztkowe")
+    )
+    return agregat.to_dict("records")
 
 
 def zbuduj_macierz_zgodnosci() -> Rekordy:
@@ -423,135 +415,80 @@ def tabela_markdown(ramka: Rekordy) -> str:
 
 
 def zapisz_svg_slupki(agregat: Rekordy) -> None:
-    dane = sorted(agregat, key=lambda w: float(w["srednie_ryzyko_resztkowe"]))
-    szerokosc = 900
-    wysokosc = 360
-    margines_lewy = 220
-    maks = max(float(w["srednie_ryzyko_resztkowe"]) for w in dane)
-    elementy = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{szerokosc}" height="{wysokosc}" viewBox="0 0 {szerokosc} {wysokosc}">',
-        '<rect width="100%" height="100%" fill="white"/>',
-        '<text x="24" y="34" font-size="20" font-family="Arial">Ryzyko resztkowe według wariantu HITL</text>',
-    ]
-    for indeks, wiersz in enumerate(dane):
-        y = 70 + indeks * 52
-        ryzyko = float(wiersz["srednie_ryzyko_resztkowe"])
-        dlugosc = 560 * ryzyko / maks
-        elementy.append(
-            f'<text x="24" y="{y + 18}" font-size="13" font-family="Arial">{wiersz["polityka"]}</text>'
-        )
-        elementy.append(
-            f'<rect x="{margines_lewy}" y="{y}" width="{dlugosc:.1f}" height="26" fill="#2f6f73"/>'
-        )
-        elementy.append(
-            f'<text x="{margines_lewy + dlugosc + 8:.1f}" y="{y + 18}" font-size="13" font-family="Arial">{ryzyko:.4f}</text>'
-        )
-    elementy.append("</svg>")
-    (KATALOG_WYNIKOW / "ryzyko_resztkowe_polityki.svg").write_text(
-        "\n".join(elementy), encoding="utf-8"
-    )
+    dane = pd.DataFrame(agregat).sort_values("srednie_ryzyko_resztkowe")
+
+    fig, ax = plt.subplots(figsize=(9, 3.8))
+    ax.barh(dane["polityka"], dane["srednie_ryzyko_resztkowe"], color="#2f6f73")
+    ax.invert_yaxis()
+    ax.set_title("Ryzyko resztkowe według wariantu HITL")
+    ax.set_xlabel("Średnie ryzyko resztkowe")
+    ax.grid(axis="x", alpha=0.25)
+    for indeks, ryzyko in enumerate(dane["srednie_ryzyko_resztkowe"]):
+        ax.text(float(ryzyko) + 0.006, indeks, f"{ryzyko:.4f}", va="center")
+    fig.tight_layout()
+    fig.savefig(KATALOG_WYNIKOW / "ryzyko_resztkowe_polityki.svg")
+    plt.close(fig)
 
 
 def zapisz_svg_kompromis(agregat: Rekordy) -> None:
-    szerokosc = 900
-    wysokosc = 460
-    lewy = 90
-    prawy = 840
-    gora = 60
-    dol = 390
-    czasy = [float(w["sredni_czas_decyzji_s"]) for w in agregat]
-    ryzyka = [float(w["srednie_ryzyko_resztkowe"]) for w in agregat]
-    min_x = min(czasy)
-    max_x = max(czasy)
-    min_y = min(ryzyka)
-    max_y = max(ryzyka)
+    dane = pd.DataFrame(agregat)
 
-    def sx(x: float) -> float:
-        return lewy + (x - min_x) / (max_x - min_x) * (prawy - lewy)
-
-    def sy(y: float) -> float:
-        return dol - (y - min_y) / (max_y - min_y) * (dol - gora)
-
-    elementy = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{szerokosc}" height="{wysokosc}" viewBox="0 0 {szerokosc} {wysokosc}">',
-        '<rect width="100%" height="100%" fill="white"/>',
-        '<text x="24" y="34" font-size="20" font-family="Arial">Kompromis: bezpieczeństwo kontra opóźnienie</text>',
-        f'<line x1="{lewy}" y1="{dol}" x2="{prawy}" y2="{dol}" stroke="#333"/>',
-        f'<line x1="{lewy}" y1="{gora}" x2="{lewy}" y2="{dol}" stroke="#333"/>',
-        f'<text x="330" y="440" font-size="14" font-family="Arial">Średni czas decyzji [s]</text>',
-        f'<text x="18" y="230" font-size="14" font-family="Arial" transform="rotate(-90 18,230)">Średnie ryzyko resztkowe</text>',
-    ]
-    for wiersz in agregat:
-        x = sx(float(wiersz["sredni_czas_decyzji_s"]))
-        y = sy(float(wiersz["srednie_ryzyko_resztkowe"]))
-        elementy.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="#c84b31"/>')
-        elementy.append(
-            f'<text x="{x + 10:.1f}" y="{y - 8:.1f}" font-size="12" font-family="Arial">{wiersz["polityka"]}</text>'
-        )
-    elementy.append("</svg>")
-    (KATALOG_WYNIKOW / "kompromis_ryzyko_czas.svg").write_text(
-        "\n".join(elementy), encoding="utf-8"
+    fig, ax = plt.subplots(figsize=(9, 4.6))
+    ax.scatter(
+        dane["sredni_czas_decyzji_s"],
+        dane["srednie_ryzyko_resztkowe"],
+        s=70,
+        color="#c84b31",
     )
+    for _, wiersz in dane.iterrows():
+        ax.annotate(
+            str(wiersz["polityka"]),
+            (
+                float(wiersz["sredni_czas_decyzji_s"]),
+                float(wiersz["srednie_ryzyko_resztkowe"]),
+            ),
+            xytext=(7, 5),
+            textcoords="offset points",
+            fontsize=8,
+        )
+    ax.set_title("Kompromis: bezpieczeństwo kontra opóźnienie")
+    ax.set_xlabel("Średni czas decyzji [s]")
+    ax.set_ylabel("Średnie ryzyko resztkowe")
+    ax.grid(alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(KATALOG_WYNIKOW / "kompromis_ryzyko_czas.svg")
+    plt.close(fig)
 
 
 def zapisz_svg_heatmapa(wyniki: Rekordy) -> None:
-    wysokie = [w for w in wyniki if float(w["ryzyko_bazowe"]) >= 0.45]
-    srodowiska = ["odseparowane", "wspoldzielone", "zatloczone"]
-    polityki = [p.nazwa for p in POLITYKI]
-    heatmapa: dict[tuple[str, str], float] = {}
-    for srodowisko in srodowiska:
-        for polityka in polityki:
-            wartosci = [
-                float(w["ryzyko_resztkowe"])
-                for w in wysokie
-                if w["srodowisko"] == srodowisko and w["polityka"] == polityka
-            ]
-            heatmapa[(srodowisko, polityka)] = (
-                round(srednia(wartosci), 3) if wartosci else 0.0
-            )
-    szerokosc = 980
-    wysokosc = 340
-    lewy = 150
-    gora = 70
-    komorka_w = 145
-    komorka_h = 58
-    maksimum = max(heatmapa.values())
-    minimum = min(heatmapa.values())
-
-    def kolor(wartosc: float) -> str:
-        udzial = (wartosc - minimum) / (maksimum - minimum)
-        r = int(255)
-        g = int(245 - 130 * udzial)
-        b = int(185 - 145 * udzial)
-        return f"rgb({r},{g},{b})"
-
-    elementy = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{szerokosc}" height="{wysokosc}" viewBox="0 0 {szerokosc} {wysokosc}">',
-        '<rect width="100%" height="100%" fill="white"/>',
-        '<text x="24" y="34" font-size="20" font-family="Arial">Ryzyko w scenariuszach wysokiego ryzyka</text>',
-    ]
-    for j, kolumna in enumerate(polityki):
-        elementy.append(
-            f'<text x="{lewy + j * komorka_w + 6}" y="60" font-size="11" font-family="Arial" transform="rotate(-20 {lewy + j * komorka_w + 6},60)">{kolumna}</text>'
+    ramka = pd.DataFrame(wyniki)
+    wysokie = ramka[ramka["ryzyko_bazowe"] >= 0.45]
+    heatmapa = (
+        wysokie.pivot_table(
+            index="srodowisko",
+            columns="polityka",
+            values="ryzyko_resztkowe",
+            aggfunc="mean",
         )
-    for i, indeks in enumerate(srodowiska):
-        y = gora + i * komorka_h
-        elementy.append(
-            f'<text x="24" y="{y + 34}" font-size="13" font-family="Arial">{indeks}</text>'
-        )
-        for j, kolumna in enumerate(polityki):
-            wartosc = heatmapa[(indeks, kolumna)]
-            x = lewy + j * komorka_w
-            elementy.append(
-                f'<rect x="{x}" y="{y}" width="{komorka_w}" height="{komorka_h}" fill="{kolor(wartosc)}" stroke="white"/>'
-            )
-            elementy.append(
-                f'<text x="{x + 48}" y="{y + 34}" font-size="13" font-family="Arial">{wartosc:.3f}</text>'
-            )
-    elementy.append("</svg>")
-    (KATALOG_WYNIKOW / "heatmapa_wysokiego_ryzyka.svg").write_text(
-        "\n".join(elementy), encoding="utf-8"
+        .reindex(index=["odseparowane", "wspoldzielone", "zatloczone"])
+        .reindex(columns=[p.nazwa for p in POLITYKI])
+        .fillna(0.0)
+        .round(3)
     )
+
+    fig, ax = plt.subplots(figsize=(9.8, 3.6))
+    obraz = ax.imshow(heatmapa.to_numpy(), cmap="YlOrRd", aspect="auto")
+    ax.set_title("Ryzyko w scenariuszach wysokiego ryzyka")
+    ax.set_xticks(np.arange(len(heatmapa.columns)), labels=heatmapa.columns)
+    ax.set_yticks(np.arange(len(heatmapa.index)), labels=heatmapa.index)
+    ax.tick_params(axis="x", labelrotation=20)
+    for i in range(len(heatmapa.index)):
+        for j in range(len(heatmapa.columns)):
+            ax.text(j, i, f"{heatmapa.iloc[i, j]:.3f}", ha="center", va="center")
+    fig.colorbar(obraz, ax=ax, label="Średnie ryzyko resztkowe")
+    fig.tight_layout()
+    fig.savefig(KATALOG_WYNIKOW / "heatmapa_wysokiego_ryzyka.svg")
+    plt.close(fig)
 
 
 def zapisz_wykresy(agregat: Rekordy, wyniki: Rekordy) -> None:
@@ -617,10 +554,7 @@ Pozorny nadzór człowieka jest realnym ryzykiem etycznym i prawnym. Operator pr
 
 
 def zapisz_csv(sciezka: Path, rekordy: Rekordy) -> None:
-    with sciezka.open("w", newline="", encoding="utf-8") as plik:
-        writer = csv.DictWriter(plik, fieldnames=list(rekordy[0].keys()))
-        writer.writeheader()
-        writer.writerows(rekordy)
+    pd.DataFrame(rekordy).to_csv(sciezka, index=False, encoding="utf-8")
 
 
 def main() -> None:

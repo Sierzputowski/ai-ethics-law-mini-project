@@ -110,3 +110,26 @@ Orientacyjnie: 3-5 godzin pracy koncepcyjnej, implementacyjnej, debugowania i do
 ## Refleksja o użyciu AI
 
 Codex był używany jako narzędzie do szybkiego przejścia od tematu do działającego, udokumentowanego prototypu. Najważniejsze było iteracyjne doprecyzowanie zakresu: najpierw powstała analiza ogólna HITL, później została osadzona w konkretnym przypadku manipulatora przemysłowego i projekcie grupowym o wyznaczaniu ścieżek. Użycie AI pomogło uporządkować wymagania, ale końcowy zakres wynika z odpowiedzi autora w pliku `doprecyzowania`.
+ 
+## Aktualizacja po dopracowaniu zależności
+
+### Prompt
+
+```text
+popraw projekt aby korzystał z typowych bibliotek takich jak np. matplotlib czy numpy, tam gdzie byłoby to sensowne, korzystaj z uv do obsługi bibliotek, popraw readme aby było zgodne z resztą projektu, na koniec sprawdź czy wszystko działa uruchamiając całość proektu zgodnie z tym jak opiszesz to w readme
+```
+
+### Zmiany
+
+W tej iteracji skrypt `src/main.py` został przestawiony z ręcznie pisanych agregacji, zapisu CSV i ręcznie składanych SVG na typowe biblioteki analityczne: `numpy`, `pandas` i `matplotlib`. Zależność `numpy` dodano przez `uv add numpy`, a README zaktualizowano tak, aby komendy uruchomieniowe odpowiadały faktycznemu sposobowi działania projektu.
+
+### Sprawdzenie
+
+Po aktualizacji uruchomiono:
+
+```text
+uv run python src/main.py
+uv run python -m unittest discover -s tests
+```
+
+Wynik: analiza wygenerowała artefakty w katalogu `wyniki/`, a 3 testy jednostkowe przeszły poprawnie.

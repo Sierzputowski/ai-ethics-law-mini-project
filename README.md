@@ -2,45 +2,60 @@
 
 **Autor:** Bartek, nr indeksu: 1
 
-**Temat:** własny, potwierdzony z prowadzącym — *Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance*
+**Temat:** temat własny, potwierdzony z prowadzącym: *Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance*
 
-**Kurs:** Aspekty prawne, społeczne i etyczne w AI, PWr 2025/2026
+**Kurs:** Aspekty prawne, społeczne i etyczne w AI, Politechnika Wrocławska, semestr letni 2025/2026
 
 ## Cel projektu
 
-Projekt analizuje, jak różne warianty nadzoru człowieka nad systemem AI wybierającym trajektorię manipulatora przemysłowego wpływają na ryzyko resztkowe, opóźnienie decyzji, obciążenie operatora i zgodność z wymaganiami AI Act. Scenariuszem bazowym jest ramię robota pracujące w hali produkcyjnej, w strefie częściowo odseparowanej od ludzi. Główne szkody w takim układzie to uszkodzenie mienia i przestój produkcji, ale projekt omawia też, co zmieniłaby praca blisko ludzi i możliwość kolizji z człowiekiem.
+Projekt analizuje, jak różne warianty nadzoru człowieka nad systemem AI wybierającym trajektorię manipulatora przemysłowego wpływają na ryzyko resztkowe, opóźnienie decyzji, obciążenie operatora i zgodność z wymaganiami AI Act. Scenariuszem bazowym jest ramię robota pracujące w hali produkcyjnej, w strefie częściowo odseparowanej od ludzi.
 
 Mini-projekt nie buduje realnego sterownika robota. Tworzy odtwarzalny model analityczny, który porównuje polityki Human-in-the-Loop (HITL) w syntetycznych scenariuszach o różnej gęstości ludzi, prędkości ruchu, okluzji, ładunku, niepewności percepcji i nowości sytuacji.
 
-Główne pytanie badawcze: w jakich sytuacjach dana polityka HITL jest uzasadniona prawnie i etycznie, a kiedy „człowiek w pętli” staje się tylko formalnym przeniesieniem odpowiedzialności na operatora?
+Główne pytanie badawcze brzmi: w jakich sytuacjach dana polityka HITL jest uzasadniona prawnie i etycznie, a kiedy „człowiek w pętli” staje się tylko formalnym przeniesieniem odpowiedzialności na operatora?
 
 ## Powiązanie z projektem grupowym
 
 Projekt grupowy dotyczy wyznaczania ścieżek dla robotów przemysłowych. Mini-projekt wspiera go przez analizę możliwych ograniczeń prawnych i etycznych dla systemu AI planującego trajektorie manipulatora. Najważniejsze powiązanie nie polega na poprawie algorytmu planowania, ale na sprawdzeniu, kiedy taki algorytm wymaga nadzoru człowieka, dokumentacji, logowania, oceny ryzyka i zgodności z regulacjami dotyczącymi systemów AI oraz maszyn.
 
-## Wymagania i uruchomienie
+## Wymagania
 
-Główna analiza działa na standardowej bibliotece Pythona i nie wymaga kluczy API.
+Projekt jest zarządzany przez `uv` i wymaga Pythona 3.11 lub nowszego. Zależności są opisane w `pyproject.toml`, a ich wersje są blokowane w `uv.lock`.
+
+Główne biblioteki użyte w analizie:
+
+- `numpy` - obliczenia numeryczne, funkcja sigmoid, średnie i kwantyle,
+- `pandas` - tabele wyników, agregacje, zapis plików CSV i przygotowanie heatmapy,
+- `matplotlib` - generowanie wykresów SVG w katalogu `wyniki/`.
+
+Główna analiza HITL nie wymaga kluczy API. Plik `.env.example` pochodzi z szablonu i dotyczy opcjonalnych przykładów LLM.
+
+## Uruchomienie
+
+Instalacja zależności:
 
 ```bash
 uv sync
+```
+
+Uruchomienie pełnej analizy i wygenerowanie artefaktów:
+
+```bash
 uv run python src/main.py
 ```
 
-Jeśli `uv` nie jest zainstalowane, można uruchomić analizę bezpośrednio:
+Uruchomienie testów:
 
 ```bash
-python src/main.py
+uv run python -m unittest discover -s tests
 ```
 
-Notebooki można uruchomić po instalacji zależności notebookowych:
+Opcjonalne uruchomienie notebooków:
 
 ```bash
 uv sync --extra notebooks
 uv run jupyter notebook
 ```
-
-Opcjonalne przykłady LLM z szablonu wymagają skopiowania `.env.example` do `.env` oraz uzupełnienia odpowiednich kluczy API. Główna analiza HITL ich nie używa.
 
 ## Co robi skrypt
 
@@ -56,25 +71,25 @@ Operator jest traktowany jako osoba przeszkolona. W analizie zakładam, że moż
 
 ## Wyniki
 
-Najważniejsze pliki:
+Po uruchomieniu `uv run python src/main.py` powstają następujące pliki:
 
-- `wyniki/scenariusze.csv` — wejściowe scenariusze syntetyczne,
-- `wyniki/wyniki_polityk_hitl.csv` — wynik dla każdego scenariusza i polityki,
-- `wyniki/podsumowanie_polityk.csv` — tabela zbiorcza polityk HITL,
-- `wyniki/rekomendacje_polityk.csv` — rekomendacje zależne od sytuacji,
-- `wyniki/analiza_obciazenia_operatora.csv` — porównanie nadzoru jednego i wielu robotów,
-- `wyniki/macierz_zgodnosci_ai_act.csv` — mapowanie wymagań AI Act i regulacji maszynowych na środki projektowe,
-- `wyniki/raport_hitl.md` — raport generowany przez skrypt,
+- `wyniki/scenariusze.csv` - wejściowe scenariusze syntetyczne,
+- `wyniki/wyniki_polityk_hitl.csv` - wynik dla każdego scenariusza i polityki,
+- `wyniki/podsumowanie_polityk.csv` - tabela zbiorcza polityk HITL,
+- `wyniki/rekomendacje_polityk.csv` - rekomendacje zależne od sytuacji,
+- `wyniki/analiza_obciazenia_operatora.csv` - porównanie nadzoru jednego i wielu robotów,
+- `wyniki/macierz_zgodnosci_ai_act.csv` - mapowanie wymagań AI Act i regulacji maszynowych na środki projektowe,
+- `wyniki/raport_hitl.md` - raport generowany przez skrypt,
 - `wyniki/ryzyko_resztkowe_polityki.svg`,
 - `wyniki/kompromis_ryzyko_czas.svg`,
 - `wyniki/heatmapa_wysokiego_ryzyka.svg`.
 
 Notebooki:
 
-- `notebooks/run.ipynb` — odtworzenie wyników przez uruchomienie skryptu,
-- `notebooks/analyse.ipynb` — opisowa analiza wyników, wykresów i konsekwencji prawno-etycznych.
+- `notebooks/run.ipynb` - odtworzenie wyników przez uruchomienie skryptu,
+- `notebooks/analyse.ipynb` - opisowa analiza wyników, wykresów i konsekwencji prawno-etycznych.
 
-Podsumowanie z uruchomienia:
+Podsumowanie z aktualnego uruchomienia:
 
 | Polityka | Średnie ryzyko resztkowe | P95 ryzyka | Średni czas decyzji | Odsetek interwencji |
 |---|---:|---:|---:|---:|
@@ -84,7 +99,7 @@ Podsumowanie z uruchomienia:
 | HITL informacyjny | 0.3541 | 0.6636 | 2.1457 s | 8.64% |
 | Brak HITL | 0.3630 | 0.7403 | 1.8000 s | 0.00% |
 
-## Jak interpretować wyniki
+## Interpretacja wyników
 
 Nie ma jednej najlepszej polityki dla wszystkich sytuacji. Zatwierdzenie przed ruchem daje najniższe średnie ryzyko, ale wymaga interwencji w prawie połowie przypadków. Dla pracy rutynowej w częściowo odseparowanej hali może to być zbyt kosztowne organizacyjnie i może prowadzić do przeciążenia operatora.
 
@@ -99,7 +114,7 @@ Najbardziej praktyczny wniosek jest sytuacyjny:
 ## Wnioski prawno-etyczne
 
 1. Samo dodanie człowieka do procesu nie wystarcza do zgodności z AI Act. Nadzór musi być realny: operator powinien rozumieć powód eskalacji, mieć możliwość zatrzymania lub korekty trajektorii i działać w czasie, który ma znaczenie dla bezpieczeństwa.
-2. W strefie częściowo odseparowanej, gdzie podstawowe szkody dotyczą mienia i przestoju, system nie musi automatycznie być traktowany tak samo jak robot pracujący bezpośrednio obok ludzi. Mimo tego nadal wymaga zarządzania ryzykiem, dokumentacji, logowania i jasnego podziału odpowiedzialności.
+2. W strefie częściowo odseparowanej, gdzie podstawowe szkody dotyczą mienia i przestoju, system nie musi automatycznie być traktowany tak samo jak robot pracujący bezpośrednio obok ludzi. Nadal wymaga jednak zarządzania ryzykiem, dokumentacji, logowania i jasnego podziału odpowiedzialności.
 3. Jeżeli manipulator pracowałby blisko ludzi albo planowanie trajektorii wpływałoby na funkcję bezpieczeństwa maszyny, problem prawny byłby poważniejszy. System należałoby traktować jako kandydata do szczegółowej oceny pod kątem AI Act, rozporządzenia maszynowego 2023/1230 i norm robotycznych.
 4. HITL nie może zastąpić funkcji bezpieczeństwa maszyny. Potrzebne są osłony, strefy bezpieczeństwa, ograniczenia prędkości, awaryjne zatrzymanie, walidacja HMI, testy czasu reakcji i dokumentacja techniczna.
 5. Odpowiedzialność nie powinna być przerzucana wyłącznie na operatora. Dostawca planera trajektorii odpowiada za projekt systemu i dokumentację, integrator za włączenie go do maszyny, organizacja wdrażająca za procedury i szkolenia, a operator za decyzje w granicach realnie dostępnych informacji i narzędzi.
@@ -115,9 +130,20 @@ Do dalszego rozwoju potrzebne byłyby: logi z realnego robota, dane o trajektori
 
 ## Źródła
 
-- Regulation (EU) 2024/1689 — AI Act: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+- Regulation (EU) 2024/1689 - AI Act: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
 - European Commission, AI Act Service Desk, Article 14 Human oversight: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-14
 - NIST AI Risk Management Framework 1.0: https://www.nist.gov/itl/ai-risk-management-framework
 - Regulation (EU) 2023/1230 on machinery: https://eur-lex.europa.eu/eli/reg/2023/1230/oj
 - EU-OSHA summary of Regulation 2023/1230/EU: https://osha.europa.eu/en/legislation/directive/regulation-20231230eu-machinery
-- ISO/TS 15066:2016, Robots and robotic devices — Collaborative robots: https://www.iso.org/standard/62996.html
+- ISO/TS 15066:2016, Robots and robotic devices - Collaborative robots: https://www.iso.org/standard/62996.html
+
+## Sprawdzenie
+
+Projekt został sprawdzony poleceniami:
+
+```bash
+uv run python src/main.py
+uv run python -m unittest discover -s tests
+```
+
+Wynik: analiza wygenerowała artefakty w `wyniki/`, a 3 testy jednostkowe zakończyły się poprawnie.
