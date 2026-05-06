@@ -4,11 +4,6 @@ version = "0.1.0"
 description = "Mini-projekt — Aspekty prawne, społeczne i etyczne w AI (PWr 2025/2026)"
 requires-python = ">=3.11"
 dependencies = [
-    "openai>=1.82",
-    "anthropic>=0.52",
-    "google-genai>=1.14",
-    "loguru>=0.7",
-    "python-dotenv>=1.1",
     "pandas>=2.2",
     "matplotlib>=3.9",
     "numpy>=2.4.4",
