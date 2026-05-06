@@ -1,6 +1,6 @@
 # Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning
 
-**Autor:** Bartek, nr indeksu: 1
+**Autor:** Bartosz Sierzputowski, nr indeksu: 266599
 
 **Temat:** temat własny, potwierdzony z prowadzącym: *Human-in-the-Loop Decision Making in AI-Based Robotic Trajectory Planning: Risk Analysis and AI Act Compliance*
 
@@ -44,11 +44,6 @@ Uruchomienie pełnej analizy i wygenerowanie artefaktów:
 uv run python src/main.py
 ```
 
-Uruchomienie testów:
-
-```bash
-uv run python -m unittest discover -s tests
-```
 
 Opcjonalne uruchomienie notebooków:
 
